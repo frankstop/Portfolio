@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Frank Valdez Portfolio</title>
+<!-- Tailwind CSS CDN for styling -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {font-family: 'Inter', sans-serif;}
+    /* Smooth scrolling */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+<nav class="fixed w-full bg-white shadow z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+<a class="text-xl font-bold text-blue-600" href="index.html">Frank Valdez</a>
+<div class="space-x-6 hidden md:block">
+<a class="hover:text-blue-600" href="about.html">About</a>
+<a class="hover:text-blue-600" href="skills.html">Skills</a>
+<a class="hover:text-blue-600" href="projects.html">Projects</a>
+<a class="hover:text-blue-600" href="experience.html">Experience</a>
+<a class="hover:text-blue-600" href="education.html">Education</a>
+<a class="hover:text-blue-600" href="contact.html">Contact</a>
+</div>
+</div>
+</nav>
+<section class="py-16 bg-white hidden" id="projects-old">
+<div class="max-w-6xl mx-auto px-4">
+<h2 class="text-3xl font-bold mb-10 text-blue-700">Projects</h2>
+<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+<!-- Project cards -->
+<!-- Each card includes project name, description and links -->
+<!-- Card Template Example -->
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">AsteroidsGame</h3>
+<p class="text-gray-700 mb-4">A classic Asteroids arcade game implemented in HTML5 Canvas and JavaScript.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/AsteroidsGame/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/AsteroidsGame" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">balls</h3>
+<p class="text-gray-700 mb-4">An interactive animation of bouncing balls demonstrating basic physics and rendering.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/balls/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/balls" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">BinaryHeap</h3>
+<p class="text-gray-700 mb-4">Visualization of a binary heap data structure, showing insert and remove operations.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/BinaryHeap/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/BinaryHeap" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">Boids</h3>
+<p class="text-gray-700 mb-4">Simulation of flocking behavior based on Craig Reynolds’ boids model.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/Boids/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/Boids" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">capstone_concept</h3>
+<p class="text-gray-700 mb-4">Concept document outlining initial ideas for the senior capstone project.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/capstone_concept/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/capstone_concept" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">Capstone_DesignDoc</h3>
+<p class="text-gray-700 mb-4">Design document detailing architecture and features for the capstone project.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/Capstone_DesignDoc/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/Capstone_DesignDoc" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">CellEatCell</h3>
+<p class="text-gray-700 mb-4">A simple game where cells grow by eating smaller cells and avoiding larger ones.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/CellEatCell/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/CellEatCell" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">DynamicFractalTree</h3>
+<p class="text-gray-700 mb-4">Interactive fractal tree generator with adjustable parameters.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/DynamicFractalTree/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/DynamicFractalTree" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">EasyUML</h3>
+<p class="text-gray-700 mb-4">A user-friendly web app for drawing UML diagrams quickly.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/EasyUML/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/EasyUML" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">Fireworks</h3>
+<p class="text-gray-700 mb-4">Animated fireworks display using canvas and particle effects.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/Fireworks/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/Fireworks" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">FlowField</h3>
+<p class="text-gray-700 mb-4">Visualization of flow fields with particles following vector directions.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/FlowField/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/FlowField" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">ForceDirectedGraph</h3>
+<p class="text-gray-700 mb-4">Interactive force-directed graph visualization that demonstrates graph layouts.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/ForceDirectedGraph/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/ForceDirectedGraph" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">forjasmine</h3>
+<p class="text-gray-700 mb-4">Personal project created for Jasmine.  It's a Pokedex.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/forjasmine/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/forjasmine" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">ForSF</h3>
+<p class="text-gray-700 mb-4">A project for a friend named Steven.  It's an awful game.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/ForSF/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/ForSF" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">HandSynth</h3>
+<p class="text-gray-700 mb-4">Interactive hand-controlled synthesizer or audio project.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/HandSynth/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/HandSynth" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">HomeScreen</h3>
+<p class="text-gray-700 mb-4">Customizable home screen interface built with web technologies.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/HomeScreen/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/HomeScreen" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">InsertionSort</h3>
+<p class="text-gray-700 mb-4">Visualization or implementation of the insertion sort algorithm.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/InsertionSort/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/InsertionSort" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">Internet-WebTechAnnouncement1</h3>
+<p class="text-gray-700 mb-4">Web technology announcement page built for a class.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/Internet-WebTechAnnouncement1/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/Internet-WebTechAnnouncement1" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">Kaleidoscope</h3>
+<p class="text-gray-700 mb-4">Colorful kaleidoscope visual using canvas and interactive controls.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/Kaleidoscope/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/Kaleidoscope" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">Mandelbrot</h3>
+<p class="text-gray-700 mb-4">Interactive Mandelbrot set viewer with zoom and color controls.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/Mandelbrot/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/Mandelbrot" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">MatrixRain</h3>
+<p class="text-gray-700 mb-4">Matrix digital rain effect simulation reminiscent of the iconic film.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/MatrixRain/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/MatrixRain" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">mypassion</h3>
+<p class="text-gray-700 mb-4">A site exploring one of my personal passions, blending art and code.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/mypassion/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/mypassion" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">PA3DataMining</h3>
+<p class="text-gray-700 mb-4">Programming assignment for a data mining course exploring algorithms.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/PA3DataMining/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/PA3DataMining" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">PA4DataMining</h3>
+<p class="text-gray-700 mb-4">Another programming assignment for data mining focusing on advanced techniques.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/PA4DataMining/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/PA4DataMining" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">ParticleAttraction</h3>
+<p class="text-gray-700 mb-4">Particle attraction simulation demonstrating gravity-like behavior.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/ParticleAttraction/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/ParticleAttraction" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">PendorCharacterCreator</h3>
+<p class="text-gray-700 mb-4">Character creator for a fantasy world named Pendor with customizable attributes.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/PendorCharacterCreator/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/PendorCharacterCreator" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">SlidesHW5</h3>
+<p class="text-gray-700 mb-4">Slideshow for homework 5 explaining how to deploy an AWS EC2 instance.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/SlidesHW5/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/SlidesHW5" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">SoftwareTestingLevels</h3>
+<p class="text-gray-700 mb-4">Presentation explaining different software testing levels with examples.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/SoftwareTestingLevels/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/SoftwareTestingLevels" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">TicTacToe</h3>
+<p class="text-gray-700 mb-4">Classic Tic-Tac-Toe game with an intuitive user interface.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/TicTacToe/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/TicTacToe" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">TikTok</h3>
+<p class="text-gray-700 mb-4">Project replicating aspects of the TikTok UI or exploring short-form video interactions.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/TikTok/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/TikTok" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">ThisIsTheOnlyLevel</h3>
+<p class="text-gray-700 mb-4">A puzzle-platformer game featuring a single level with clever twists.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/ThisIsTheOnlyLevel/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/ThisIsTheOnlyLevel" target="_blank">Code</a>
+</div>
+</div>
+<div class="bg-gray-100 rounded-xl shadow-sm p-6 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-semibold mb-2">Vortex</h3>
+<p class="text-gray-700 mb-4">Simulation or visualization of vortex patterns and swirling motion.</p>
+</div>
+<div class="mt-auto flex gap-4">
+<a class="text-blue-700 hover:underline" href="https://frankstop.github.io/Vortex/" target="_blank">Live Site</a>
+<a class="text-blue-700 hover:underline" href="https://github.com/frankstop/Vortex" target="_blank">Code</a>
+</div>
+</div>
+</div>
+<p class="mt-8 text-sm text-gray-500">More projects are available on my <a class="text-blue-700 hover:underline" href="https://github.com/frankstop?tab=repositories">GitHub repositories page</a>.</p>
+</div>
+</section>
+<!-- New redesigned projects section using glassmorphism -->
+<section class="py-20 bg-gradient-to-b from-blue-100 via-white to-blue-100" id="projects">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-10 text-blue-700 text-center">Projects</h2>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Redesigned project cards with glassmorphism and tech stack overlay -->
+      <div data-project="AsteroidsGame" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">AsteroidsGame</h3>
+        <p class="text-gray-800 mb-4">A classic Asteroids arcade game implemented in HTML5 Canvas and JavaScript.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • Canvas</p>
+        </div>
+      </div>
+      <div data-project="balls" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">balls</h3>
+        <p class="text-gray-800 mb-4">An interactive animation of bouncing balls influenced by physics and collisions.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • Canvas</p>
+        </div>
+      </div>
+      <div data-project="BinaryHeap" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">BinaryHeap</h3>
+        <p class="text-gray-800 mb-4">Visualization of a binary heap data structure, showing insert and remove operations.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • D3.js</p>
+        </div>
+      </div>
+      <div data-project="Boids" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">Boids</h3>
+        <p class="text-gray-800 mb-4">Simulation of flocking behavior based on Craig Reynolds’ boids model.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • WebGL</p>
+        </div>
+      </div>
+      <div data-project="capstone_concept" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">capstone_concept</h3>
+        <p class="text-gray-800 mb-4">Concept document outlining initial ideas and requirements for a capstone project.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • Tailwind CSS</p>
+        </div>
+      </div>
+      <div data-project="Capstone_DesignDoc" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">Capstone_DesignDoc</h3>
+        <p class="text-gray-800 mb-4">Design document detailing architecture and specifications for the capstone project.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • Tailwind CSS</p>
+        </div>
+      </div>
+      <div data-project="CellEatCell" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">CellEatCell</h3>
+        <p class="text-gray-800 mb-4">A simple game where cells grow by consuming smaller cells.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • Tailwind CSS • JavaScript • Canvas</p>
+        </div>
+      </div>
+      <div data-project="DynamicFractalTree" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">DynamicFractalTree</h3>
+        <p class="text-gray-800 mb-4">Interactive fractal tree generator with adjustable parameters.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • Canvas</p>
+        </div>
+      </div>
+      <div data-project="EasyUML" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">EasyUML</h3>
+        <p class="text-gray-800 mb-4">A user-friendly web app for drawing UML diagrams with live editing and exporting.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • CodeMirror • Mermaid • InteractJS • FileSaver • canvg</p>
+        </div>
+      </div>
+      <div data-project="Fireworks" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">Fireworks</h3>
+        <p class="text-gray-800 mb-4">Animated fireworks display using particles and physics simulation.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • Canvas</p>
+        </div>
+      </div>
+      <div data-project="FlowField" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">FlowField</h3>
+        <p class="text-gray-800 mb-4">Visualization of flow fields with particles following vector directions.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • Canvas</p>
+        </div>
+      </div>
+      <div data-project="ForceDirectedGraph" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">ForceDirectedGraph</h3>
+        <p class="text-gray-800 mb-4">Interactive force-directed graph visualization that demonstrates graph layouts.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • D3.js</p>
+        </div>
+      </div>
+      <div data-project="forjasmine" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">forjasmine</h3>
+        <p class="text-gray-800 mb-4">Personal project created for Jasmine.  It's a Pokedex.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • REST API</p>
+        </div>
+      </div>
+      <div data-project="ForSF" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">ForSF</h3>
+        <p class="text-gray-800 mb-4">A project for a friend named Steven.  It's an awful game.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • Canvas</p>
+        </div>
+      </div>
+      <div data-project="HandSynth" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">HandSynth</h3>
+        <p class="text-gray-800 mb-4">Interactive hand-controlled synthesizer or audio project.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • p5.js • ml5.js • Tone.js</p>
+        </div>
+      </div>
+      <div data-project="HomeScreen" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">HomeScreen</h3>
+        <p class="text-gray-800 mb-4">Customizable home screen interface built with web technologies.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • WebGL</p>
+        </div>
+      </div>
+      <div data-project="InsertionSort" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">InsertionSort</h3>
+        <p class="text-gray-800 mb-4">Visualization or implementation of the insertion sort algorithm.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript</p>
+        </div>
+      </div>
+      <div data-project="Internet-WebTechAnnouncement1" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">Internet-WebTechAnnouncement1</h3>
+        <p class="text-gray-800 mb-4">Web technology announcement page built for a class.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • Tailwind CSS • JavaScript</p>
+        </div>
+      </div>
+      <div data-project="Kaleidoscope" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">Kaleidoscope</h3>
+        <p class="text-gray-800 mb-4">Colorful kaleidoscope visual using canvas and interactive controls.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • Canvas</p>
+        </div>
+      </div>
+      <div data-project="Mandelbrot" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">Mandelbrot</h3>
+        <p class="text-gray-800 mb-4">Interactive Mandelbrot set viewer with zoom and color controls.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • WebGL</p>
+        </div>
+      </div>
+      <div data-project="MatrixRain" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">MatrixRain</h3>
+        <p class="text-gray-800 mb-4">Matrix digital rain effect simulation reminiscent of the iconic film.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • Canvas</p>
+        </div>
+      </div>
+      <div data-project="mypassion" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">mypassion</h3>
+        <p class="text-gray-800 mb-4">A site exploring one of my personal passions, blending art and code.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • Tailwind CSS • JavaScript</p>
+        </div>
+      </div>
+      <div data-project="PA3DataMining" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">PA3DataMining</h3>
+        <p class="text-gray-800 mb-4">Programming assignment for a data mining course exploring algorithms.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • Plotly.js</p>
+        </div>
+      </div>
+      <div data-project="PA4DataMining" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">PA4DataMining</h3>
+        <p class="text-gray-800 mb-4">Another programming assignment for data mining focusing on advanced techniques.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • D3.js</p>
+        </div>
+      </div>
+      <div data-project="ParticleAttraction" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">ParticleAttraction</h3>
+        <p class="text-gray-800 mb-4">Particle attraction simulation demonstrating gravity-like behavior.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • Canvas</p>
+        </div>
+      </div>
+      <div data-project="PendorCharacterCreator" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">PendorCharacterCreator</h3>
+        <p class="text-gray-800 mb-4">Character creator for a fantasy world named Pendor with customizable attributes.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • Tailwind CSS • JavaScript</p>
+        </div>
+      </div>
+      <div data-project="SlidesHW5" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">SlidesHW5</h3>
+        <p class="text-gray-800 mb-4">Slideshow for homework 5 explaining how to deploy an AWS EC2 instance.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript</p>
+        </div>
+      </div>
+      <div data-project="SoftwareTestingLevels" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">SoftwareTestingLevels</h3>
+        <p class="text-gray-800 mb-4">Presentation explaining different software testing levels with examples.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript</p>
+        </div>
+      </div>
+      <div data-project="TicTacToe" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">TicTacToe</h3>
+        <p class="text-gray-800 mb-4">Classic Tic-Tac-Toe game with an intuitive user interface.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript</p>
+        </div>
+      </div>
+      <div data-project="TikTok" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">TikTok</h3>
+        <p class="text-gray-800 mb-4">Project replicating aspects of the TikTok UI or exploring short-form video interactions.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • Tailwind CSS • JavaScript</p>
+        </div>
+      </div>
+      <div data-project="ThisIsTheOnlyLevel" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">ThisIsTheOnlyLevel</h3>
+        <p class="text-gray-800 mb-4">A puzzle-platformer game featuring a single level with clever twists.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • Tailwind CSS • JavaScript • Canvas</p>
+        </div>
+      </div>
+      <div data-project="Vortex" class="relative rounded-xl p-6 bg-white/20 backdrop-blur-lg border border-white/30 shadow-lg transform transition-transform hover:scale-105 cursor-pointer overflow-hidden">
+        <h3 class="text-xl font-semibold mb-2 text-blue-800">Vortex</h3>
+        <p class="text-gray-800 mb-4">Simulation or visualization of vortex patterns and swirling motion.</p>
+        <div class="absolute inset-0 flex items-center justify-center bg-black/60 opacity-0 hover:opacity-100 transition-opacity">
+          <p class="text-white text-center text-sm font-medium px-4">HTML • CSS • JavaScript • Canvas</p>
+        </div>
+      </div>
+    </div>
+    <p class="mt-8 text-sm text-gray-600 text-center">Click a card to view details or explore more on my <a class="text-blue-700 underline" href="https://github.com/frankstop?tab=repositories" target="_blank">GitHub repositories page</a>.</p>
+  </div>
+</section>
+<!-- Project detail modals -->
+<!-- Each modal corresponds to a project; clicking outside or the close button hides it. -->
+<div id="modal-AsteroidsGame" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">AsteroidsGame</h3>
+    <p class="text-gray-700 mb-4">A classic Asteroids arcade game implemented in HTML5 Canvas and JavaScript.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, Canvas</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/AsteroidsGame/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/AsteroidsGame" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-balls" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">balls</h3>
+    <p class="text-gray-700 mb-4">An interactive animation of bouncing balls influenced by physics and collisions.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, Canvas</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/balls/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/balls" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-BinaryHeap" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">BinaryHeap</h3>
+    <p class="text-gray-700 mb-4">Visualization of a binary heap data structure, showing insert and remove operations.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, D3.js</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/BinaryHeap/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/BinaryHeap" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-Boids" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">Boids</h3>
+    <p class="text-gray-700 mb-4">Simulation of flocking behavior based on Craig Reynolds’ boids model.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, WebGL</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/Boids/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/Boids" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-capstone_concept" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">capstone_concept</h3>
+    <p class="text-gray-700 mb-4">Concept document outlining initial ideas and requirements for a capstone project.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, Tailwind CSS</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/capstone_concept/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/capstone_concept" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-Capstone_DesignDoc" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">Capstone_DesignDoc</h3>
+    <p class="text-gray-700 mb-4">Design document detailing architecture and specifications for the capstone project.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, Tailwind CSS</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/Capstone_DesignDoc/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/Capstone_DesignDoc" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-CellEatCell" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">CellEatCell</h3>
+    <p class="text-gray-700 mb-4">A simple game where cells grow by consuming smaller cells.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, Tailwind CSS, JavaScript, Canvas</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/CellEatCell/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/CellEatCell" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-DynamicFractalTree" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">DynamicFractalTree</h3>
+    <p class="text-gray-700 mb-4">Interactive fractal tree generator with adjustable parameters.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, Canvas</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/DynamicFractalTree/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/DynamicFractalTree" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-EasyUML" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">EasyUML</h3>
+    <p class="text-gray-700 mb-4">A user-friendly web app for drawing UML diagrams with live editing and exporting.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, CodeMirror, Mermaid, InteractJS, FileSaver, canvg</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/EasyUML/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/EasyUML" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-Fireworks" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">Fireworks</h3>
+    <p class="text-gray-700 mb-4">Animated fireworks display using particles and physics simulation.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, Canvas</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/Fireworks/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/Fireworks" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-FlowField" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">FlowField</h3>
+    <p class="text-gray-700 mb-4">Visualization of flow fields with particles following vector directions.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, Canvas</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/FlowField/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/FlowField" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-ForceDirectedGraph" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">ForceDirectedGraph</h3>
+    <p class="text-gray-700 mb-4">Interactive force-directed graph visualization that demonstrates graph layouts.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, D3.js</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/ForceDirectedGraph/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/ForceDirectedGraph" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-forjasmine" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">forjasmine</h3>
+    <p class="text-gray-700 mb-4">Personal project created for Jasmine.  It's a Pokedex.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, REST API</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/forjasmine/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/forjasmine" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-ForSF" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">ForSF</h3>
+    <p class="text-gray-700 mb-4">A project for a friend named Steven.  It's an awful game.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, Canvas</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/ForSF/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/ForSF" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-HandSynth" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">HandSynth</h3>
+    <p class="text-gray-700 mb-4">Interactive hand-controlled synthesizer or audio project.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, p5.js, ml5.js, Tone.js</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/HandSynth/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/HandSynth" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-HomeScreen" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">HomeScreen</h3>
+    <p class="text-gray-700 mb-4">Customizable home screen interface built with web technologies.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, WebGL</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/HomeScreen/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/HomeScreen" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-InsertionSort" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">InsertionSort</h3>
+    <p class="text-gray-700 mb-4">Visualization or implementation of the insertion sort algorithm.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/InsertionSort/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/InsertionSort" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-Internet-WebTechAnnouncement1" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">Internet-WebTechAnnouncement1</h3>
+    <p class="text-gray-700 mb-4">Web technology announcement page built for a class.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, Tailwind CSS, JavaScript</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/Internet-WebTechAnnouncement1/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/Internet-WebTechAnnouncement1" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-Kaleidoscope" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">Kaleidoscope</h3>
+    <p class="text-gray-700 mb-4">Colorful kaleidoscope visual using canvas and interactive controls.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, Canvas</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/Kaleidoscope/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/Kaleidoscope" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-Mandelbrot" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">Mandelbrot</h3>
+    <p class="text-gray-700 mb-4">Interactive Mandelbrot set viewer with zoom and color controls.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, WebGL</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/Mandelbrot/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/Mandelbrot" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-MatrixRain" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">MatrixRain</h3>
+    <p class="text-gray-700 mb-4">Matrix digital rain effect simulation reminiscent of the iconic film.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, Canvas</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/MatrixRain/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/MatrixRain" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-mypassion" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">mypassion</h3>
+    <p class="text-gray-700 mb-4">A site exploring one of my personal passions, blending art and code.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, Tailwind CSS, JavaScript</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/mypassion/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/mypassion" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-PA3DataMining" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">PA3DataMining</h3>
+    <p class="text-gray-700 mb-4">Programming assignment for a data mining course exploring algorithms.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, Plotly.js</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/PA3DataMining/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/PA3DataMining" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-PA4DataMining" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">PA4DataMining</h3>
+    <p class="text-gray-700 mb-4">Another programming assignment for data mining focusing on advanced techniques.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, D3.js</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/PA4DataMining/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/PA4DataMining" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-ParticleAttraction" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">ParticleAttraction</h3>
+    <p class="text-gray-700 mb-4">Particle attraction simulation demonstrating gravity-like behavior.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, Canvas</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/ParticleAttraction/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/ParticleAttraction" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-PendorCharacterCreator" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">PendorCharacterCreator</h3>
+    <p class="text-gray-700 mb-4">Character creator for a fantasy world named Pendor with customizable attributes.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, Tailwind CSS, JavaScript</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/PendorCharacterCreator/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/PendorCharacterCreator" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-SlidesHW5" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">SlidesHW5</h3>
+    <p class="text-gray-700 mb-4">Slideshow for homework 5 explaining how to deploy an AWS EC2 instance.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/SlidesHW5/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/SlidesHW5" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-SoftwareTestingLevels" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">SoftwareTestingLevels</h3>
+    <p class="text-gray-700 mb-4">Presentation explaining different software testing levels with examples.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/SoftwareTestingLevels/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/SoftwareTestingLevels" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-TicTacToe" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">TicTacToe</h3>
+    <p class="text-gray-700 mb-4">Classic Tic-Tac-Toe game with an intuitive user interface.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/TicTacToe/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/TicTacToe" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-TikTok" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">TikTok</h3>
+    <p class="text-gray-700 mb-4">Project replicating aspects of the TikTok UI or exploring short-form video interactions.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, Tailwind CSS, JavaScript</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/TikTok/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/TikTok" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-ThisIsTheOnlyLevel" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">ThisIsTheOnlyLevel</h3>
+    <p class="text-gray-700 mb-4">A puzzle-platformer game featuring a single level with clever twists.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, Tailwind CSS, JavaScript, Canvas</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/ThisIsTheOnlyLevel/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/ThisIsTheOnlyLevel" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<div id="modal-Vortex" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+  <div class="bg-white rounded-lg shadow-xl p-8 max-w-lg w-full relative">
+    <button data-close class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 text-2xl leading-none">&times;</button>
+    <h3 class="text-2xl font-bold mb-4 text-blue-800">Vortex</h3>
+    <p class="text-gray-700 mb-4">Simulation or visualization of vortex patterns and swirling motion.</p>
+    <p class="text-gray-700 mb-4"><span class="font-semibold">Tech Stack:</span> HTML, CSS, JavaScript, Canvas</p>
+    <div class="flex gap-4">
+      <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/Vortex/" target="_blank">Live Site</a>
+      <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/Vortex" target="_blank">Code</a>
+    </div>
+  </div>
+</div>
+<footer class="bg-gray-100 py-4 text-center text-sm text-gray-500">
+    © 2025 Frank Valdez. All rights reserved.
+  </footer>
+  <!-- Modal handling script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // When a project card is clicked, open the corresponding modal
+      document.querySelectorAll('[data-project]').forEach(card => {
+        card.addEventListener('click', () => {
+          const id = card.getAttribute('data-project');
+          const modal = document.getElementById('modal-' + id);
+          if (modal) {
+            modal.classList.remove('hidden');
+          }
+        });
+      });
+      // Close modals when clicking on overlay or the close button
+      document.querySelectorAll('.modal-overlay').forEach(modal => {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal || e.target.hasAttribute('data-close')) {
+            modal.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
