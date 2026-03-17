@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gala Fresh | Retail Data Systems Engineering</title>
+    <meta name="description" content="Portfolio highlighting the Source-of-Truth Retail Data System built at Gala Fresh.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter & Poppins -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet"/>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS (Animations & Specific Overrides) -->
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Apply heading font to headers and logo */
+        h1, h2, h3, h4, h5, h6, .logo, .nav-links { font-family: 'Poppins', sans-serif; }
+        
+        /* Custom Animations */
+        @keyframes drift {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(-5%, 5%) scale(1.1); }
+        }
+        @keyframes rotateHub {
+            0% { transform: rotateX(60deg) rotateZ(0deg); }
+            100% { transform: rotateX(60deg) rotateZ(360deg); }
+        }
+        @keyframes rotateHubRev {
+            0% { transform: rotateX(60deg) rotateZ(360deg); }
+            100% { transform: rotateX(60deg) rotateZ(0deg); }
+        }
+        @keyframes pulseCore {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 40px rgba(37, 99, 235, 0.8); } /* blue-600 */
+            50% { transform: scale(1.1); box-shadow: 0 0 60px rgba(96, 165, 250, 0.8); } /* blue-400 */
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        @keyframes jitter {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(2px, -2px) rotate(1deg); }
+            50% { transform: translate(-1px, 3px) rotate(-1deg); }
+            75% { transform: translate(3px, 1px) rotate(2deg); }
+            100% { transform: translate(-2px, -1px); }
+        }
+        
+        /* Animation Utility Classes */
+        .glow-1 { animation: drift 15s ease-in-out infinite alternate; }
+        .glow-2 { animation: drift 20s ease-in-out infinite alternate-reverse; }
+        .ring-1 { animation: rotateHub 20s linear infinite; }
+        .ring-2 { animation: rotateHubRev 30s linear infinite; }
+        .pulse { animation: pulseCore 3s ease-in-out infinite; }
+        .node-1 { animation: float 4s ease-in-out infinite; }
+        .node-2 { animation: float 5s ease-in-out infinite 1s; }
+        .node-3 { animation: float 4.5s ease-in-out infinite 2s; }
+        
+        .chaos-item { animation: jitter 2s infinite alternate; }
+        .chaos-item:nth-child(2) { animation-duration: 1.5s; }
+        .chaos-item:nth-child(3) { animation-duration: 2.5s; }
+        .chaos-item:nth-child(4) { animation-duration: 2s; }
+        
+        /* Intersection Observer Fade Ins */
+        .fade-in { opacity: 0; transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+        .fade-in.visible { opacity: 1; }
+        .fade-in-up { opacity: 0; transform: translateY(40px); transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+        .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+        .fade-in-left { opacity: 0; transform: translateX(-40px); transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+        .fade-in-left.visible { opacity: 1; transform: translateX(0); }
+        .fade-in-right { opacity: 0; transform: translateX(40px); transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+        .fade-in-right.visible { opacity: 1; transform: translateX(0); }
+        
+        /* Specific Component Styling */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: #2563eb; /* text-blue-600 */
+            transition: width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        .feature-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #3b82f6; /* blue-500 */
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+        
+        .system-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #93c5fd, #2563eb); /* blue-300 to blue-600 */
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+        }
+        .system-card:hover::before { transform: scaleX(1); }
+        
+        .principle-mark::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: #2563eb; /* blue-600 */
+            border-radius: 50%;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        /* Syntax highlighting simple overrides inside code blocks */
+        pre { font-family: monospace; white-space: pre-wrap; font-size: 0.875rem; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 relative overflow-x-hidden">
+
+    <!-- Background Abstract Glow Elements -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-10">
+        <div class="glow-sphere glow-1 absolute w-[60vw] h-[60vw] bg-[radial-gradient(circle,_#93c5fd_0%,_transparent_70%)] opacity-30 blur-[120px] -top-[30%] -right-[20%] mix-blend-multiply"></div>
+        <div class="glow-sphere glow-2 absolute w-[50vw] h-[50vw] bg-[radial-gradient(circle,_#bfdbfe_0%,_transparent_70%)] opacity-40 blur-[120px] -bottom-[20%] -left-[10%] mix-blend-multiply"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md shadow py-3 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="logo text-xl font-bold text-blue-600 tracking-tight">Frank Valdez</a>
+                <div class="h-5 w-px bg-gray-300 hidden sm:block"></div>
+                <span class="text-sm font-semibold text-gray-500 hidden sm:block">Case Study: Gala Fresh</span>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-6 text-sm font-semibold text-gray-700">
+                <a href="projects.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-1">
+                    &larr; Back to Portfolio
+                </a>
+                <a href="about.html" class="hover:text-blue-600 transition-colors">About</a>
+                <a href="skills.html" class="hover:text-blue-600 transition-colors">Skills</a>
+                <a href="experience.html" class="hover:text-blue-600 transition-colors">Experience</a>
+                <a href="education.html" class="hover:text-blue-600 transition-colors">Education</a>
+                <a href="contact.html" class="hover:text-blue-600 transition-colors">Contact</a>
+            </div>
+
+            <!-- Mobile Button -->
+            <button id="menu-btn" class="md:hidden text-blue-600 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-inner mt-3">
+            <div class="flex flex-col space-y-3 px-6 py-4 text-sm font-semibold text-gray-700">
+                <a href="projects.html" class="text-blue-600">&larr; Back to Portfolio</a>
+                <a href="about.html" class="hover:text-blue-600">About</a>
+                <a href="skills.html" class="hover:text-blue-600">Skills</a>
+                <a href="experience.html" class="hover:text-blue-600">Experience</a>
+                <a href="education.html" class="hover:text-blue-600">Education</a>
+                <a href="contact.html" class="hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center pt-28 pb-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in-up">
+                    <p class="text-blue-600 font-bold text-sm tracking-widest uppercase mb-4 opacity-90">Data Engineering & Automation</p>
+                    <h1 class="text-5xl sm:text-6xl font-black tracking-tight mb-6 text-gray-900 leading-[1.1]">
+                        Building a <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-400">Source-of-Truth</span><br/>Retail Data System
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-10 max-w-xl font-medium leading-relaxed">
+                        Transforming messy, real-world retail chaos into a structured, automated, and deterministic operational data pipeline at Gala Fresh.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#system" class="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-white bg-blue-600 hover:bg-blue-700 transition shadow-lg hover:shadow-blue-600/30 transform hover:-translate-y-0.5">Explore System Architecture</a>
+                        <a href="#impact" class="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-50 transition transform hover:-translate-y-0.5 bg-white bg-opacity-60 backdrop-blur">View Business Impact</a>
+                    </div>
+                </div>
+                
+                <!-- Hero Data Visual -->
+                <div class="relative h-[400px] lg:h-[500px] flex items-center justify-center fade-in scroll-reveal">
+                    <div class="relative w-full h-full flex items-center justify-center [perspective:1000px]">
+                        <!-- Core -->
+                        <div class="w-16 h-16 bg-blue-600 rounded-full shadow-[0_0_40px_rgba(37,99,235,0.8)] z-10 pulse"></div>
+                        <!-- Rings -->
+                        <div class="ring-1 absolute rounded-full border border-blue-200 border-t-blue-500 border-b-blue-400 w-[250px] h-[250px] [transform-style:preserve-3d]"></div>
+                        <div class="ring-2 absolute rounded-full border border-blue-200 border-l-blue-600 border-r-blue-300 w-[400px] h-[400px] [transform-style:preserve-3d]"></div>
+                        <!-- Nodes -->
+                        <div class="data-node node-1 absolute top-[20%] left-[10%] bg-white/90 border border-blue-200 px-4 py-2 rounded-lg text-sm font-bold text-blue-700 backdrop-blur-md shadow-md z-20">Scans</div>
+                        <div class="data-node node-2 absolute bottom-[30%] right-[10%] bg-white/90 border border-blue-200 px-4 py-2 rounded-lg text-sm font-bold text-blue-700 backdrop-blur-md shadow-md z-20">Pipeline</div>
+                        <div class="data-node node-3 absolute top-[70%] left-[20%] bg-white/90 border border-blue-200 px-4 py-2 rounded-lg text-sm font-bold text-blue-700 backdrop-blur-md shadow-md z-20">Auto-Publish</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Problem Section -->
+        <section id="problem" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-in-left scroll-reveal">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">The <span class="text-blue-600">Reality</span> of Retail Data</h2>
+                    <p class="text-xl text-gray-600 mb-10 max-w-2xl leading-relaxed">
+                        Retail data is rarely perfect. Messy items, inconsistent records, manual inefficiencies, and broken workflows create widespread chaos and a lack of trust.
+                    </p>
+                    <ul class="flex flex-col gap-6">
+                        <li class="feature-item relative pl-8 text-lg font-medium text-gray-600"><strong class="text-gray-900">Manual bottlenecks</strong> requiring hours of human intervention safely assembling circulars.</li>
+                        <li class="feature-item relative pl-8 text-lg font-medium text-gray-600"><strong class="text-gray-900">Unstructured scanning</strong> processes leaving room for frequent human error.</li>
+                        <li class="feature-item relative pl-8 text-lg font-medium text-gray-600"><strong class="text-gray-900">Lack of confidence</strong> across pricing, POS, vendors, and transactions.</li>
+                    </ul>
+                </div>
+                <div class="fade-in-right scroll-reveal">
+                    <div class="chaos-container relative h-[400px] w-full bg-red-50 border-2 border-red-100 rounded-[2rem] overflow-hidden shadow-inner">
+                        <div class="chaos-item absolute font-mono text-red-500 font-bold" style="top: 15%; left: 20%;">A01-B02</div>
+                        <div class="chaos-item absolute font-mono text-gray-400 font-bold" style="top: 45%; left: 15%;">123456789012</div>
+                        <div class="chaos-item absolute font-mono text-orange-500 font-bold" style="top: 75%; left: 55%;">GC20230101_v2.pdf</div>
+                        <div class="chaos-item absolute font-mono text-red-600 font-bold" style="top: 35%; left: 65%;">012345678905</div>
+                        <!-- Reddish fade to simulate chaos area -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-red-100/40 to-transparent pointer-events-none"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The System Overview -->
+        <section id="system" class="py-24 bg-gradient-to-b from-blue-50/50 via-gray-50 to-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 fade-in-up scroll-reveal">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">An End-to-End <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-400">Operational Pipeline</span></h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto font-medium">A multi-layered system designed to enforce structure early, automate repeatable tasks, and reduce human dependency.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Component 1 -->
+                    <div class="system-card bg-white/70 backdrop-blur-xl border border-white rounded-2xl p-8 shadow-xl shadow-blue-900/5 hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-300 relative overflow-hidden fade-in-up scroll-reveal hover:-translate-y-2" style="transition-delay: 100ms;">
+                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6 border border-blue-100">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">1. Scan Data Transformation</h3>
+                        <p class="text-gray-600 mb-6 font-medium leading-relaxed h-[84px] md:h-auto lg:h-[84px]">Reduces human error by capturing scans via AHK regex, enforcing structural invariants explicitly.</p>
+                        <div class="bg-gray-900 border border-gray-800 rounded-xl p-4 text-blue-300 relative overflow-hidden shadow-inner">
+                            <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 to-blue-600"></div>
+<pre class="pl-2"><code>if RegExMatch(line, LOCATION_REGEX)
+    currentLocation := line
+else if RegExMatch(line, ITEM_REGEX)
+    output.Push(currentLocation . "`t" . line)</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Component 2 -->
+                    <div class="system-card bg-white/70 backdrop-blur-xl border border-white rounded-2xl p-8 shadow-xl shadow-blue-900/5 hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-300 relative overflow-hidden fade-in-up scroll-reveal hover:-translate-y-2" style="transition-delay: 200ms;">
+                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6 border border-blue-100">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">2. Circular PDF Pipeline</h3>
+                        <p class="text-gray-600 mb-6 font-medium leading-relaxed h-[84px] md:h-auto lg:h-[84px]">Deterministically merges multiple disparate PDFs into a single, correctly-named output automatically.</p>
+                        <div class="bg-gray-900 border border-gray-800 rounded-xl p-4 text-blue-300 relative overflow-hidden shadow-inner">
+                            <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 to-blue-600"></div>
+<pre class="pl-2"><code>$name = "GC{0}0{1}_Merged.pdf" -f 
+$Date.ToString("yyyy"), 
+$Date.ToString("MMdd")</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Component 3 -->
+                    <div class="system-card bg-white/70 backdrop-blur-xl border border-white rounded-2xl p-8 shadow-xl shadow-blue-900/5 hover:shadow-2xl hover:shadow-blue-900/10 transition-all duration-300 relative overflow-hidden fade-in-up scroll-reveal hover:-translate-y-2" style="transition-delay: 300ms;">
+                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6 border border-blue-100">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">3. Auto-Publishing</h3>
+                        <p class="text-gray-600 mb-6 font-medium leading-relaxed h-[84px] md:h-auto lg:h-[84px]">Custom WordPress plugin reacts to the presence of the exact correctly structured file for zero-click publishes.</p>
+                        <div class="bg-gray-900 border border-gray-800 rounded-xl p-4 text-blue-300 relative overflow-hidden shadow-inner">
+                            <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-400 to-blue-600"></div>
+<pre class="pl-2"><code>$pattern = '/^GC(\d{8})_Merged\.pdf$/';
+// On regex match -> auto_publish()</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pipeline Diagram -->
+                <div class="mt-16 fade-in scroll-reveal flex justify-center">
+                    <div class="inline-flex flex-col md:flex-row items-center gap-4 md:gap-6 bg-white border border-gray-200 rounded-2xl md:rounded-full py-4 md:py-5 px-8 md:px-12 shadow-sm font-heading font-bold">
+                        <div class="text-lg text-gray-600 flex items-center gap-4 md:gap-6">
+                            Input <span class="text-blue-300 rotate-90 md:rotate-0 inline-block">→</span>
+                        </div>
+                        <div class="text-lg text-gray-600 flex items-center gap-4 md:gap-6">
+                            Transformation <span class="text-blue-300 rotate-90 md:rotate-0 inline-block">→</span>
+                        </div>
+                        <div class="text-xl text-blue-600 flex items-center gap-4 md:gap-6 drop-shadow-sm">
+                            Standardization <span class="text-blue-300 rotate-90 md:rotate-0 inline-block">→</span>
+                        </div>
+                        <div class="text-lg text-gray-600 flex items-center gap-4 md:gap-6">
+                            Output <span class="text-blue-300 rotate-90 md:rotate-0 inline-block">→</span>
+                        </div>
+                        <div class="text-lg text-gray-600">
+                            Distribution
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact and Learnings Section -->
+        <section id="impact" class="py-24 bg-white border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <!-- Impact Metrics -->
+                <div class="fade-in-left scroll-reveal">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">Business <span class="text-blue-600">Impact</span></h2>
+                    <p class="text-xl text-gray-600 mb-10 font-medium">Moving from fragile, human-dependent workflows toward invisible, automated infrastructural certainty.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-blue-50/50 p-8 rounded-2xl border-l-4 border-blue-500 shadow-sm">
+                            <span class="block text-5xl font-black text-blue-600 mb-3 tracking-tight">100%</span>
+                            <span class="block text-gray-700 font-medium leading-relaxed">Reduction in manual circular publishing workflows</span>
+                        </div>
+                        <div class="bg-blue-50/50 p-8 rounded-2xl border-l-4 border-blue-500 shadow-sm">
+                            <span class="block text-3xl font-black text-blue-600 mb-5 mt-2 tracking-tight">Deterministic</span>
+                            <span class="block text-gray-700 font-medium leading-relaxed">Data standard reliability established early</span>
+                        </div>
+                        <div class="sm:col-span-2 bg-indigo-50/50 p-8 rounded-2xl border-l-4 border-indigo-500 shadow-sm">
+                            <span class="text-xl font-bold text-gray-900">Foundation built for future pricing, POS, and inventory scalability</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lessons Learned -->
+                <div class="fade-in-right scroll-reveal lg:pt-4">
+                    <h3 class="text-3xl font-bold mb-8 pb-4 border-b border-gray-200 text-gray-900">Architecture Principles & Learnings</h3>
+                    <ul class="flex flex-col gap-8">
+                        <li class="flex gap-6 items-start">
+                            <div class="principle-mark relative shrink-0 w-12 h-12 bg-blue-50 border border-blue-200 rounded-xl flex items-center justify-center rotate-45 mt-1 shadow-sm"></div>
+                            <div>
+                                <strong class="block text-xl font-bold text-blue-800 mb-2">Messy Data is the Default</strong>
+                                <p class="text-gray-600 text-lg font-medium leading-relaxed">Structure must be rigorously enforced at boundaries; it cannot be assumed.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-6 items-start">
+                            <div class="principle-mark relative shrink-0 w-12 h-12 bg-blue-50 border border-blue-200 rounded-xl flex items-center justify-center rotate-45 mt-1 shadow-sm"></div>
+                            <div>
+                                <strong class="block text-xl font-bold text-blue-800 mb-2">Process First, Automate Second</strong>
+                                <p class="text-gray-600 text-lg font-medium leading-relaxed">Automation accelerates execution, but it's only viable after process clarity is achieved.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-6 items-start">
+                            <div class="principle-mark relative shrink-0 w-12 h-12 bg-blue-50 border border-blue-200 rounded-xl flex items-center justify-center rotate-45 mt-1 shadow-sm"></div>
+                            <div>
+                                <strong class="block text-xl font-bold text-blue-800 mb-2">The Power of Naming</strong>
+                                <p class="text-gray-600 text-lg font-medium leading-relaxed">Using deterministic naming conventions as a core logical component bridges system gaps easily.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 py-12 text-center text-gray-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <div class="logo text-xl font-black text-gray-800 tracking-tight mb-2">Gala Fresh<span class="text-blue-600">.</span></div>
+            <p class="mb-6 font-medium">Building scalable operational data pipelines.</p>
+            <div class="flex gap-6 mb-8 text-sm">
+                <a href="#hero" class="font-semibold text-gray-600 hover:text-blue-600 transition-colors">Overview</a>
+                <a href="#system" class="font-semibold text-gray-600 hover:text-blue-600 transition-colors">Architecture</a>
+            </div>
+            <div class="border-t border-gray-200 pt-8 w-full max-w-lg text-sm">
+                <p>&copy; 2026 Frank Valdez. Portfolio project based on real systems engineered in production.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- 1. Intersection Observer for Scroll Animations ---
+        const revealElements = document.querySelectorAll('.scroll-reveal');
+        const revealOptions = { root: null, rootMargin: '0px 0px -100px 0px', threshold: 0.1 };
+        
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        };
+        const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Handle immediate triggers for hero elements
+        setTimeout(() => {
+            const heroElements = document.querySelectorAll('#hero .scroll-reveal, #hero .fade-in-up');
+            heroElements.forEach(el => el.classList.add('visible'));
+        }, 100);
+
+        // --- 2. Smooth Scrolling for Navigation Links ---
+        const navLinks = document.querySelectorAll('a[href^="#"]');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    // Slight offset for navbar
+                    const offset = 80;
+                    const bodyRect = document.body.getBoundingClientRect().top;
+                    const elRect = targetElement.getBoundingClientRect().top;
+                    const elPosition = elRect - bodyRect;
+                    const offsetPosition = elPosition - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // --- 3. Navbar Visual Change on Scroll ---
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                // Background & shadow adjust if needed (handled by default utility classes here)
+                navbar.classList.add('bg-white/95');
+                navbar.classList.remove('bg-white/90');
+            } else {
+                navbar.classList.remove('bg-white/95');
+                navbar.classList.add('bg-white/90');
+            }
+        });
+
+        // --- 4. Interactive Chaos Effect ---
+        const chaosContainer = document.querySelector('.chaos-container');
+        const chaosItems = document.querySelectorAll('.chaos-item');
+
+        if(chaosContainer && chaosItems.length > 0) {
+            chaosContainer.addEventListener('mousemove', (e) => {
+                const rect = chaosContainer.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const pX = (x - centerX) / centerX;
+                const pY = (y - centerY) / centerY;
+
+                chaosItems.forEach((item, index) => {
+                    const speed = (index + 1) * 10;
+                    item.style.transform = `translate(${pX * speed}px, ${pY * speed}px)`;
+                });
+            });
+
+            chaosContainer.addEventListener('mouseleave', () => {
+                chaosItems.forEach(item => item.style.transform = '');
+            });
+        }
+    });
+    </script>
+</body>
+</html>
