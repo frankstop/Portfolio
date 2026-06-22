@@ -12,261 +12,272 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Projects | Frank Valdez Portfolio">
   <meta name="twitter:description" content="Software tools, data pipelines, public dashboards, workflow apps, and developer tooling projects by Frank Valdez.">
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-    html { scroll-behavior: smooth; }
-  </style>
+
+<meta charset="utf-8" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  html { scroll-behavior: smooth; }
+</style>
+
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSVR6Y389R"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+
     gtag('config', 'G-RSVR6Y389R');
   </script>
 </head>
-<body class="bg-slate-950 text-slate-100">
-  <nav class="fixed top-0 left-0 w-full bg-slate-950/90 backdrop-blur-md border-b border-white/10 z-50">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
-      <a href="index.html" class="text-xl font-bold text-white">Frank Valdez</a>
-      <button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-label="Open navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-      <div id="menu-links" class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
-        <a href="about.html" class="hover:text-white">About</a>
-        <a href="skills.html" class="hover:text-white">Skills</a>
-        <a href="projects.html" class="text-white">Projects</a>
-        <a href="experience.html" class="hover:text-white">Experience</a>
-        <a href="education.html" class="hover:text-white">Education</a>
-        <a href="contact.html" class="hover:text-white">Contact</a>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- NAVIGATION -->
+<nav class="fixed w-full bg-white/90 backdrop-blur shadow z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+    <a href="index.html" class="text-xl font-bold text-blue-600">Frank Valdez</a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6">
+      <a href="about.html" class="hover:text-blue-600">About</a>
+      <a href="skills.html" class="hover:text-blue-600">Skills</a>
+      <a href="projects.html" class="hover:text-blue-600">Projects</a>
+      <a href="experience.html" class="hover:text-blue-600">Experience</a>
+      <a href="education.html" class="hover:text-blue-600">Education</a>
+      <a href="contact.html" class="hover:text-blue-600">Contact</a>
+    </div>
+
+    <!-- Mobile Button -->
+    <button id="menu-btn" class="md:hidden text-blue-600 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+           viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-inner">
+    <div class="flex flex-col space-y-2 px-6 py-4">
+      <a href="about.html" class="hover:text-blue-600">About</a>
+      <a href="skills.html" class="hover:text-blue-600">Skills</a>
+      <a href="projects.html" class="hover:text-blue-600">Projects</a>
+      <a href="experience.html" class="hover:text-blue-600">Experience</a>
+      <a href="education.html" class="hover:text-blue-600">Education</a>
+      <a href="contact.html" class="hover:text-blue-600">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="pt-24 pb-16 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="mb-10">
+      <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">Projects</p>
+      <h2 class="mt-2 text-3xl font-bold text-gray-900">Self-directed software, data, and workflow tooling</h2>
+      <div class="mt-5 space-y-4 text-gray-700 leading-relaxed">
+        <p>
+          The professional experience above explains my operations and support background. The project work explains the technical direction I have been moving toward: software tools that reduce manual work, make data easier to inspect, and publish useful information through simple deployed systems.
+        </p>
+        <p>
+          This work matters because it shows that I do not only support systems after they exist. I also build tools when I see a repeated workflow that can be made clearer, easier to track, or easier to publish.
+        </p>
       </div>
     </div>
-    <div id="menu-mobile" class="hidden md:hidden bg-slate-950 border-t border-white/10">
-      <div class="flex flex-col px-6 py-4 space-y-3 text-slate-200">
-        <a href="about.html" class="hover:text-white">About</a>
-        <a href="skills.html" class="hover:text-white">Skills</a>
-        <a href="projects.html" class="text-white">Projects</a>
-        <a href="experience.html" class="hover:text-white">Experience</a>
-        <a href="education.html" class="hover:text-white">Education</a>
-        <a href="contact.html" class="hover:text-white">Contact</a>
-      </div>
+
+    <div class="mb-10 rounded-lg border border-blue-100 bg-white p-6 shadow-sm">
+      <h3 class="text-xl font-semibold text-gray-900">Project Summary</h3>
+      <ul class="mt-4 grid gap-3 text-gray-700 md:grid-cols-2">
+        <li class="flex gap-2"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span><span>Scheduled data workflows that collect public source data and publish static dashboards.</span></li>
+        <li class="flex gap-2"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span><span>Browser-first workflow apps with search, saved state, tracking, and source transparency.</span></li>
+        <li class="flex gap-2"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span><span>API-backed analysis pipelines with reconciliation checks, longitudinal tracking, and reporting.</span></li>
+        <li class="flex gap-2"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span><span>Developer tooling that prepares compact source context for AI-assisted code review.</span></li>
+      </ul>
     </div>
-  </nav>
 
-  <main>
-    <section class="pt-32 pb-16 border-b border-white/10 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.28),_transparent_34%),linear-gradient(135deg,_#020617_0%,_#0f172a_52%,_#111827_100%)]">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="max-w-4xl">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">Self-Directed Software, Data, and Workflow Tooling</h1>
-          <p class="mt-6 text-lg sm:text-xl leading-8 text-slate-300">
-            The professional experience above explains my operations and support background. The project work explains the technical direction I have been moving toward: software tools that reduce manual work, make data easier to inspect, and publish useful information through simple deployed systems.
-          </p>
-          <p class="mt-5 text-lg leading-8 text-slate-300">
-            This work matters because it shows that I do not only support systems after they exist. I also build tools when I see a repeated workflow that can be made clearer, easier to track, or easier to publish.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-14 bg-slate-100 text-slate-950">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="grid gap-5 md:grid-cols-3">
-          <div class="border border-slate-300 bg-white p-5 rounded-lg">
-            <p class="text-sm font-semibold text-sky-700">Data workflows</p>
-            <p class="mt-2 text-slate-700">Official sources, scheduled refreshes, reconciliation checks, and public reports.</p>
+    <div class="space-y-8">
+      <article class="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900">JobBoard</h3>
+            <p class="mt-1 text-sm text-blue-700 font-medium">What this proves: I can build a scheduled data workflow that collects public source data, turns it into a usable interface, and keeps it available through static hosting.</p>
           </div>
-          <div class="border border-slate-300 bg-white p-5 rounded-lg">
-            <p class="text-sm font-semibold text-sky-700">Workflow tools</p>
-            <p class="mt-2 text-slate-700">Browser-first interfaces, local state, search, tracking, and static publishing.</p>
-          </div>
-          <div class="border border-slate-300 bg-white p-5 rounded-lg">
-            <p class="text-sm font-semibold text-sky-700">Developer support</p>
-            <p class="mt-2 text-slate-700">Parser output, diagnostics, source understanding, and AI context preparation.</p>
+          <div class="flex shrink-0 gap-3 text-sm font-medium sm:justify-end">
+            <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/JobBoard/" target="_blank" rel="noopener">Live Site</a>
+            <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/JobBoard" target="_blank" rel="noopener">Repo</a>
           </div>
         </div>
-      </div>
-    </section>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          JobBoard is a Python job board that refreshes from official company career feeds and publishes a searchable GitHub Pages dashboard.
+        </p>
+        <ul class="mt-4 grid gap-2 text-gray-700 md:grid-cols-2">
+          <li>- Official employer feed collection.</li>
+          <li>- Scheduled refresh patterns.</li>
+          <li>- GitHub Actions publishing.</li>
+          <li>- Searchable GitHub Pages output.</li>
+          <li>- Source quality checks and public-facing dashboard design.</li>
+          <li>- Practical use case: finding software, data, and tech-adjacent roles without relying only on third-party job boards.</li>
+        </ul>
+      </article>
 
-    <section class="py-16 bg-white text-slate-950">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="grid gap-7">
-          <article class="project-card">
-            <div>
-              <h2>JobBoard</h2>
-              <p>JobBoard is a Python job board that refreshes from official company career feeds and publishes a searchable GitHub Pages dashboard.</p>
-              <p><strong>What this project proves:</strong> I can build a scheduled data workflow that collects public source data, turns it into a usable interface, and keeps it available through static hosting.</p>
-            </div>
-            <ul>
-              <li>Official employer feed collection.</li>
-              <li>Scheduled refresh patterns.</li>
-              <li>GitHub Actions publishing.</li>
-              <li>Searchable GitHub Pages output.</li>
-              <li>Source quality checks and public-facing dashboard design.</li>
-              <li>Practical use case: finding software, data, and tech-adjacent roles without relying only on third-party job boards.</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div>
-              <h2>RemoteJob</h2>
-              <p>RemoteJob is a TypeScript remote-job tracker with a public data pipeline and local browser state.</p>
-              <p><strong>What this project proves:</strong> I can build a browser-first workflow app around a real user process.</p>
-            </div>
-            <ul>
-              <li>TypeScript and Vite application work.</li>
-              <li>Public job-source ingestion.</li>
-              <li>Local browser state for saved roles and application tracking.</li>
-              <li>Source policy design.</li>
-              <li>Static deployment through GitHub Pages.</li>
-              <li>Product thinking around job search workflows, status tracking, and source transparency.</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div>
-              <h2>KingKullenResearch</h2>
-              <p>KingKullenResearch is a weekly grocery-pricing pipeline using Freshop API data, longitudinal tracking, reconciliation checks, predictive modeling, and GitHub Pages reporting.</p>
-              <p><strong>What this project proves:</strong> I can work with messy retail data and turn it into a repeatable analysis and reporting system.</p>
-            </div>
-            <ul>
-              <li>API-backed data collection.</li>
-              <li>Weekly refresh logic.</li>
-              <li>Price tracking across time.</li>
-              <li>Reconciliation checks.</li>
-              <li>Python data analysis with pandas, NumPy, and related tools.</li>
-              <li>Predictive modeling practice.</li>
-              <li>Public reporting through GitHub Pages.</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div>
-              <h2>Civil Service Watch</h2>
-              <p>Civil Service Watch is a scheduled Python monitor for public-sector exam and hiring pages with structured extraction, change detection, source-health reporting, GitHub Actions refreshes, and a public dashboard.</p>
-              <p><strong>What this project proves:</strong> I can monitor changing public information sources, detect changes, report source health, and publish a useful dashboard.</p>
-            </div>
-            <ul>
-              <li>Scheduled monitors.</li>
-              <li>Structured extraction.</li>
-              <li>Change detection.</li>
-              <li>Source-health reporting.</li>
-              <li>GitHub Actions automation.</li>
-              <li>Public dashboard delivery.</li>
-              <li>Public-sector interest and comfort working with government-style source pages.</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div>
-              <h2>f-ast</h2>
-              <p>f-ast is a TypeScript parser toolkit that converts legacy Java 6-8 and C# 5-7 codebases into compact structure, symbol, flow, and diagnostic output for AI-assisted code analysis.</p>
-              <p><strong>What this project proves:</strong> I can build developer tooling for source understanding and AI-assisted workflows without pretending it is a production LLM platform.</p>
-            </div>
-            <ul>
-              <li>TypeScript tooling.</li>
-              <li>Parser and code-structure work.</li>
-              <li>Legacy Java and C# source analysis.</li>
-              <li>Compact output design for agent-assisted review.</li>
-              <li>Diagnostic and flow-oriented thinking.</li>
-              <li>Practical AI workflow support through better context preparation.</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div>
-              <h2>Gala-LI/Circular</h2>
-              <p>Gala-LI/Circular is a production circular site with date-based logic that automatically serves the active weekly PDF through GitHub Pages.</p>
-              <p><strong>What this project proves:</strong> I can connect a real business publishing need to a simple deployed web tool.</p>
-            </div>
-            <ul>
-              <li>GitHub Pages deployment.</li>
-              <li>Date-based logic.</li>
-              <li>Weekly circular publishing support.</li>
-              <li>Static site delivery for a business workflow.</li>
-              <li>Operational thinking around keeping the correct customer-facing asset available.</li>
-            </ul>
-          </article>
-
-          <article class="project-card">
-            <div>
-              <h2>Othello AI / FastAPI Capstone</h2>
-              <p>My SUNY Old Westbury capstone work included an Othello AI FastAPI project. This connects my computer science coursework to backend API design, game logic, and algorithmic thinking.</p>
-              <p><strong>What this project proves:</strong> I can apply coursework to a working software system with defined rules, endpoints, and logic.</p>
-            </div>
-            <ul>
-              <li>FastAPI application work.</li>
-              <li>Game logic and algorithmic thinking.</li>
-              <li>Computer science capstone delivery.</li>
-              <li>Practical connection between academic work and buildable software.</li>
-            </ul>
-          </article>
+      <article class="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900">RemoteJob</h3>
+            <p class="mt-1 text-sm text-blue-700 font-medium">What this proves: I can build a browser-first workflow app around a real user process.</p>
+          </div>
+          <div class="flex shrink-0 gap-3 text-sm font-medium sm:justify-end">
+            <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/RemoteJob/" target="_blank" rel="noopener">Live Site</a>
+            <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/RemoteJob" target="_blank" rel="noopener">Repo</a>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          RemoteJob is a TypeScript remote-job tracker with a public data pipeline and local browser state.
+        </p>
+        <ul class="mt-4 grid gap-2 text-gray-700 md:grid-cols-2">
+          <li>- TypeScript and Vite application work.</li>
+          <li>- Public job-source ingestion.</li>
+          <li>- Local browser state for saved roles and application tracking.</li>
+          <li>- Source policy design.</li>
+          <li>- Static deployment through GitHub Pages.</li>
+          <li>- Product thinking around job search workflows, status tracking, and source transparency.</li>
+        </ul>
+      </article>
 
-  <footer class="bg-slate-950 border-t border-white/10 py-5 text-center text-sm text-slate-400">
-    © 2026 Frank Valdez. All rights reserved.
-  </footer>
+      <article class="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900">KingKullenResearch</h3>
+            <p class="mt-1 text-sm text-blue-700 font-medium">What this proves: I can work with messy retail data and turn it into a repeatable analysis and reporting system.</p>
+          </div>
+          <div class="flex shrink-0 gap-3 text-sm font-medium sm:justify-end">
+            <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/KingKullenResearch/" target="_blank" rel="noopener">Live Site</a>
+            <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/KingKullenResearch" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          KingKullenResearch is a weekly grocery-pricing pipeline using Freshop API data, longitudinal tracking, reconciliation checks, predictive modeling, and GitHub Pages reporting.
+        </p>
+        <ul class="mt-4 grid gap-2 text-gray-700 md:grid-cols-2">
+          <li>- API-backed data collection.</li>
+          <li>- Weekly refresh logic.</li>
+          <li>- Price tracking across time.</li>
+          <li>- Reconciliation checks.</li>
+          <li>- Python data analysis with pandas, NumPy, and related tools.</li>
+          <li>- Predictive modeling practice.</li>
+          <li>- Public reporting through GitHub Pages.</li>
+        </ul>
+      </article>
 
-  <style>
-    .project-card {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
-      gap: 2rem;
-      padding: 2rem;
-      border: 1px solid rgb(203 213 225);
-      border-radius: 0.5rem;
-      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
-    }
-    .project-card h2 {
-      font-size: clamp(1.55rem, 2.2vw, 2.2rem);
-      line-height: 1.12;
-      font-weight: 800;
-      color: #0f172a;
-      margin-bottom: 0.9rem;
-    }
-    .project-card p {
-      color: #334155;
-      line-height: 1.75;
-      margin-top: 0.85rem;
-    }
-    .project-card strong {
-      color: #0f172a;
-      font-weight: 700;
-    }
-    .project-card ul {
-      display: grid;
-      gap: 0.75rem;
-      align-content: start;
-      padding-left: 1.2rem;
-      color: #475569;
-      line-height: 1.55;
-    }
-    .project-card li::marker {
-      color: #0284c7;
-    }
-    @media (max-width: 760px) {
-      .project-card {
-        grid-template-columns: 1fr;
-        padding: 1.25rem;
-        gap: 1.25rem;
-      }
-    }
-  </style>
+      <article class="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900">Civil Service Watch</h3>
+            <p class="mt-1 text-sm text-blue-700 font-medium">What this proves: I can monitor changing public information sources, detect changes, report source health, and publish a useful dashboard.</p>
+          </div>
+          <div class="flex shrink-0 gap-3 text-sm font-medium sm:justify-end">
+            <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/civil-service-watch/" target="_blank" rel="noopener">Live Site</a>
+            <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/civil-service-watch" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          Civil Service Watch is a scheduled Python monitor for public-sector exam and hiring pages with structured extraction, change detection, source-health reporting, GitHub Actions refreshes, and a public dashboard.
+        </p>
+        <ul class="mt-4 grid gap-2 text-gray-700 md:grid-cols-2">
+          <li>- Scheduled monitors.</li>
+          <li>- Structured extraction.</li>
+          <li>- Change detection.</li>
+          <li>- Source-health reporting.</li>
+          <li>- GitHub Actions automation.</li>
+          <li>- Public dashboard delivery.</li>
+          <li>- Public-sector interest and comfort working with government-style source pages.</li>
+        </ul>
+      </article>
 
-  <script>
-    const btn = document.getElementById('menu-toggle');
-    const mobile = document.getElementById('menu-mobile');
-    btn.addEventListener('click', () => mobile.classList.toggle('hidden'));
-  </script>
+      <article class="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900">f-ast</h3>
+            <p class="mt-1 text-sm text-blue-700 font-medium">What this proves: I can build developer tooling for source understanding and AI-assisted workflows without pretending it is a production LLM platform.</p>
+          </div>
+          <div class="flex shrink-0 gap-3 text-sm font-medium sm:justify-end">
+            <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/f-ast" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          f-ast is a TypeScript parser toolkit that converts legacy Java 6-8 and C# 5-7 codebases into compact structure, symbol, flow, and diagnostic output for AI-assisted code analysis.
+        </p>
+        <ul class="mt-4 grid gap-2 text-gray-700 md:grid-cols-2">
+          <li>- TypeScript tooling.</li>
+          <li>- Parser and code-structure work.</li>
+          <li>- Legacy Java and C# source analysis.</li>
+          <li>- Compact output design for agent-assisted review.</li>
+          <li>- Diagnostic and flow-oriented thinking.</li>
+          <li>- Practical AI workflow support through better context preparation.</li>
+        </ul>
+      </article>
+
+      <article class="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900">Gala-LI/Circular</h3>
+            <p class="mt-1 text-sm text-blue-700 font-medium">What this proves: I can connect a real business publishing need to a simple deployed web tool.</p>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          Gala-LI/Circular is a production circular site with date-based logic that automatically serves the active weekly PDF through GitHub Pages.
+        </p>
+        <ul class="mt-4 grid gap-2 text-gray-700 md:grid-cols-2">
+          <li>- GitHub Pages deployment.</li>
+          <li>- Date-based logic.</li>
+          <li>- Weekly circular publishing support.</li>
+          <li>- Static site delivery for a business workflow.</li>
+          <li>- Operational thinking around keeping the correct customer-facing asset available.</li>
+        </ul>
+      </article>
+
+      <article class="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h3 class="text-xl font-semibold text-gray-900">Othello AI / FastAPI Capstone</h3>
+            <p class="mt-1 text-sm text-blue-700 font-medium">What this proves: I can apply coursework to a working software system with defined rules, endpoints, and logic.</p>
+          </div>
+          <div class="flex shrink-0 gap-3 text-sm font-medium sm:justify-end">
+            <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/OthelloAI/" target="_blank" rel="noopener">Live Site</a>
+            <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/OthelloAI" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          My SUNY Old Westbury capstone work included an Othello AI FastAPI project. This connects my computer science coursework to backend API design, game logic, and algorithmic thinking.
+        </p>
+        <ul class="mt-4 grid gap-2 text-gray-700 md:grid-cols-2">
+          <li>- FastAPI application work.</li>
+          <li>- Game logic and algorithmic thinking.</li>
+          <li>- Computer science capstone delivery.</li>
+          <li>- Practical connection between academic work and buildable software.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-gray-100 py-4 text-center text-sm text-gray-500">
+  © 2025 Frank Valdez. All rights reserved.
+</footer>
+
 </body>
 </html>
