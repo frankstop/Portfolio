@@ -1,7 +1,7 @@
 # Frank Valdez | Personal Portfolio
 
 
-## 🚀 Live Site
+# 🚀 Live Site
 **[View the Live Portfolio](https://frankstop.github.io/Portfolio/)** 
 
 Welcome to the repository for my personal portfolio.
