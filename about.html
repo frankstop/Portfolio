@@ -90,14 +90,57 @@
         <p class="text-lg mb-6">
           I bring a careful, direct, and human style to technical work. I like clarity, I care about people using the thing, and I’m comfortable being the person who asks what is actually true before the team keeps moving. Outside of work, I stay close to creative projects, surfing, skateboarding, and design.
         </p>
-        <a href="projects.html" class="inline-block bg-blue-600 text-white font-semibold px-5 py-3 rounded-lg hover:bg-blue-700 transition">View Projects</a>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="projects.html" class="inline-block text-center bg-blue-600 text-white font-semibold px-5 py-3 rounded-lg hover:bg-blue-700 transition">View Projects</a>
+          <button type="button" id="resume-modal-open" class="inline-block text-center bg-white text-blue-700 border border-blue-200 font-semibold px-5 py-3 rounded-lg hover:bg-blue-50 transition">View Resume</button>
+        </div>
       </div>
     </section>
   </main>
 
+  <div id="resume-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-gray-900/70 px-4 py-6" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+    <div class="flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl">
+      <div class="flex items-center justify-between border-b px-5 py-4">
+        <h3 id="resume-modal-title" class="text-lg font-semibold text-gray-900">Frank Valdez Resume</h3>
+        <button type="button" id="resume-modal-close" class="rounded-lg px-3 py-2 text-sm font-semibold text-gray-600 hover:bg-gray-100 hover:text-gray-900" aria-label="Close resume preview">Close</button>
+      </div>
+      <iframe src="https://frankstop.github.io/Resume/" title="Frank Valdez resume" class="h-[78vh] w-full bg-white"></iframe>
+    </div>
+  </div>
+
   <footer class="bg-white/50 py-4 text-center text-sm text-gray-600 border-t">
     © 2025 Frank Valdez. All rights reserved.
   </footer>
+
+  <script>
+    const resumeModal = document.getElementById('resume-modal');
+    const resumeOpen = document.getElementById('resume-modal-open');
+    const resumeClose = document.getElementById('resume-modal-close');
+
+    function closeResumeModal() {
+      resumeModal.classList.add('hidden');
+      resumeModal.classList.remove('flex');
+      resumeOpen.focus();
+    }
+
+    resumeOpen.addEventListener('click', () => {
+      resumeModal.classList.remove('hidden');
+      resumeModal.classList.add('flex');
+      resumeClose.focus();
+    });
+
+    resumeClose.addEventListener('click', closeResumeModal);
+    resumeModal.addEventListener('click', (event) => {
+      if (event.target === resumeModal) {
+        closeResumeModal();
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !resumeModal.classList.contains('hidden')) {
+        closeResumeModal();
+      }
+    });
+  </script>
 
 </body>
 </html>
