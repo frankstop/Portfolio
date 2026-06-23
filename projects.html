@@ -2,282 +2,217 @@
 <html lang="en">
 <head>
   <title>Projects | Frank Valdez Portfolio</title>
-  <meta name="description" content="Self-directed software, data, and workflow tooling projects by Frank Valdez.">
+  <meta name="description" content="Selected project work by Frank Valdez across job boards, data pipelines, retail circular automation, and an Othello AI FastAPI capstone.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://frankstop.github.io/Portfolio/projects.html">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Projects | Frank Valdez Portfolio">
-  <meta property="og:description" content="Software tools, data pipelines, public dashboards, workflow apps, and developer tooling projects by Frank Valdez.">
+  <meta property="og:description" content="Selected project work by Frank Valdez across job boards, data pipelines, retail circular automation, and an Othello AI FastAPI capstone.">
   <meta property="og:url" content="https://frankstop.github.io/Portfolio/projects.html">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Projects | Frank Valdez Portfolio">
-  <meta name="twitter:description" content="Software tools, data pipelines, public dashboards, workflow apps, and developer tooling projects by Frank Valdez.">
-
-<meta charset="utf-8" />
-<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect" />
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<style>
-  body { font-family: 'Inter', sans-serif; }
-  html { scroll-behavior: smooth; }
-</style>
-
-  <!-- Google tag (gtag.js) -->
+  <meta name="twitter:description" content="Selected project work by Frank Valdez across job boards, data pipelines, retail circular automation, and an Othello AI FastAPI capstone.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    html { scroll-behavior: smooth; }
+    .projects-hero-title {
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      -webkit-text-stroke: 3px #000;
+      text-shadow:
+        4px 4px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000;
+    }
+  </style>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSVR6Y389R"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-RSVR6Y389R');
   </script>
 </head>
-
 <body class="bg-gray-50 text-gray-800">
-
-<!-- NAVIGATION -->
-<nav class="fixed w-full bg-white/90 backdrop-blur shadow z-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-    <a href="index.html" class="text-xl font-bold text-blue-600">Frank Valdez</a>
-
-    <!-- Desktop Menu -->
-    <div class="hidden md:flex space-x-6">
-      <a href="about.html" class="hover:text-blue-600">About</a>
-      <a href="skills.html" class="hover:text-blue-600">Skills</a>
-      <a href="projects.html" class="hover:text-blue-600">Projects</a>
-      <a href="experience.html" class="hover:text-blue-600">Experience</a>
-      <a href="education.html" class="hover:text-blue-600">Education</a>
-      <a href="contact.html" class="hover:text-blue-600">Contact</a>
-    </div>
-
-    <!-- Mobile Button -->
-    <button id="menu-btn" class="md:hidden text-blue-600 focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-           viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round"
-              stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-inner">
-    <div class="flex flex-col space-y-2 px-6 py-4">
-      <a href="about.html" class="hover:text-blue-600">About</a>
-      <a href="skills.html" class="hover:text-blue-600">Skills</a>
-      <a href="projects.html" class="hover:text-blue-600">Projects</a>
-      <a href="experience.html" class="hover:text-blue-600">Experience</a>
-      <a href="education.html" class="hover:text-blue-600">Education</a>
-      <a href="contact.html" class="hover:text-blue-600">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<script>
-  const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-</script>
-
-<!-- PROJECTS SECTION -->
-<section id="projects" class="pt-24 pb-16 bg-gray-50">
-  <div class="max-w-5xl mx-auto px-4">
-    <div class="mb-10">
-      <p class="text-sm font-semibold uppercase tracking-wide text-blue-600">Projects</p>
-      <h2 class="mt-2 text-3xl font-bold text-gray-900">Self-directed software, data, and workflow tooling</h2>
-      <div class="mt-5 space-y-4 text-gray-700 leading-relaxed">
-        <p>
-          The professional experience above explains my operations and support background. The project work explains the technical direction I have been moving toward: software tools that reduce manual work, make data easier to inspect, and publish useful information through simple deployed systems.
-        </p>
-        <p>
-          This work matters because it shows that I do not only support systems after they exist. I also build tools when I see a repeated workflow that can be made clearer, easier to track, or easier to publish.
-        </p>
+  <nav class="fixed top-0 left-0 z-50 w-full bg-white/90 shadow backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+      <a href="index.html" class="text-xl font-bold text-blue-600">Frank Valdez</a>
+      <button id="menu-toggle" class="text-blue-600 focus:outline-none md:hidden" aria-label="Toggle navigation">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <div id="menu-links" class="hidden space-x-6 text-gray-700 md:flex">
+        <a href="about.html" class="hover:text-blue-600">About</a>
+        <a href="skills.html" class="hover:text-blue-600">Skills</a>
+        <a href="projects.html" class="hover:text-blue-600">Projects</a>
+        <a href="experience.html" class="hover:text-blue-600">Experience</a>
+        <a href="education.html" class="hover:text-blue-600">Education</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
       </div>
     </div>
-
-    <div class="mb-10 rounded-lg border border-blue-100 bg-white p-6 shadow-sm">
-      <h3 class="text-xl font-semibold text-gray-900">Project Summary</h3>
-      <ul class="mt-4 grid gap-3 text-gray-700 md:grid-cols-2">
-        <li class="flex gap-2"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span><span>Scheduled data workflows that collect public source data and publish static dashboards.</span></li>
-        <li class="flex gap-2"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span><span>Browser-first workflow apps with search, saved state, tracking, and source transparency.</span></li>
-        <li class="flex gap-2"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span><span>API-backed analysis pipelines with reconciliation checks, longitudinal tracking, and reporting.</span></li>
-        <li class="flex gap-2"><span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-blue-600"></span><span>Developer tooling that prepares compact source context for AI-assisted code review.</span></li>
-      </ul>
+    <div id="menu-mobile" class="hidden border-t bg-white shadow-inner md:hidden">
+      <div class="flex flex-col space-y-2 px-6 py-4">
+        <a href="about.html" class="hover:text-blue-600">About</a>
+        <a href="skills.html" class="hover:text-blue-600">Skills</a>
+        <a href="projects.html" class="hover:text-blue-600">Projects</a>
+        <a href="experience.html" class="hover:text-blue-600">Experience</a>
+        <a href="education.html" class="hover:text-blue-600">Education</a>
+        <a href="contact.html" class="hover:text-blue-600">Contact</a>
+      </div>
     </div>
+  </nav>
 
-    <div class="space-y-8">
-      <article class="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
-        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <h3 class="text-xl font-semibold text-gray-900">JobBoard</h3>
-            <p class="mt-1 text-sm text-blue-700 font-medium">What this proves: I can build a scheduled data workflow that collects public source data, turns it into a usable interface, and keeps it available through static hosting.</p>
-          </div>
-          <div class="flex shrink-0 gap-3 text-sm font-medium sm:justify-end">
-            <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/JobBoard/" target="_blank" rel="noopener">Live Site</a>
-            <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/JobBoard" target="_blank" rel="noopener">Repo</a>
-          </div>
-        </div>
-        <p class="mt-4 text-gray-700 leading-relaxed">
-          JobBoard is a Python job board that refreshes from official company career feeds and publishes a searchable GitHub Pages dashboard.
-        </p>
-        <ul class="mt-4 grid gap-2 text-gray-700 md:grid-cols-2">
-          <li>- Official employer feed collection.</li>
-          <li>- Scheduled refresh patterns.</li>
-          <li>- GitHub Actions publishing.</li>
-          <li>- Searchable GitHub Pages output.</li>
-          <li>- Source quality checks and public-facing dashboard design.</li>
-          <li>- Practical use case: finding software, data, and tech-adjacent roles without relying only on third-party job boards.</li>
-        </ul>
-      </article>
+  <main class="pt-24">
+    <section class="relative flex min-h-[46vh] items-center justify-center overflow-hidden bg-black">
+      <iframe class="absolute inset-0 h-full w-full border-0 opacity-75" src="https://frankstop.github.io/MatrixRain/" title="MatrixRain background" loading="lazy" referrerpolicy="no-referrer" aria-hidden="true" tabindex="-1"></iframe>
+      <div class="absolute inset-0 bg-black/20"></div>
+      <div class="relative z-10 px-4 py-24 text-center">
+        <h1 class="projects-hero-title text-7xl uppercase leading-none tracking-normal text-white sm:text-8xl md:text-9xl">Projects</h1>
+      </div>
+    </section>
 
-      <article class="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
-        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <h3 class="text-xl font-semibold text-gray-900">RemoteJob</h3>
-            <p class="mt-1 text-sm text-blue-700 font-medium">What this proves: I can build a browser-first workflow app around a real user process.</p>
+    <section id="projects" class="bg-gray-50 py-16">
+      <div class="mx-auto max-w-6xl px-4">
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+          <h3 class="text-xl font-semibold text-gray-900">JobBoard</h3>
+          <ul class="mt-4 list-disc pl-5 text-gray-700">
+            <li>Company-first job board that refreshes from official career feeds and publishes a searchable GitHub Pages dashboard.</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap items-center gap-4">
+            <a href="https://frankstop.github.io/JobBoard/" target="_blank" rel="noreferrer" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
+            <a href="https://github.com/frankstop/JobBoard" target="_blank" rel="noreferrer" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
+            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/JobBoard/" data-preview-title="JobBoard" data-preview-cta="Open live site">Preview project</button>
           </div>
-          <div class="flex shrink-0 gap-3 text-sm font-medium sm:justify-end">
-            <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/RemoteJob/" target="_blank" rel="noopener">Live Site</a>
-            <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/RemoteJob" target="_blank" rel="noopener">Repo</a>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+          <h3 class="text-xl font-semibold text-gray-900">RemoteJob</h3>
+          <ul class="mt-4 list-disc pl-5 text-gray-700">
+            <li>Static remote-job tracker with a public data pipeline, searchable listings, and local browser state.</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap items-center gap-4">
+            <a href="https://frankstop.github.io/RemoteJob/" target="_blank" rel="noreferrer" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
+            <a href="https://github.com/frankstop/RemoteJob" target="_blank" rel="noreferrer" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
+            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/RemoteJob/" data-preview-title="RemoteJob" data-preview-cta="Open live site">Preview project</button>
           </div>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+          <h3 class="text-xl font-semibold text-gray-900">KingKullenResearch</h3>
+          <ul class="mt-4 list-disc pl-5 text-gray-700">
+            <li>Weekly grocery pricing pipeline using collected retail data for longitudinal analysis and modeling.</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap items-center gap-4">
+            <a href="https://frankstop.github.io/KingKullenResearch/" target="_blank" rel="noreferrer" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
+            <a href="https://github.com/frankstop/KingKullenResearch" target="_blank" rel="noreferrer" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
+            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/KingKullenResearch/" data-preview-title="KingKullenResearch" data-preview-cta="Open live site">Preview project</button>
+          </div>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+          <h3 class="text-xl font-semibold text-gray-900">CivilServiceWatch</h3>
+          <ul class="mt-4 list-disc pl-5 text-gray-700">
+            <li>Daily monitor for civil service exams and public-sector hiring sources with source-health reporting.</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap items-center gap-4">
+            <a href="https://frankstop.github.io/civil-service-watch/" target="_blank" rel="noreferrer" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
+            <a href="https://github.com/frankstop/civil-service-watch" target="_blank" rel="noreferrer" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
+            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/civil-service-watch/" data-preview-title="CivilServiceWatch" data-preview-cta="Open live site">Preview project</button>
+          </div>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+          <h3 class="text-xl font-semibold text-gray-900">Gala-LI/Circular</h3>
+          <ul class="mt-4 list-disc pl-5 text-gray-700">
+            <li>Gala Foods circular page with date-based logic that selects the current weekly PDF automatically.</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap items-center gap-4">
+            <a href="https://gala-li.github.io/Circular/" target="_blank" rel="noreferrer" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
+            <a href="https://github.com/gala-li/Circular" target="_blank" rel="noreferrer" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
+            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://gala-li.github.io/Circular/" data-preview-title="Gala-LI/Circular" data-preview-cta="Open live site">Preview project</button>
+          </div>
+        </article>
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+          <h3 class="text-xl font-semibold text-gray-900">Othello AI / FastAPI Capstone</h3>
+          <ul class="mt-4 list-disc pl-5 text-gray-700">
+            <li>Othello AI capstone with a FastAPI backend and multiple game strategies behind a playable web interface.</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap items-center gap-4">
+            <a href="https://frankstop.github.io/OthelloAI/" target="_blank" rel="noreferrer" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
+            <a href="https://github.com/frankstop/OthelloAISource" target="_blank" rel="noreferrer" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
+            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/OthelloAI/" data-preview-title="Othello AI / FastAPI Capstone" data-preview-cta="Open live site">Preview project</button>
+          </div>
+        </article>
         </div>
-        <p class="mt-4 text-gray-700 leading-relaxed">
-          RemoteJob is a TypeScript remote-job tracker with a public data pipeline and local browser state.
-        </p>
-        <ul class="mt-4 grid gap-2 text-gray-700 md:grid-cols-2">
-          <li>- TypeScript and Vite application work.</li>
-          <li>- Public job-source ingestion.</li>
-          <li>- Local browser state for saved roles and application tracking.</li>
-          <li>- Source policy design.</li>
-          <li>- Static deployment through GitHub Pages.</li>
-          <li>- Product thinking around job search workflows, status tracking, and source transparency.</li>
-        </ul>
-      </article>
+      </div>
+    </section>
+  </main>
 
-      <article class="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
-        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <h3 class="text-xl font-semibold text-gray-900">KingKullenResearch</h3>
-            <p class="mt-1 text-sm text-blue-700 font-medium">What this proves: I can work with messy retail data and turn it into a repeatable analysis and reporting system.</p>
-          </div>
-          <div class="flex shrink-0 gap-3 text-sm font-medium sm:justify-end">
-            <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/KingKullenResearch/" target="_blank" rel="noopener">Live Site</a>
-            <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/KingKullenResearch" target="_blank" rel="noopener">Repo</a>
-          </div>
-        </div>
-        <p class="mt-4 text-gray-700 leading-relaxed">
-          KingKullenResearch is a weekly grocery-pricing pipeline using Freshop API data, longitudinal tracking, reconciliation checks, predictive modeling, and GitHub Pages reporting.
-        </p>
-        <ul class="mt-4 grid gap-2 text-gray-700 md:grid-cols-2">
-          <li>- API-backed data collection.</li>
-          <li>- Weekly refresh logic.</li>
-          <li>- Price tracking across time.</li>
-          <li>- Reconciliation checks.</li>
-          <li>- Python data analysis with pandas, NumPy, and related tools.</li>
-          <li>- Predictive modeling practice.</li>
-          <li>- Public reporting through GitHub Pages.</li>
-        </ul>
-      </article>
+  <footer class="bg-gray-100 py-4 text-center text-sm text-gray-500">
+    &copy; 2026 Frank Valdez. All rights reserved.
+  </footer>
 
-      <article class="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
-        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <h3 class="text-xl font-semibold text-gray-900">Civil Service Watch</h3>
-            <p class="mt-1 text-sm text-blue-700 font-medium">What this proves: I can monitor changing public information sources, detect changes, report source health, and publish a useful dashboard.</p>
-          </div>
-          <div class="flex shrink-0 gap-3 text-sm font-medium sm:justify-end">
-            <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/civil-service-watch/" target="_blank" rel="noopener">Live Site</a>
-            <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/civil-service-watch" target="_blank" rel="noopener">Repo</a>
-          </div>
+  <div id="preview-modal" class="fixed inset-0 z-[60] hidden bg-black/60 px-4 py-6" role="dialog" aria-modal="true" aria-labelledby="preview-title">
+    <div class="mx-auto flex h-full max-w-6xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl">
+      <div class="flex flex-col gap-4 border-b border-gray-200 p-5 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.18em] text-blue-600">Project preview</p>
+          <h2 id="preview-title" class="mt-1 text-2xl font-bold text-gray-900">Project preview</h2>
         </div>
-        <p class="mt-4 text-gray-700 leading-relaxed">
-          Civil Service Watch is a scheduled Python monitor for public-sector exam and hiring pages with structured extraction, change detection, source-health reporting, GitHub Actions refreshes, and a public dashboard.
-        </p>
-        <ul class="mt-4 grid gap-2 text-gray-700 md:grid-cols-2">
-          <li>- Scheduled monitors.</li>
-          <li>- Structured extraction.</li>
-          <li>- Change detection.</li>
-          <li>- Source-health reporting.</li>
-          <li>- GitHub Actions automation.</li>
-          <li>- Public dashboard delivery.</li>
-          <li>- Public-sector interest and comfort working with government-style source pages.</li>
-        </ul>
-      </article>
-
-      <article class="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
-        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <h3 class="text-xl font-semibold text-gray-900">f-ast</h3>
-            <p class="mt-1 text-sm text-blue-700 font-medium">What this proves: I can build developer tooling for source understanding and AI-assisted workflows without pretending it is a production LLM platform.</p>
-          </div>
-          <div class="flex shrink-0 gap-3 text-sm font-medium sm:justify-end">
-            <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/f-ast" target="_blank" rel="noopener">Repo</a>
-          </div>
+        <div class="flex flex-wrap gap-3">
+          <a id="preview-cta" href="#" target="_blank" rel="noreferrer" class="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Open live site</a>
+          <button id="preview-close" type="button" class="rounded-md border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:text-gray-950">Close</button>
         </div>
-        <p class="mt-4 text-gray-700 leading-relaxed">
-          f-ast is a TypeScript parser toolkit that converts legacy Java 6-8 and C# 5-7 codebases into compact structure, symbol, flow, and diagnostic output for AI-assisted code analysis.
-        </p>
-        <ul class="mt-4 grid gap-2 text-gray-700 md:grid-cols-2">
-          <li>- TypeScript tooling.</li>
-          <li>- Parser and code-structure work.</li>
-          <li>- Legacy Java and C# source analysis.</li>
-          <li>- Compact output design for agent-assisted review.</li>
-          <li>- Diagnostic and flow-oriented thinking.</li>
-          <li>- Practical AI workflow support through better context preparation.</li>
-        </ul>
-      </article>
-
-      <article class="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
-        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <h3 class="text-xl font-semibold text-gray-900">Gala-LI/Circular</h3>
-            <p class="mt-1 text-sm text-blue-700 font-medium">What this proves: I can connect a real business publishing need to a simple deployed web tool.</p>
-          </div>
-        </div>
-        <p class="mt-4 text-gray-700 leading-relaxed">
-          Gala-LI/Circular is a production circular site with date-based logic that automatically serves the active weekly PDF through GitHub Pages.
-        </p>
-        <ul class="mt-4 grid gap-2 text-gray-700 md:grid-cols-2">
-          <li>- GitHub Pages deployment.</li>
-          <li>- Date-based logic.</li>
-          <li>- Weekly circular publishing support.</li>
-          <li>- Static site delivery for a business workflow.</li>
-          <li>- Operational thinking around keeping the correct customer-facing asset available.</li>
-        </ul>
-      </article>
-
-      <article class="bg-white rounded-lg border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
-        <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <h3 class="text-xl font-semibold text-gray-900">Othello AI / FastAPI Capstone</h3>
-            <p class="mt-1 text-sm text-blue-700 font-medium">What this proves: I can apply coursework to a working software system with defined rules, endpoints, and logic.</p>
-          </div>
-          <div class="flex shrink-0 gap-3 text-sm font-medium sm:justify-end">
-            <a class="text-blue-700 hover:underline" href="https://frankstop.github.io/OthelloAI/" target="_blank" rel="noopener">Live Site</a>
-            <a class="text-blue-700 hover:underline" href="https://github.com/frankstop/OthelloAI" target="_blank" rel="noopener">Repo</a>
-          </div>
-        </div>
-        <p class="mt-4 text-gray-700 leading-relaxed">
-          My SUNY Old Westbury capstone work included an Othello AI FastAPI project. This connects my computer science coursework to backend API design, game logic, and algorithmic thinking.
-        </p>
-        <ul class="mt-4 grid gap-2 text-gray-700 md:grid-cols-2">
-          <li>- FastAPI application work.</li>
-          <li>- Game logic and algorithmic thinking.</li>
-          <li>- Computer science capstone delivery.</li>
-          <li>- Practical connection between academic work and buildable software.</li>
-        </ul>
-      </article>
+      </div>
+      <div class="relative min-h-[60vh] flex-1 bg-gray-100">
+        <p id="preview-loading" class="absolute left-5 top-5 text-sm font-medium text-gray-600">Loading preview...</p>
+        <iframe id="preview-frame" class="h-full min-h-[60vh] w-full border-0 bg-white" title="Project preview" loading="lazy" referrerpolicy="no-referrer"></iframe>
+      </div>
     </div>
   </div>
-</section>
 
-<footer class="bg-gray-100 py-4 text-center text-sm text-gray-500">
-  © 2025 Frank Valdez. All rights reserved.
-</footer>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('menu-mobile');
+    menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
+    const previewModal = document.getElementById('preview-modal');
+    const previewTitle = document.getElementById('preview-title');
+    const previewFrame = document.getElementById('preview-frame');
+    const previewCta = document.getElementById('preview-cta');
+    const previewClose = document.getElementById('preview-close');
+    const previewLoading = document.getElementById('preview-loading');
+
+    document.querySelectorAll('.preview-btn').forEach((button) => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.previewUrl;
+        const title = button.dataset.previewTitle || 'Project preview';
+        const cta = button.dataset.previewCta || 'Open live site';
+        previewTitle.textContent = title;
+        previewFrame.title = `${title} preview`;
+        previewFrame.src = url;
+        previewCta.href = url;
+        previewCta.textContent = cta;
+        previewLoading.classList.remove('hidden');
+        previewModal.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+        previewClose.focus();
+      });
+    });
+
+    previewFrame.addEventListener('load', () => { previewLoading.classList.add('hidden'); });
+    function closePreview() {
+      previewModal.classList.add('hidden');
+      previewFrame.src = '';
+      document.body.classList.remove('overflow-hidden');
+    }
+    previewClose.addEventListener('click', closePreview);
+    previewModal.addEventListener('click', (event) => { if (event.target === previewModal) closePreview(); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !previewModal.classList.contains('hidden')) closePreview(); });
+  </script>
 </body>
 </html>
