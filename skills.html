@@ -1,3 +1,6 @@
+---
+nav_key: skills
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,43 +97,7 @@
   <canvas id="fireworks" aria-hidden="true"></canvas>
   <div class="background-tint" aria-hidden="true"></div>
 
-  <!-- Navigation -->
-  <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow z-50">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
-      <a href="index.html" class="text-xl font-bold text-blue-600">Frank Valdez</a>
-      <button id="menu-toggle" class="md:hidden text-blue-600 focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-      <div id="menu-links" class="hidden md:flex space-x-6 text-gray-700">
-        <a href="about.html" class="hover:text-blue-600">About</a>
-        <a href="skills.html" class="hover:text-blue-600">Skills</a>
-        <a href="projects.html" class="hover:text-blue-600">Projects</a>
-        <a href="experience.html" class="hover:text-blue-600">Experience</a>
-        <a href="education.html" class="hover:text-blue-600">Education</a>
-        <a href="contact.html" class="hover:text-blue-600">Contact</a>
-      </div>
-    </div>
-    <div id="menu-mobile" class="hidden md:hidden bg-white border-t shadow-inner">
-      <div class="flex flex-col px-6 py-4 space-y-2">
-        <a href="about.html" class="hover:text-blue-600">About</a>
-        <a href="skills.html" class="hover:text-blue-600">Skills</a>
-        <a href="projects.html" class="hover:text-blue-600">Projects</a>
-        <a href="experience.html" class="hover:text-blue-600">Experience</a>
-        <a href="education.html" class="hover:text-blue-600">Education</a>
-        <a href="contact.html" class="hover:text-blue-600">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <script>
-    const btn = document.getElementById('menu-toggle');
-    const mobile = document.getElementById('menu-mobile');
-    btn.addEventListener('click', () => mobile.classList.toggle('hidden'));
-  </script>
+  {% include header.html %}
 
   <!-- Main -->
   <main class="flex-grow pt-24 pb-16 px-6">
@@ -218,9 +185,7 @@
     </section>
   </main>
 
-  <footer class="bg-white/50 py-4 text-center text-sm text-gray-600 border-t">
-    © 2025 Frank Valdez. All rights reserved.
-  </footer>
+  {% include footer.html %}
 
   <script>
     const canvas = document.getElementById("fireworks");

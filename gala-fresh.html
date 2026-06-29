@@ -1,3 +1,9 @@
+---
+nav_key: projects
+header_context: "Case Study: Gala Fresh"
+header_back_href: "/projects.html"
+header_back_label: "Back to Projects"
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -169,47 +175,7 @@
         <div class="glow-sphere glow-2 absolute w-[50vw] h-[50vw] bg-[radial-gradient(circle,_#bfdbfe_0%,_transparent_70%)] opacity-40 blur-[120px] -bottom-[20%] -left-[10%] mix-blend-multiply"></div>
     </div>
 
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-md shadow py-3 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <div class="flex items-center gap-4">
-                <a href="index.html" class="logo text-xl font-bold text-blue-600 tracking-tight">Frank Valdez</a>
-                <div class="h-5 w-px bg-gray-300 hidden sm:block"></div>
-                <span class="text-sm font-semibold text-gray-500 hidden sm:block">Case Study: Gala Fresh</span>
-            </div>
-
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center space-x-6 text-sm font-semibold text-gray-700">
-                <a href="projects.html" class="text-blue-600 hover:text-blue-800 transition-colors flex items-center gap-1">
-                    &larr; Back to Portfolio
-                </a>
-                <a href="about.html" class="hover:text-blue-600 transition-colors">About</a>
-                <a href="skills.html" class="hover:text-blue-600 transition-colors">Skills</a>
-                <a href="experience.html" class="hover:text-blue-600 transition-colors">Experience</a>
-                <a href="education.html" class="hover:text-blue-600 transition-colors">Education</a>
-                <a href="contact.html" class="hover:text-blue-600 transition-colors">Contact</a>
-            </div>
-
-            <!-- Mobile Button -->
-            <button id="menu-btn" class="md:hidden text-blue-600 focus:outline-none">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-inner mt-3">
-            <div class="flex flex-col space-y-3 px-6 py-4 text-sm font-semibold text-gray-700">
-                <a href="projects.html" class="text-blue-600">&larr; Back to Portfolio</a>
-                <a href="about.html" class="hover:text-blue-600">About</a>
-                <a href="skills.html" class="hover:text-blue-600">Skills</a>
-                <a href="experience.html" class="hover:text-blue-600">Experience</a>
-                <a href="education.html" class="hover:text-blue-600">Education</a>
-                <a href="contact.html" class="hover:text-blue-600">Contact</a>
-            </div>
-        </div>
-    </nav>
+    {% include header.html %}
 
     <main>
         <!-- Hero Section -->
