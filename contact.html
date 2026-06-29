@@ -1,3 +1,6 @@
+---
+nav_key: contact
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,50 +39,7 @@
 </head>
 <body class="bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-800 min-h-screen flex flex-col">
 
-    <nav class="fixed w-full bg-white/90 backdrop-blur shadow z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        <a href="index.html" class="text-xl font-bold text-blue-600">Frank Valdez</a>
-
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex space-x-6">
-          <a href="about.html" class="hover:text-blue-600">About</a>
-          <a href="skills.html" class="hover:text-blue-600">Skills</a>
-          <a href="projects.html" class="hover:text-blue-600">Projects</a>
-          <a href="experience.html" class="hover:text-blue-600">Experience</a>
-          <a href="education.html" class="hover:text-blue-600">Education</a>
-          <a href="contact.html" class="hover:text-blue-600">Contact</a>
-        </div>
-
-        <!-- Mobile Button -->
-        <button id="menu-btn" class="md:hidden text-blue-600 focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-               viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round"
-                  stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden md:hidden bg-white border-t shadow-inner">
-        <div class="flex flex-col space-y-2 px-6 py-4">
-          <a href="about.html" class="hover:text-blue-600">About</a>
-          <a href="skills.html" class="hover:text-blue-600">Skills</a>
-          <a href="projects.html" class="hover:text-blue-600">Projects</a>
-          <a href="experience.html" class="hover:text-blue-600">Experience</a>
-          <a href="education.html" class="hover:text-blue-600">Education</a>
-          <a href="contact.html" class="hover:text-blue-600">Contact</a>
-        </div>
-      </div>
-    </nav>
-
-    <script>
-      const btn = document.getElementById('menu-btn');
-      const menu = document.getElementById('mobile-menu');
-      btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-      });
-    </script>
+    {% include header.html %}
 
   <main class="flex-grow flex items-center justify-center pt-24 pb-16">
     <section id="contact" class="text-center px-4">
@@ -108,9 +68,7 @@
     </section>
   </main>
 
-  <footer class="bg-white/50 py-4 text-center text-sm text-gray-600 border-t">
-    © 2025 Frank Valdez. All rights reserved.
-  </footer>
+  {% include footer.html %}
 
 </body>
 </html>

@@ -1,0 +1,58 @@
+<nav id="navbar" class="fixed top-0 left-0 z-50 w-full bg-white/90 shadow backdrop-blur-md">
+  <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between px-4 py-3">
+    <div class="flex min-w-0 items-center gap-4">
+      <a
+        href="{{ '/index.html' | relative_url }}"
+        class="text-xl font-bold text-blue-600 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+        {% if page.nav_key == 'home' %}aria-current="page"{% endif %}
+      >Frank Valdez</a>
+      {% if page.header_context %}
+      <span class="hidden h-5 w-px bg-gray-300 sm:block" aria-hidden="true"></span>
+      <span class="hidden truncate text-sm font-semibold text-gray-500 sm:block">{{ page.header_context }}</span>
+      {% endif %}
+    </div>
+
+    <button
+      type="button"
+      class="rounded text-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 md:hidden"
+      aria-label="Toggle primary navigation"
+      aria-controls="primary-navigation"
+      aria-expanded="false"
+      data-menu-toggle
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+
+    <div id="primary-navigation" class="hidden w-full flex-col gap-3 border-t border-gray-200 pt-4 text-gray-700 md:flex md:w-auto md:flex-row md:items-center md:gap-6 md:border-0 md:pt-0">
+      {% if page.header_back_href %}
+      <a
+        href="{{ page.header_back_href | relative_url }}"
+        class="text-sm font-semibold text-blue-600 hover:text-blue-800 focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2"
+      >&larr; {{ page.header_back_label }}</a>
+      {% endif %}
+      <ul class="flex flex-col gap-3 md:flex-row md:items-center md:gap-6" aria-label="Primary navigation">
+        <li>
+          <a href="{{ '/about.html' | relative_url }}" class="{% if page.nav_key == 'about' %}font-semibold text-blue-600{% else %}hover:text-blue-600{% endif %} focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2" {% if page.nav_key == 'about' %}aria-current="page"{% endif %}>About</a>
+        </li>
+        <li>
+          <a href="{{ '/skills.html' | relative_url }}" class="{% if page.nav_key == 'skills' %}font-semibold text-blue-600{% else %}hover:text-blue-600{% endif %} focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2" {% if page.nav_key == 'skills' %}aria-current="page"{% endif %}>Skills</a>
+        </li>
+        <li>
+          <a href="{{ '/projects.html' | relative_url }}" class="{% if page.nav_key == 'projects' %}font-semibold text-blue-600{% else %}hover:text-blue-600{% endif %} focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2" {% if page.nav_key == 'projects' %}aria-current="page"{% endif %}>Projects</a>
+        </li>
+        <li>
+          <a href="{{ '/experience.html' | relative_url }}" class="{% if page.nav_key == 'experience' %}font-semibold text-blue-600{% else %}hover:text-blue-600{% endif %} focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2" {% if page.nav_key == 'experience' %}aria-current="page"{% endif %}>Experience</a>
+        </li>
+        <li>
+          <a href="{{ '/education.html' | relative_url }}" class="{% if page.nav_key == 'education' %}font-semibold text-blue-600{% else %}hover:text-blue-600{% endif %} focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2" {% if page.nav_key == 'education' %}aria-current="page"{% endif %}>Education</a>
+        </li>
+        <li>
+          <a href="{{ '/contact.html' | relative_url }}" class="{% if page.nav_key == 'contact' %}font-semibold text-blue-600{% else %}hover:text-blue-600{% endif %} focus-visible:rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2" {% if page.nav_key == 'contact' %}aria-current="page"{% endif %}>Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script src="{{ '/assets/js/navigation.js' | relative_url }}" defer></script>

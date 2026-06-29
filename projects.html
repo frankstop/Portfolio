@@ -1,3 +1,6 @@
+---
+nav_key: projects
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,34 +43,7 @@
   </script>
 </head>
 <body class="bg-gray-50 text-gray-800">
-  <nav class="fixed top-0 left-0 z-50 w-full bg-white/90 shadow backdrop-blur-md">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
-      <a href="index.html" class="text-xl font-bold text-blue-600">Frank Valdez</a>
-      <button id="menu-toggle" class="text-blue-600 focus:outline-none md:hidden" aria-label="Toggle navigation">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-      <div id="menu-links" class="hidden space-x-6 text-gray-700 md:flex">
-        <a href="about.html" class="hover:text-blue-600">About</a>
-        <a href="skills.html" class="hover:text-blue-600">Skills</a>
-        <a href="projects.html" class="hover:text-blue-600">Projects</a>
-        <a href="experience.html" class="hover:text-blue-600">Experience</a>
-        <a href="education.html" class="hover:text-blue-600">Education</a>
-        <a href="contact.html" class="hover:text-blue-600">Contact</a>
-      </div>
-    </div>
-    <div id="menu-mobile" class="hidden border-t bg-white shadow-inner md:hidden">
-      <div class="flex flex-col space-y-2 px-6 py-4">
-        <a href="about.html" class="hover:text-blue-600">About</a>
-        <a href="skills.html" class="hover:text-blue-600">Skills</a>
-        <a href="projects.html" class="hover:text-blue-600">Projects</a>
-        <a href="experience.html" class="hover:text-blue-600">Experience</a>
-        <a href="education.html" class="hover:text-blue-600">Education</a>
-        <a href="contact.html" class="hover:text-blue-600">Contact</a>
-      </div>
-    </div>
-  </nav>
+  {% include header.html %}
 
   <main class="pt-24">
     <section class="relative flex min-h-[46vh] items-center justify-center overflow-hidden bg-black">
@@ -152,9 +128,7 @@
     </section>
   </main>
 
-  <footer class="bg-gray-100 py-4 text-center text-sm text-gray-500">
-    &copy; 2026 Frank Valdez. All rights reserved.
-  </footer>
+  {% include footer.html %}
 
   <div id="preview-modal" class="fixed inset-0 z-[60] hidden bg-black/60 px-4 py-6" role="dialog" aria-modal="true" aria-labelledby="preview-title">
     <div class="mx-auto flex h-full max-w-6xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl">
@@ -176,10 +150,6 @@
   </div>
 
   <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('menu-mobile');
-    menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-
     const previewModal = document.getElementById('preview-modal');
     const previewTitle = document.getElementById('preview-title');
     const previewFrame = document.getElementById('preview-frame');
