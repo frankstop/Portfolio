@@ -1,23 +1,81 @@
-# Frank Valdez | Personal Portfolio
+# Frank Valdez Portfolio
 
-**[🚀 View Live Site](https://frankstop.github.io/Portfolio/)** 
+A multi-page experimental portfolio built from custom browser graphics, shared Jekyll components, and independently deployed GitHub projects.
 
-Welcome to the repository for my personal portfolio.
+The site treats the portfolio as a composition layer: other repositories can become live visual and interactive parts of the experience instead of appearing only as screenshots or outbound links.
 
-Instead of relying on heavy frameworks, this portfolio is built with raw web technologies and lightweight utilities to prioritize speed, custom interactive experiences, and creative freedom.
+**[Explore the live website](https://frankiejvaldez.com/)**
 
+## Interactive Experiences
 
-## 🏗️ Architecture & Tech Stack
-This repository is structured as a modular, multi-page static site. 
-* **Core:** HTML5, Vanilla JavaScript, CSS3
-* **Styling:** Tailwind CSS
-* **Graphics & Visualizations:** HTML5 `<canvas>`, WebGL, D3.js, Plotly.js
-* **Typography:** Google Fonts (Inter & Poppins)
+| Page | Experience | How it works |
+| --- | --- | --- |
+| **Home** | Particle vortex | An HTML canvas renders 12,000 particles moving through four mathematical vortex fields in a continuous animation loop. |
+| **Skills** | Fireworks display | A full-window canvas creates launches, trails, explosions, and a generated star field. It scales for high-density displays and adapts when reduced motion is preferred. |
+| **Projects** | Live Matrix Rain background | The independently deployed [MatrixRain](https://github.com/frankstop/MatrixRain) project is embedded as the page's animated hero background. |
+| **Projects** | In-page project previews | A reusable modal loads deployed applications on demand, allowing visitors to explore them without leaving the portfolio. |
+| **About** | Live resume viewer | The separately deployed [Resume](https://github.com/frankstop/Resume) site is embedded directly into an accessible modal. |
 
+## Cross-Repository Composition
 
-## 📫 Connect
-Whether you want to discuss system infrastructure, software engineering, or creative coding, feel free to reach out.
+The portfolio can use independently maintained GitHub Pages sites as components:
 
-* **GitHub:** [@frankstop](https://github.com/frankstop)
-* **Linkedin** [frankiejvaldez](https://www.linkedin.com/in/frankiejvaldez/)
-* **Email:** [frankiejvaldez@gmail.com](mailto:frankiejvaldez@gmail.com)
+- **MatrixRain** provides the animated environment behind the Projects heading.
+- **Resume** supplies the live document shown in the About page's resume viewer.
+- **Project previews** load deployed applications inside a shared iframe-based modal.
+
+Each project remains independently deployable while the portfolio brings them together into one experience.
+
+## Site Architecture
+
+```text
+Portfolio/
+├── _includes/
+│   ├── header.html        # Shared responsive navigation
+│   └── footer.html        # Shared site footer
+├── assets/js/
+│   └── navigation.js     # Mobile menu and keyboard behavior
+├── index.html             # Canvas vortex
+├── skills.html            # Canvas fireworks
+├── projects.html          # MatrixRain hero and live previews
+├── about.html             # Embedded resume viewer
+├── experience.html
+├── education.html
+├── contact.html
+└── gala-fresh.html        # Purpose-built case-study page
+```
+
+GitHub Pages processes the shared header and footer through Jekyll includes. Individual pages remain free to define their own visual systems and interactive behavior.
+
+## Technology
+
+- HTML5 and CSS3
+- Vanilla JavaScript
+- Canvas 2D API
+- Tailwind CSS
+- Jekyll and Liquid includes
+- Responsive iframe integrations
+- GitHub Pages
+- Google Fonts
+
+## Interaction and Accessibility
+
+- Escape-key dismissal for responsive navigation and modal dialogs
+- Focus placement for opened dialogs and focus return in the resume viewer
+- Responsive navigation shared across the site
+- Reduced-motion adaptation for the fireworks effect
+- High-density display scaling for canvas graphics
+- Lazy-loaded external experiences
+- Descriptive iframe titles and decorative-background isolation
+
+## Local Development
+
+The pages use Jekyll includes, so preview the site through Jekyll rather than opening the HTML files directly:
+
+```bash
+jekyll serve
+```
+
+Then visit `http://localhost:4000`.
+
+Changes pushed to `main` are published through GitHub Pages at [frankiejvaldez.com](https://frankiejvaldez.com/).
