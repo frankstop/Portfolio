@@ -50,7 +50,9 @@ Portfolio/
 └── gala-fresh.html        # Purpose-built case-study page
 ```
 
-GitHub Pages processes the shared header and footer through Jekyll includes. Individual pages remain free to define their own visual systems and interactive behavior.
+GitHub Actions builds the site with Jekyll and deploys it to GitHub Pages.
+Jekyll processes the shared header and footer includes while individual pages
+remain free to define their own visual systems and interactive behavior.
 
 Games keep their own repositories and deployments. The portfolio exposes them
 at lowercase canonical URLs such as
@@ -89,4 +91,5 @@ jekyll serve
 
 Then visit `http://localhost:4000`.
 
-Changes pushed to `main` are published through GitHub Pages at [frankiejvaldez.com](https://frankiejvaldez.com/).
+Changes pushed to `main` are built by the Pages workflow and published at
+[frankiejvaldez.com](https://frankiejvaldez.com/).
