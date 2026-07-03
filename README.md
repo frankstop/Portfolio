@@ -33,8 +33,15 @@ Portfolio/
 ├── _includes/
 │   ├── header.html        # Shared responsive navigation
 │   └── footer.html        # Shared site footer
+├── _layouts/
+│   └── game.html          # Full-screen wrapper for independently deployed games
+├── games/
+│   └── <game>/index.html  # Lowercase canonical game routes
+├── aliases/
+│   └── <game>.html        # Title-case compatibility aliases
 ├── assets/js/
 │   └── navigation.js     # Mobile menu and keyboard behavior
+├── 404.html               # Mixed-case game-route normalization
 ├── index.html             # Canvas vortex
 ├── skills.html            # Canvas fireworks
 ├── projects.html          # MatrixRain hero and live previews
@@ -46,6 +53,12 @@ Portfolio/
 ```
 
 GitHub Pages processes the shared header and footer through Jekyll includes. Individual pages remain free to define their own visual systems and interactive behavior.
+
+Games keep their own repositories and deployments. The portfolio exposes them
+at lowercase canonical URLs such as
+`https://frankiejvaldez.com/games/metrodash/`; title-case and mixed-case links
+normalize to the same route. See [`docs/GAMES.md`](docs/GAMES.md) for the
+small add-a-game checklist.
 
 ## Technology
 

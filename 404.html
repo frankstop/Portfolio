@@ -1,0 +1,53 @@
+---
+permalink: /404.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | Frank Valdez</title>
+  <meta name="robots" content="noindex">
+  <style>
+    body {
+      display: grid;
+      min-height: 100vh;
+      margin: 0;
+      place-items: center;
+      padding: 2rem;
+      background: #0f172a;
+      color: #f8fafc;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      text-align: center;
+    }
+
+    a {
+      color: #93c5fd;
+    }
+  </style>
+  <script>
+    (function () {
+      const gameRoutes = {
+        {% for game in site.data.games %}
+        "{{ game.slug }}": "/games/{{ game.slug }}/"{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      };
+      const match = window.location.pathname.match(/^\/games\/([^/]+)\/?$/i);
+
+      if (!match) return;
+
+      const destination = gameRoutes[match[1].toLowerCase()];
+      if (destination && window.location.pathname !== destination) {
+        window.location.replace(destination + window.location.search + window.location.hash);
+      }
+    }());
+  </script>
+</head>
+<body>
+  <main>
+    <h1>Page not found</h1>
+    <p>The address may be incorrect or the page may have moved.</p>
+    <p><a href="/">Return to frankiejvaldez.com</a></p>
+  </main>
+</body>
+</html>
