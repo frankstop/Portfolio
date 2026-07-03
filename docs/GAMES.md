@@ -17,7 +17,8 @@ Title-case and mixed-case requests are normalized by `404.html`.
 3. Add `games/<lowercase-game-slug>/index.html` using the `game` layout.
 4. Verify the canonical, title-case, and mixed-case URLs after Pages deploys.
 
-## Deferred
+## Catalog
 
-Build `/games/` as a proper landing page once the first set of game routes is
-settled. Until then, game URLs are intentionally direct links.
+`/games/` renders the public catalog from `_data/games.yml`. Each entry supplies
+its canonical slug, deployed game URL, screenshot, description, and display
+position. The same metadata drives route normalization and sitemap entries.

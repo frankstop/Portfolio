@@ -13,6 +13,14 @@
     <loc>https://frankiejvaldez.com/projects.html</loc>
   </url>
   <url>
+    <loc>https://frankiejvaldez.com/games/</loc>
+  </url>
+  {% for game in site.data.games %}
+  <url>
+    <loc>https://frankiejvaldez.com/games/{{ game.slug }}/</loc>
+  </url>
+  {% endfor %}
+  <url>
     <loc>https://frankiejvaldez.com/experience.html</loc>
   </url>
   <url>

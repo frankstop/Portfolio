@@ -15,6 +15,7 @@ The site treats the portfolio as a composition layer: other repositories can bec
 | **Projects** | Live Matrix Rain background | The independently deployed [MatrixRain](https://github.com/frankstop/MatrixRain) project is embedded as the page's animated hero background. |
 | **Projects** | In-page project previews | A reusable modal loads deployed applications on demand, allowing visitors to explore them without leaving the portfolio. |
 | **About** | Live resume viewer | The separately deployed [Resume](https://github.com/frankstop/Resume) site is embedded directly into an accessible modal. |
+| **Games** | Browser game catalog | A responsive catalog presents six independently deployed games at first-party routes on frankiejvaldez.com. |
 
 ## Cross-Repository Composition
 
@@ -36,6 +37,7 @@ Portfolio/
 ├── _layouts/
 │   └── game.html          # Full-screen wrapper for independently deployed games
 ├── games/
+│   ├── index.html         # Responsive game catalog
 │   └── <game>/index.html  # Lowercase canonical game routes
 ├── assets/js/
 │   └── navigation.js     # Mobile menu and keyboard behavior

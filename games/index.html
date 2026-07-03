@@ -1,0 +1,485 @@
+---
+nav_key: games
+permalink: /games/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Games | Frank Valdez</title>
+  <meta name="description" content="Play browser games built by Frank Valdez, including MetroDash, WingSprint, PressureMatch, 2048, Minesweeper, and Sudoku.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://frankiejvaldez.com/games/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Frank Valdez">
+  <meta property="og:title" content="Games | Frank Valdez">
+  <meta property="og:description" content="Small games, built to be played.">
+  <meta property="og:url" content="https://frankiejvaldez.com/games/">
+  <meta property="og:image" content="https://frankiejvaldez.com/assets/images/games/metrodash.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Games | Frank Valdez">
+  <meta name="twitter:description" content="Small games, built to be played.">
+  <meta name="twitter:image" content="https://frankiejvaldez.com/assets/images/games/metrodash.png">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Frank Valdez Games",
+      "url": "https://frankiejvaldez.com/games/",
+      "description": "Browser games built by Frank Valdez.",
+      "hasPart": [
+        {% for game in site.data.games %}
+        {
+          "@type": "VideoGame",
+          "name": "{{ game.name }}",
+          "url": "https://frankiejvaldez.com/games/{{ game.slug }}/"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --games-bg: #030b1d;
+      --games-bg-soft: #07142d;
+      --games-border: rgba(129, 166, 224, 0.22);
+      --games-blue: #1263f1;
+      --games-blue-bright: #2b7cff;
+      --games-text: #f8fbff;
+      --games-muted: #a9b9d5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-width: 20rem;
+      margin: 0;
+      background: var(--games-bg);
+      color: var(--games-text);
+      font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
+    }
+
+    .browse-rail {
+      position: sticky;
+      top: 3.75rem;
+      z-index: 40;
+      display: flex;
+      min-height: 3rem;
+      margin-top: 3.75rem;
+      align-items: center;
+      border-bottom: 1px solid var(--games-border);
+      background: rgba(3, 11, 29, 0.94);
+      backdrop-filter: blur(1rem);
+    }
+
+    .browse-rail__inner {
+      display: flex;
+      width: min(90rem, 100%);
+      margin: 0 auto;
+      align-items: center;
+      gap: 0.7rem;
+      padding: 0.65rem clamp(1rem, 4vw, 4rem);
+      color: #dce8ff;
+      font-size: 0.84rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+    }
+
+    .browse-rail__icon {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+
+    .games-shell {
+      position: relative;
+      isolation: isolate;
+      min-height: calc(100vh - 3.75rem);
+      overflow: hidden;
+    }
+
+    .games-shell::before,
+    .games-shell::after {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      pointer-events: none;
+    }
+
+    .games-shell::before {
+      inset: 0 0 auto;
+      height: 48rem;
+      background:
+        radial-gradient(circle at 73% 8%, rgba(36, 112, 255, 0.32), transparent 18rem),
+        radial-gradient(circle at 10% 30%, rgba(16, 84, 205, 0.18), transparent 25rem),
+        linear-gradient(180deg, rgba(5, 24, 63, 0.7), transparent 86%);
+    }
+
+    .games-shell::after {
+      top: 8rem;
+      right: -8rem;
+      width: 50rem;
+      height: 25rem;
+      opacity: 0.46;
+      background-image:
+        radial-gradient(circle, rgba(170, 208, 255, 0.95) 0 1px, transparent 1.5px),
+        radial-gradient(circle, rgba(38, 119, 255, 0.9) 0 1px, transparent 1.5px);
+      background-position: 0 0, 1.75rem 1.2rem;
+      background-size: 3.6rem 3.6rem, 4.6rem 4.6rem;
+      transform: rotate(-9deg);
+      mask-image: radial-gradient(ellipse, black, transparent 68%);
+      animation: particle-drift 18s linear infinite alternate;
+    }
+
+    .games-main {
+      width: min(90rem, 100%);
+      margin: 0 auto;
+      padding: clamp(3rem, 8vw, 7rem) clamp(1rem, 4vw, 4rem) 5rem;
+    }
+
+    .games-heading {
+      max-width: 48rem;
+      margin-bottom: clamp(2rem, 5vw, 3.5rem);
+    }
+
+    .games-heading h1 {
+      margin: 0;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      font-weight: 800;
+      letter-spacing: -0.065em;
+      line-height: 0.92;
+    }
+
+    .games-heading p {
+      margin: 1rem 0 0;
+      color: var(--games-muted);
+      font-size: clamp(1.05rem, 2vw, 1.4rem);
+      font-weight: 600;
+    }
+
+    .featured-game {
+      display: grid;
+      align-items: center;
+      gap: clamp(1.5rem, 5vw, 4.5rem);
+      margin-bottom: clamp(4rem, 9vw, 7rem);
+      grid-template-columns: minmax(0, 1.45fr) minmax(16rem, 0.75fr);
+    }
+
+    .featured-game__image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border: 1px solid rgba(90, 151, 255, 0.48);
+      border-radius: 0.85rem;
+      object-fit: cover;
+      box-shadow: 0 2.2rem 5rem rgba(0, 0, 0, 0.38);
+    }
+
+    .featured-game__content h2 {
+      margin: 0;
+      font-size: clamp(2.35rem, 5vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: -0.055em;
+      line-height: 1;
+    }
+
+    .featured-game__content p {
+      margin: 1rem 0 1.65rem;
+      color: var(--games-muted);
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .play-button {
+      display: inline-flex;
+      min-height: 3.4rem;
+      align-items: center;
+      justify-content: center;
+      gap: 0.7rem;
+      border-radius: 0.42rem;
+      background: var(--games-blue);
+      color: #fff;
+      font-size: 0.98rem;
+      font-weight: 700;
+      padding: 0.85rem 1.35rem;
+      text-decoration: none;
+      transition: background-color 160ms ease, transform 160ms ease;
+    }
+
+    .play-button:hover {
+      background: var(--games-blue-bright);
+      transform: translateY(-2px);
+    }
+
+    .play-button:focus-visible,
+    .game-card__link:focus-visible,
+    .browse-rail__inner:focus-visible,
+    .games-footer a:focus-visible {
+      border-radius: 0.35rem;
+      outline: 3px solid #8bb8ff;
+      outline-offset: 4px;
+    }
+
+    .play-button svg,
+    .game-card__action svg {
+      width: 1rem;
+      height: 1rem;
+      fill: currentColor;
+    }
+
+    .catalog-heading {
+      margin: 0 0 1.4rem;
+      font-size: clamp(1.75rem, 3vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+
+    .game-grid {
+      display: grid;
+      gap: clamp(1.25rem, 2.5vw, 2rem);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .game-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--games-border);
+      border-radius: 0.75rem;
+      background: rgba(5, 17, 42, 0.78);
+      box-shadow: 0 1.1rem 3rem rgba(0, 0, 0, 0.18);
+      transition: border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .game-card:hover {
+      border-color: rgba(90, 151, 255, 0.72);
+      transform: translateY(-0.25rem);
+      box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.28);
+    }
+
+    .game-card__link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .game-card__image {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-bottom: 1px solid var(--games-border);
+      object-fit: cover;
+      object-position: center;
+      transition: transform 300ms ease;
+    }
+
+    .game-card:hover .game-card__image {
+      transform: scale(1.025);
+    }
+
+    .game-card__body {
+      display: flex;
+      min-height: 5.2rem;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.1rem;
+    }
+
+    .game-card__title {
+      margin: 0;
+      font-size: clamp(1.05rem, 2vw, 1.3rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+    }
+
+    .game-card__action {
+      display: inline-flex;
+      flex: 0 0 auto;
+      align-items: center;
+      gap: 0.42rem;
+      color: #7eb0ff;
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .games-footer {
+      display: flex;
+      width: min(90rem, 100%);
+      margin: 0 auto;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      border-top: 1px solid var(--games-border);
+      padding: 1.5rem clamp(1rem, 4vw, 4rem) 2rem;
+      color: #e6efff;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .games-footer a {
+      color: #6ea5ff;
+      text-decoration: none;
+    }
+
+    @keyframes particle-drift {
+      from { transform: rotate(-9deg) translate3d(0, 0, 0); }
+      to { transform: rotate(-7deg) translate3d(-2rem, 1.5rem, 0); }
+    }
+
+    @media (max-width: 64rem) {
+      .featured-game {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-game__content {
+        max-width: 38rem;
+      }
+
+      .game-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 47.99rem) {
+      .browse-rail {
+        top: 3.5rem;
+        margin-top: 3.5rem;
+      }
+
+      .games-main {
+        padding-top: 2.7rem;
+      }
+
+      .games-heading h1 {
+        font-size: clamp(3.4rem, 19vw, 5.2rem);
+      }
+
+      .game-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .game-card__body {
+        min-height: 4.75rem;
+      }
+
+      .games-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .games-shell::after {
+        animation: none;
+      }
+
+      .play-button,
+      .game-card,
+      .game-card__image {
+        transition: none;
+      }
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSVR6Y389R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RSVR6Y389R');
+  </script>
+</head>
+<body>
+  {% include header.html %}
+
+  <div class="games-shell">
+    <nav class="browse-rail" aria-label="Games navigation">
+      <a class="browse-rail__inner" href="#all-games">
+        <svg class="browse-rail__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+        Browse games
+      </a>
+    </nav>
+
+    <main class="games-main">
+      <header class="games-heading">
+        <h1>Games</h1>
+        <p>Small games, built to be played.</p>
+      </header>
+
+      {% assign featured_game = site.data.games | where: "featured", true | first %}
+      <section class="featured-game" aria-labelledby="featured-title">
+        <a href="{{ '/games/' | append: featured_game.slug | append: '/' | relative_url }}" aria-label="Play {{ featured_game.name }}">
+          <img
+            class="featured-game__image"
+            src="{{ featured_game.image | relative_url }}"
+            alt="{{ featured_game.name }} title screen"
+            width="1280"
+            height="720"
+          >
+        </a>
+        <div class="featured-game__content">
+          <h2 id="featured-title">{{ featured_game.name }}</h2>
+          <p>{{ featured_game.description }}</p>
+          <a class="play-button" href="{{ '/games/' | append: featured_game.slug | append: '/' | relative_url }}">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.3 3.1a1 1 0 0 1 1.1.1l8.1 5.9a1.1 1.1 0 0 1 0 1.8l-8.1 5.9a1 1 0 0 1-1.6-.8V4a1 1 0 0 1 .5-.9Z"/></svg>
+            Play {{ featured_game.name }}
+          </a>
+        </div>
+      </section>
+
+      <section id="all-games" aria-labelledby="catalog-title">
+        <h2 class="catalog-heading" id="catalog-title">All games</h2>
+        <div class="game-grid">
+          {% assign sorted_games = site.data.games | sort: "position" %}
+          {% for game in sorted_games %}
+          <article class="game-card">
+            <a class="game-card__link" href="{{ '/games/' | append: game.slug | append: '/' | relative_url }}">
+              <img
+                class="game-card__image"
+                src="{{ game.image | relative_url }}"
+                alt="{{ game.name }} game preview"
+                width="1280"
+                height="720"
+                loading="{% if forloop.index > 3 %}lazy{% else %}eager{% endif %}"
+              >
+              <div class="game-card__body">
+                <h3 class="game-card__title">{{ game.name }}</h3>
+                <span class="game-card__action">
+                  <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.3 3.1a1 1 0 0 1 1.1.1l8.1 5.9a1.1 1.1 0 0 1 0 1.8l-8.1 5.9a1 1 0 0 1-1.6-.8V4a1 1 0 0 1 .5-.9Z"/></svg>
+                  Play
+                </span>
+              </div>
+            </a>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+
+    <footer class="games-footer">
+      <span>Frank Valdez</span>
+      <a href="{{ '/index.html' | relative_url }}">Back to portfolio &rarr;</a>
+    </footer>
+  </div>
+</body>
+</html>

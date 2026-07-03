@@ -1,5 +1,54 @@
 - slug: metrodash
   name: MetroDash
+  description: Race the rails. Beat your best run.
   source_url: https://github.com/frankstop/MetroDash
   game_url: https://frankstop.github.io/MetroDash/
+  image: /assets/images/games/metrodash.png
+  featured: true
+  position: 1
+  published: true
+
+- slug: wingsprint
+  name: WingSprint
+  description: Tap into the wind and thread every gap.
+  source_url: https://github.com/frankstop/WingSprint
+  game_url: https://frankstop.github.io/WingSprint/
+  image: /assets/images/games/wingsprint.png
+  position: 2
+  published: true
+
+- slug: pressurematch
+  name: PressureMatch
+  description: Match fast before the board squeezes in.
+  source_url: https://github.com/frankstop/PressureMatch
+  game_url: https://frankstop.github.io/PressureMatch/
+  image: /assets/images/games/pressurematch.png
+  position: 3
+  published: true
+
+- slug: "2048"
+  name: "2048"
+  description: Merge numbers and grow the garden.
+  source_url: https://github.com/frankstop/2048
+  game_url: https://frankstop.github.io/2048/
+  image: /assets/images/games/2048.png
+  position: 4
+  published: true
+
+- slug: minesweeper
+  name: Minesweeper
+  description: Clear a calm garden without touching a mine.
+  source_url: https://github.com/frankstop/Minesweeper
+  game_url: https://frankstop.github.io/Minesweeper/
+  image: /assets/images/games/minesweeper.png
+  position: 5
+  published: true
+
+- slug: sudoku
+  name: Sudoku
+  description: Settle in with a clean daily number puzzle.
+  source_url: https://github.com/frankstop/Sudoku
+  game_url: https://frankstop.github.io/Sudoku/
+  image: /assets/images/games/sudoku.png
+  position: 6
   published: true
