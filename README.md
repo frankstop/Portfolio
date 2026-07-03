@@ -83,6 +83,37 @@ small add-a-game checklist.
 - Lazy-loaded external experiences
 - Descriptive iframe titles and decorative-background isolation
 
+## Analytics
+
+Every public page uses the shared `_includes/analytics.html` include with the
+GA4 measurement ID `G-RSVR6Y389R`. Page views identify the rendered page with
+its title, pathname, and query-free first-party location.
+
+High-value interactions are recorded through `assets/js/analytics.js`:
+
+| Event | Purpose | Parameters |
+| --- | --- | --- |
+| `resume_view` | Resume modal opened | `placement` |
+| `contact_click` | Email, GitHub, or LinkedIn selected | `method`, `placement` |
+| `project_preview_open` | In-page project preview opened | `project_name` |
+| `project_link_click` | Live site, repository, or preview CTA selected | `project_name`, `link_type` |
+| `game_open` | Featured or catalog game selected | `game_name`, `placement` |
+| `certificate_click` | Credential link selected | `certificate_name` |
+| `page_not_found` | The 404 page rendered | `page_path` |
+
+The helper accepts only the parameters above. It does not send email
+addresses, destination URLs, query strings, or visitor-entered content, and it
+fails safely when Google Analytics is unavailable.
+
+To verify a deployment in Google Analytics:
+
+1. Open **Reports → Realtime** and use **Page title and screen name** to confirm
+   the page being tested.
+2. Open the resume, a project preview, a game, or a contact link.
+3. Confirm the matching event appears in **Event count by Event name**.
+4. Use **Admin → DebugView** with Google Tag Assistant when inspecting event
+   parameters during development.
+
 ## Local Development
 
 The pages use Jekyll includes, so preview the site through Jekyll rather than opening the HTML files directly:
@@ -92,6 +123,12 @@ jekyll serve
 ```
 
 Then visit `http://localhost:4000`.
+
+Run the analytics checks with:
+
+```bash
+node --test _tests/*.test.mjs
+```
 
 Changes pushed to `main` are built by the Pages workflow and published at
 [frankiejvaldez.com](https://frankiejvaldez.com/).

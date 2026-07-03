@@ -8,6 +8,7 @@ permalink: /404.html
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found | Frank Valdez</title>
   <meta name="robots" content="noindex">
+  {% include analytics.html %}
   <style>
     body {
       display: grid;
@@ -43,7 +44,7 @@ permalink: /404.html
     }());
   </script>
 </head>
-<body>
+<body data-analytics-page-event="page_not_found">
   <main>
     <h1>Page not found</h1>
     <p>The address may be incorrect or the page may have moved.</p>

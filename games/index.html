@@ -398,14 +398,7 @@ permalink: /games/
     }
   </style>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSVR6Y389R"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RSVR6Y389R');
-  </script>
+  {% include analytics.html %}
 </head>
 <body>
   {% include header.html %}
@@ -428,7 +421,7 @@ permalink: /games/
 
       {% assign featured_game = site.data.games | where: "featured", true | first %}
       <section class="featured-game" aria-labelledby="featured-title">
-        <a href="{{ '/games/' | append: featured_game.slug | append: '/' | relative_url }}" aria-label="Play {{ featured_game.name }}">
+        <a href="{{ '/games/' | append: featured_game.slug | append: '/' | relative_url }}" aria-label="Play {{ featured_game.name }}" data-analytics-event="game_open" data-analytics-game-name="{{ featured_game.name }}" data-analytics-placement="featured_image">
           <img
             class="featured-game__image"
             src="{{ featured_game.image | relative_url }}"
@@ -440,7 +433,7 @@ permalink: /games/
         <div class="featured-game__content">
           <h2 id="featured-title">{{ featured_game.name }}</h2>
           <p>{{ featured_game.description }}</p>
-          <a class="play-button" href="{{ '/games/' | append: featured_game.slug | append: '/' | relative_url }}">
+          <a class="play-button" href="{{ '/games/' | append: featured_game.slug | append: '/' | relative_url }}" data-analytics-event="game_open" data-analytics-game-name="{{ featured_game.name }}" data-analytics-placement="featured_button">
             <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5.3 3.1a1 1 0 0 1 1.1.1l8.1 5.9a1.1 1.1 0 0 1 0 1.8l-8.1 5.9a1 1 0 0 1-1.6-.8V4a1 1 0 0 1 .5-.9Z"/></svg>
             Play {{ featured_game.name }}
           </a>
@@ -453,7 +446,7 @@ permalink: /games/
           {% assign sorted_games = site.data.games | sort: "position" %}
           {% for game in sorted_games %}
           <article class="game-card">
-            <a class="game-card__link" href="{{ '/games/' | append: game.slug | append: '/' | relative_url }}">
+            <a class="game-card__link" href="{{ '/games/' | append: game.slug | append: '/' | relative_url }}" data-analytics-event="game_open" data-analytics-game-name="{{ game.name }}" data-analytics-placement="catalog">
               <img
                 class="game-card__image"
                 src="{{ game.image | relative_url }}"

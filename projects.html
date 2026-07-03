@@ -39,13 +39,7 @@ nav_key: projects
         -2px 2px 0 #000;
     }
   </style>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSVR6Y389R"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RSVR6Y389R');
-  </script>
+  {% include analytics.html %}
 </head>
 <body class="bg-gray-50 text-gray-800">
   {% include header.html %}
@@ -68,9 +62,9 @@ nav_key: projects
             <li>Company-first job board that refreshes from official career feeds and publishes a searchable GitHub Pages dashboard.</li>
           </ul>
           <div class="mt-6 flex flex-wrap items-center gap-4">
-            <a href="https://frankstop.github.io/JobBoard/" target="_blank" rel="noreferrer" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
-            <a href="https://github.com/frankstop/JobBoard" target="_blank" rel="noreferrer" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
-            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/JobBoard/" data-preview-title="JobBoard" data-preview-cta="Open live site">Preview project</button>
+            <a href="https://frankstop.github.io/JobBoard/" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="JobBoard" data-analytics-link-type="live_site" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
+            <a href="https://github.com/frankstop/JobBoard" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="JobBoard" data-analytics-link-type="repository" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
+            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/JobBoard/" data-preview-title="JobBoard" data-preview-cta="Open live site" data-analytics-event="project_preview_open" data-analytics-project-name="JobBoard">Preview project</button>
           </div>
         </article>
         <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
@@ -79,9 +73,9 @@ nav_key: projects
             <li>Static remote-job tracker with a public data pipeline, searchable listings, and local browser state.</li>
           </ul>
           <div class="mt-6 flex flex-wrap items-center gap-4">
-            <a href="https://frankstop.github.io/RemoteJob/" target="_blank" rel="noreferrer" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
-            <a href="https://github.com/frankstop/RemoteJob" target="_blank" rel="noreferrer" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
-            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/RemoteJob/" data-preview-title="RemoteJob" data-preview-cta="Open live site">Preview project</button>
+            <a href="https://frankstop.github.io/RemoteJob/" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="RemoteJob" data-analytics-link-type="live_site" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
+            <a href="https://github.com/frankstop/RemoteJob" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="RemoteJob" data-analytics-link-type="repository" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
+            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/RemoteJob/" data-preview-title="RemoteJob" data-preview-cta="Open live site" data-analytics-event="project_preview_open" data-analytics-project-name="RemoteJob">Preview project</button>
           </div>
         </article>
         <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
@@ -90,9 +84,9 @@ nav_key: projects
             <li>Weekly grocery pricing pipeline using collected retail data for longitudinal analysis and modeling.</li>
           </ul>
           <div class="mt-6 flex flex-wrap items-center gap-4">
-            <a href="https://frankstop.github.io/KingKullenResearch/" target="_blank" rel="noreferrer" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
-            <a href="https://github.com/frankstop/KingKullenResearch" target="_blank" rel="noreferrer" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
-            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/KingKullenResearch/" data-preview-title="KingKullenResearch" data-preview-cta="Open live site">Preview project</button>
+            <a href="https://frankstop.github.io/KingKullenResearch/" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="KingKullenResearch" data-analytics-link-type="live_site" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
+            <a href="https://github.com/frankstop/KingKullenResearch" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="KingKullenResearch" data-analytics-link-type="repository" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
+            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/KingKullenResearch/" data-preview-title="KingKullenResearch" data-preview-cta="Open live site" data-analytics-event="project_preview_open" data-analytics-project-name="KingKullenResearch">Preview project</button>
           </div>
         </article>
         <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
@@ -101,9 +95,9 @@ nav_key: projects
             <li>Daily monitor for civil service exams and public-sector hiring sources with source-health reporting.</li>
           </ul>
           <div class="mt-6 flex flex-wrap items-center gap-4">
-            <a href="https://frankstop.github.io/civil-service-watch/" target="_blank" rel="noreferrer" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
-            <a href="https://github.com/frankstop/civil-service-watch" target="_blank" rel="noreferrer" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
-            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/civil-service-watch/" data-preview-title="CivilServiceWatch" data-preview-cta="Open live site">Preview project</button>
+            <a href="https://frankstop.github.io/civil-service-watch/" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="CivilServiceWatch" data-analytics-link-type="live_site" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
+            <a href="https://github.com/frankstop/civil-service-watch" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="CivilServiceWatch" data-analytics-link-type="repository" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
+            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/civil-service-watch/" data-preview-title="CivilServiceWatch" data-preview-cta="Open live site" data-analytics-event="project_preview_open" data-analytics-project-name="CivilServiceWatch">Preview project</button>
           </div>
         </article>
         <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
@@ -112,9 +106,9 @@ nav_key: projects
             <li>Gala Foods circular page with date-based logic that selects the current weekly PDF automatically.</li>
           </ul>
           <div class="mt-6 flex flex-wrap items-center gap-4">
-            <a href="https://gala-li.github.io/Circular/" target="_blank" rel="noreferrer" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
-            <a href="https://github.com/gala-li/Circular" target="_blank" rel="noreferrer" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
-            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://gala-li.github.io/Circular/" data-preview-title="Gala-LI/Circular" data-preview-cta="Open live site">Preview project</button>
+            <a href="https://gala-li.github.io/Circular/" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="Gala-LI/Circular" data-analytics-link-type="live_site" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
+            <a href="https://github.com/gala-li/Circular" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="Gala-LI/Circular" data-analytics-link-type="repository" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
+            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://gala-li.github.io/Circular/" data-preview-title="Gala-LI/Circular" data-preview-cta="Open live site" data-analytics-event="project_preview_open" data-analytics-project-name="Gala-LI/Circular">Preview project</button>
           </div>
         </article>
         <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
@@ -123,9 +117,9 @@ nav_key: projects
             <li>Othello AI capstone with a FastAPI backend and multiple game strategies behind a playable web interface.</li>
           </ul>
           <div class="mt-6 flex flex-wrap items-center gap-4">
-            <a href="https://frankstop.github.io/OthelloAI/" target="_blank" rel="noreferrer" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
-            <a href="https://github.com/frankstop/OthelloAISource" target="_blank" rel="noreferrer" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
-            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/OthelloAI/" data-preview-title="Othello AI / FastAPI Capstone" data-preview-cta="Open live site">Preview project</button>
+            <a href="https://frankstop.github.io/OthelloAI/" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="Othello AI / FastAPI Capstone" data-analytics-link-type="live_site" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
+            <a href="https://github.com/frankstop/OthelloAISource" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="Othello AI / FastAPI Capstone" data-analytics-link-type="repository" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
+            <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="https://frankstop.github.io/OthelloAI/" data-preview-title="Othello AI / FastAPI Capstone" data-preview-cta="Open live site" data-analytics-event="project_preview_open" data-analytics-project-name="Othello AI / FastAPI Capstone">Preview project</button>
           </div>
         </article>
         </div>
@@ -143,7 +137,7 @@ nav_key: projects
           <h2 id="preview-title" class="mt-1 text-2xl font-bold text-gray-900">Project preview</h2>
         </div>
         <div class="flex flex-wrap gap-3">
-          <a id="preview-cta" href="#" target="_blank" rel="noreferrer" class="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Open live site</a>
+          <a id="preview-cta" href="#" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-link-type="preview_cta" class="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Open live site</a>
           <button id="preview-close" type="button" class="rounded-md border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:text-gray-950">Close</button>
         </div>
       </div>
@@ -172,6 +166,7 @@ nav_key: projects
         previewFrame.src = url;
         previewCta.href = url;
         previewCta.textContent = cta;
+        previewCta.dataset.analyticsProjectName = title;
         previewLoading.classList.remove('hidden');
         previewModal.classList.remove('hidden');
         document.body.classList.add('overflow-hidden');
