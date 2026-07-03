@@ -37,8 +37,6 @@ Portfolio/
 │   └── game.html          # Full-screen wrapper for independently deployed games
 ├── games/
 │   └── <game>/index.html  # Lowercase canonical game routes
-├── aliases/
-│   └── <game>.html        # Title-case compatibility aliases
 ├── assets/js/
 │   └── navigation.js     # Mobile menu and keyboard behavior
 ├── 404.html               # Mixed-case game-route normalization
