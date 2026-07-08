@@ -1,11 +1,20 @@
+- slug: signalrw
+  name: SignalRW
+  description: High-fidelity HTML5 retro-vector survival arena game.
+  source_url: https://github.com/frankstop/SignalRW
+  game_url: https://frankstop.github.io/SignalRW/
+  image: /assets/images/games/signalrw.png
+  featured: true
+  position: 1
+  published: true
+
 - slug: metrodash
   name: MetroDash
   description: Race the rails. Beat your best run.
   source_url: https://github.com/frankstop/MetroDash
   game_url: https://frankstop.github.io/MetroDash/
   image: /assets/images/games/metrodash.png
-  featured: true
-  position: 1
+  position: 2
   published: true
 
 - slug: wingsprint
@@ -14,7 +23,7 @@
   source_url: https://github.com/frankstop/WingSprint
   game_url: https://frankstop.github.io/WingSprint/
   image: /assets/images/games/wingsprint.png
-  position: 2
+  position: 3
   published: true
 
 - slug: pressurematch
@@ -23,7 +32,7 @@
   source_url: https://github.com/frankstop/PressureMatch
   game_url: https://frankstop.github.io/PressureMatch/
   image: /assets/images/games/pressurematch.png
-  position: 3
+  position: 4
   published: true
 
 - slug: "2048"
@@ -32,7 +41,7 @@
   source_url: https://github.com/frankstop/2048
   game_url: https://frankstop.github.io/2048/
   image: /assets/images/games/2048.png
-  position: 4
+  position: 5
   published: true
 
 - slug: minesweeper
@@ -41,7 +50,7 @@
   source_url: https://github.com/frankstop/Minesweeper
   game_url: https://frankstop.github.io/Minesweeper/
   image: /assets/images/games/minesweeper.png
-  position: 5
+  position: 6
   published: true
 
 - slug: sudoku
@@ -50,5 +59,32 @@
   source_url: https://github.com/frankstop/Sudoku
   game_url: https://frankstop.github.io/Sudoku/
   image: /assets/images/games/sudoku.png
-  position: 6
+  position: 7
+  published: true
+
+- slug: asteroidsgame
+  name: AsteroidsGame
+  description: A browser-based arcade game inspired by the classic Asteroids experience.
+  source_url: https://github.com/frankstop/AsteroidsGame
+  game_url: https://frankstop.github.io/AsteroidsGame/
+  image: /assets/images/games/asteroidsgame.png
+  position: 8
+  published: true
+
+- slug: crossysprint
+  name: CrossySprint
+  description: Original winter lane-crossing arcade game for desktop and iPhone.
+  source_url: https://github.com/frankstop/CrossySprint
+  game_url: https://frankstop.github.io/CrossySprint/
+  image: /assets/images/games/crossysprint.png
+  position: 9
+  published: true
+
+- slug: loveletter
+  name: LoveLetter
+  description: Play the classic micro-card game of deduction and risk on the web.
+  source_url: https://github.com/frankstop/LoveLetter
+  game_url: https://frankstop.github.io/LoveLetter/
+  image: /assets/images/games/loveletter.png
+  position: 10
   published: true

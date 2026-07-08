@@ -187,7 +187,16 @@ nav_key: skills
   <script>
     const canvas = document.getElementById("fireworks");
     const ctx = canvas.getContext("2d");
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    
+    // Track prefers-reduced-motion state
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let reducedMotion = motionQuery.matches;
+    
+    // Visibility state variables
+    let isDocumentVisible = document.visibilityState === "visible";
+    let isCanvasInViewport = true;
+    let animationFrameId = null;
+    
     let width;
     let height;
     let ratio;
@@ -195,6 +204,13 @@ nav_key: skills
     let particles = [];
     let stars = [];
     let lastAutomaticLaunch = 0;
+
+    function drawStaticScene() {
+      ctx.globalCompositeOperation = "source-over";
+      ctx.fillStyle = "#040e21"; // Solid dark background matching skills page styling
+      ctx.fillRect(0, 0, width, height);
+      drawStars();
+    }
 
     function resizeFireworks() {
       width = window.innerWidth;
@@ -209,6 +225,11 @@ nav_key: skills
         radius: Math.random() * 1.2,
         alpha: Math.random() * 0.48 + 0.12
       }));
+      
+      // If we are not currently animating (static or paused), draw the background once
+      if (reducedMotion || animationFrameId === null) {
+        drawStaticScene();
+      }
     }
 
     class Firework {
@@ -315,11 +336,18 @@ nav_key: skills
     }
 
     function animateFireworks(timestamp) {
-      requestAnimationFrame(animateFireworks);
+      if (!isDocumentVisible || !isCanvasInViewport || reducedMotion) {
+        animationFrameId = null;
+        return;
+      }
+      
+      animationFrameId = requestAnimationFrame(animateFireworks);
+      
       ctx.globalCompositeOperation = "source-over";
       ctx.fillStyle = "rgba(4, 14, 33, 0.2)";
       ctx.fillRect(0, 0, width, height);
       drawStars();
+      
       ctx.globalCompositeOperation = "lighter";
       fireworks = fireworks.filter((firework) => {
         firework.draw();
@@ -331,16 +359,74 @@ nav_key: skills
       });
       ctx.globalAlpha = 1;
 
-      const interval = reducedMotion ? 11000 : 3000;
+      const interval = 3000;
       if (timestamp - lastAutomaticLaunch > interval && fireworks.length < 2) {
         fireworks.push(new Firework());
         lastAutomaticLaunch = timestamp;
       }
     }
 
-    window.addEventListener("resize", resizeFireworks);
+    // Toggle animation loop based on visibility and motion preferences
+    function checkAndToggleAnimation() {
+      const shouldAnimate = isDocumentVisible && isCanvasInViewport && !reducedMotion;
+      
+      if (shouldAnimate) {
+        if (animationFrameId === null) {
+          lastAutomaticLaunch = performance.now();
+          animationFrameId = requestAnimationFrame(animateFireworks);
+        }
+      } else {
+        if (animationFrameId !== null) {
+          cancelAnimationFrame(animationFrameId);
+          animationFrameId = null;
+        }
+        if (reducedMotion) {
+          drawStaticScene();
+        }
+      }
+    }
+
+    // Debounced Resize event handler
+    let resizeTimeout;
+    function handleResize() {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        resizeFireworks();
+      }, 150);
+    }
+
+    // Watch visibility change
+    document.addEventListener("visibilitychange", () => {
+      isDocumentVisible = document.visibilityState === "visible";
+      checkAndToggleAnimation();
+    });
+
+    // Viewport visibility check using IntersectionObserver
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          isCanvasInViewport = entry.isIntersecting;
+          checkAndToggleAnimation();
+        });
+      }, {
+        threshold: 0
+      });
+      observer.observe(canvas);
+    } else {
+      isCanvasInViewport = true;
+    }
+
+    // Watch reduced-motion changes dynamically
+    motionQuery.addEventListener("change", (e) => {
+      reducedMotion = e.matches;
+      checkAndToggleAnimation();
+    });
+
+    window.addEventListener("resize", handleResize);
+    
+    // Initial setup
     resizeFireworks();
-    requestAnimationFrame(animateFireworks);
+    checkAndToggleAnimation();
   </script>
 </body>
 </html>

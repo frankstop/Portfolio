@@ -38,6 +38,48 @@ nav_key: projects
         2px -2px 0 #000,
         -2px 2px 0 #000;
     }
+    .matrix-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      user-select: none;
+      background: black;
+      opacity: 0.75;
+    }
+    .matrix-col {
+      position: absolute;
+      top: -450px;
+      left: var(--left);
+      width: 1ch;
+      line-height: 1.1;
+      text-align: center;
+      font-family: monospace;
+      font-size: 1.25rem;
+      color: #00ff66;
+      opacity: var(--opacity);
+      animation: fall var(--speed) linear infinite;
+      animation-delay: var(--d);
+      text-shadow: 0 0 8px rgba(0, 255, 102, 0.8);
+      white-space: pre-wrap;
+      word-break: break-all;
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
+      mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(calc(46vh + 550px));
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .matrix-col {
+        animation-duration: calc(var(--speed) * 6) !important;
+        opacity: calc(var(--opacity) * 0.4) !important;
+      }
+    }
   </style>
   {% include analytics.html %}
 </head>
@@ -46,7 +88,26 @@ nav_key: projects
 
   <main class="pt-24">
     <section class="relative flex min-h-[46vh] items-center justify-center overflow-hidden bg-black">
-      <iframe class="absolute inset-0 h-full w-full border-0 opacity-75" src="https://frankstop.github.io/MatrixRain/" title="MatrixRain background" loading="lazy" referrerpolicy="no-referrer" aria-hidden="true" tabindex="-1"></iframe>
+      <!-- CSS-only local Matrix-style decorative background -->
+      <div class="matrix-bg" aria-hidden="true">
+        <div class="matrix-col" style="--left: 3%; --speed: 14s; --d: -2s; --opacity: 0.35;">日ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍ</div>
+        <div class="matrix-col" style="--left: 8%; --speed: 20s; --d: -7s; --opacity: 0.2;">0123456789ﾊﾐﾋｰｳｼ</div>
+        <div class="matrix-col" style="--left: 14%; --speed: 12s; --d: -4s; --opacity: 0.5;">ｦｧｨｩｪｫｬｭｮｯｰｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿ</div>
+        <div class="matrix-col" style="--left: 20%; --speed: 18s; --d: -1s; --opacity: 0.25;">ﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜﾝ</div>
+        <div class="matrix-col" style="--left: 26%; --speed: 15s; --d: -9s; --opacity: 0.45;">0123456789日ﾊﾐﾋｰ</div>
+        <div class="matrix-col" style="--left: 32%; --speed: 22s; --d: -3s; --opacity: 0.25;">ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄ</div>
+        <div class="matrix-col" style="--left: 38%; --speed: 13s; --d: -5s; --opacity: 0.55;">日ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱ</div>
+        <div class="matrix-col" style="--left: 44%; --speed: 17s; --d: -8s; --opacity: 0.3;">ｦｧｨｩｪｫｬｭｮｯｰｱｲｳｴｵｶｷｸ</div>
+        <div class="matrix-col" style="--left: 50%; --speed: 11s; --d: -2s; --opacity: 0.45;">0123456789ﾊﾐﾋｰｳｼﾅﾓ</div>
+        <div class="matrix-col" style="--left: 56%; --speed: 19s; --d: -6s; --opacity: 0.3;">ﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑ</div>
+        <div class="matrix-col" style="--left: 62%; --speed: 16s; --d: -11s; --opacity: 0.4;">ｦｧｨｩｪｫｬｭｮｯｰｱｲｳｴｵ</div>
+        <div class="matrix-col" style="--left: 68%; --speed: 21s; --d: -4s; --opacity: 0.2;">0123456789日ﾊﾐ</div>
+        <div class="matrix-col" style="--left: 74%; --speed: 14s; --d: -1s; --opacity: 0.45;">ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃ</div>
+        <div class="matrix-col" style="--left: 80%; --speed: 18s; --d: -8s; --opacity: 0.3;">日ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾏｹ</div>
+        <div class="matrix-col" style="--left: 86%; --speed: 12s; --d: -3s; --opacity: 0.5;">ｦｧｨｩｪｫｬｭｮｯｰｱｲｳｴｵ</div>
+        <div class="matrix-col" style="--left: 92%; --speed: 20s; --d: -10s; --opacity: 0.2;">0123456789ﾀﾁﾂﾃﾄ</div>
+        <div class="matrix-col" style="--left: 97%; --speed: 15s; --d: -5s; --opacity: 0.35;">ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘ</div>
+      </div>
       <div class="absolute inset-0 bg-black/20"></div>
       <div class="relative z-10 px-4 py-24 text-center">
         <h1 class="projects-hero-title text-7xl uppercase leading-none tracking-normal text-white sm:text-8xl md:text-9xl">Projects</h1>

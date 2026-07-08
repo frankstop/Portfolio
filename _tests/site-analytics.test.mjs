@@ -71,9 +71,13 @@ test("the source markup covers the complete event contract", async () => {
 test("all game routes use the analytics-enabled game layout", async () => {
   const games = [
     "2048",
+    "asteroidsgame",
+    "crossysprint",
+    "loveletter",
     "metrodash",
     "minesweeper",
     "pressurematch",
+    "signalrw",
     "sudoku",
     "wingsprint"
   ];
