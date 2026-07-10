@@ -1,0 +1,55 @@
+- slug: goodjob
+  name: GoodJob
+  description: Static job dashboard that normalizes employer-direct Greenhouse, Lever, and Ashby feeds into searchable, filterable listings on GitHub Pages.
+  live_url: https://frankstop.github.io/GoodJob/
+  repo_url: https://github.com/frankstop/GoodJob
+  published: true
+  position: 1
+
+- slug: f-ast
+  name: f-ast
+  description: TypeScript CLI and MCP toolkit that parses legacy Java and C# into compact AST, symbol, and flow maps for AI-assisted modernization.
+  live_url: ""
+  repo_url: https://github.com/frankstop/f-ast
+  published: false
+  position: 2
+
+- slug: kingkullenresearch
+  name: KingKullenResearch
+  description: Weekly grocery pricing pipeline using collected retail data for longitudinal analysis and modeling.
+  live_url: https://frankstop.github.io/KingKullenResearch/
+  repo_url: https://github.com/frankstop/KingKullenResearch
+  published: true
+  position: 3
+
+- slug: civil-service-watch
+  name: CivilServiceWatch
+  description: Daily monitor for civil service exams and public-sector hiring sources with source-health reporting.
+  live_url: https://frankstop.github.io/civil-service-watch/
+  repo_url: https://github.com/frankstop/civil-service-watch
+  published: true
+  position: 4
+
+- slug: circular
+  name: Gala-LI/Circular
+  description: Gala Foods circular page with date-based logic that selects the current weekly PDF automatically.
+  live_url: https://gala-li.github.io/Circular/
+  repo_url: https://github.com/gala-li/Circular
+  published: true
+  position: 5
+
+- slug: othelloai
+  name: Othello AI / FastAPI Capstone
+  description: Othello AI capstone with a FastAPI backend and multiple game strategies behind a playable web interface.
+  live_url: https://frankstop.github.io/OthelloAI/
+  repo_url: https://github.com/frankstop/OthelloAISource
+  published: true
+  position: 6
+
+- slug: stopshopresearch
+  name: StopShopResearch
+  description: Longitudinal public Stop & Shop catalog price research.
+  live_url: https://frankstop.github.io/StopShopResearch/
+  repo_url: https://github.com/frankstop/StopShopResearch
+  published: true
+  position: 7
