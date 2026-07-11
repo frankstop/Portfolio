@@ -88,3 +88,13 @@
   image: /assets/images/games/loveletter.png
   position: 10
   published: true
+
+- slug: stack
+  name: Stack
+  description: A colorful offline block puzzle game.
+  source_url: https://github.com/frankstop/Stack
+  game_url: https://frankstop.github.io/Stack/
+  image: /assets/images/games/stack.png
+  position: 11
+  published: true
+
