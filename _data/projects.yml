@@ -1,10 +1,19 @@
+- slug: shreddedflatabs
+  name: ShreddedFlatAbs
+  description: Six-day calisthenics and posture program presented like a music player, with day playlists, exercise videos, and track-style navigation.
+  live_url: https://frankstop.github.io/ShreddedFlatAbs/
+  repo_url: https://github.com/frankstop/ShreddedFlatAbs
+  published: true
+  featured: true
+  position: 1
+
 - slug: goodjob
   name: GoodJob
   description: Static job dashboard that normalizes employer-direct Greenhouse, Lever, and Ashby feeds into searchable, filterable listings on GitHub Pages.
   live_url: https://frankstop.github.io/GoodJob/
   repo_url: https://github.com/frankstop/GoodJob
   published: true
-  position: 1
+  position: 2
 
 - slug: f-ast
   name: f-ast
@@ -12,7 +21,7 @@
   live_url: ""
   repo_url: https://github.com/frankstop/f-ast
   published: false
-  position: 2
+  position: 3
 
 - slug: kingkullenresearch
   name: KingKullenResearch
@@ -20,7 +29,7 @@
   live_url: https://frankstop.github.io/KingKullenResearch/
   repo_url: https://github.com/frankstop/KingKullenResearch
   published: true
-  position: 3
+  position: 4
 
 - slug: civil-service-watch
   name: CivilServiceWatch
@@ -28,7 +37,7 @@
   live_url: https://frankstop.github.io/civil-service-watch/
   repo_url: https://github.com/frankstop/civil-service-watch
   published: true
-  position: 4
+  position: 5
 
 - slug: circular
   name: Gala-LI/Circular
@@ -36,7 +45,7 @@
   live_url: https://gala-li.github.io/Circular/
   repo_url: https://github.com/gala-li/Circular
   published: true
-  position: 5
+  position: 6
 
 - slug: othelloai
   name: Othello AI / FastAPI Capstone
@@ -44,7 +53,7 @@
   live_url: https://frankstop.github.io/OthelloAI/
   repo_url: https://github.com/frankstop/OthelloAISource
   published: true
-  position: 6
+  position: 7
 
 - slug: stopshopresearch
   name: StopShopResearch
@@ -52,4 +61,4 @@
   live_url: https://frankstop.github.io/StopShopResearch/
   repo_url: https://github.com/frankstop/StopShopResearch
   published: true
-  position: 7
+  position: 8

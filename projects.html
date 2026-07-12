@@ -38,6 +38,22 @@ nav_key: projects
         2px -2px 0 #000,
         -2px 2px 0 #000;
     }
+    .featured-project {
+      border-color: #e8b923;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(255, 239, 172, 0.58), transparent 34%),
+        linear-gradient(135deg, #fffdf5 0%, #ffffff 56%, #fff8dc 100%);
+      box-shadow:
+        0 0 0 1px rgba(232, 185, 35, 0.18),
+        0 12px 34px rgba(184, 134, 11, 0.18),
+        0 0 38px rgba(246, 199, 68, 0.18);
+    }
+    .featured-project:hover {
+      box-shadow:
+        0 0 0 1px rgba(232, 185, 35, 0.26),
+        0 16px 42px rgba(184, 134, 11, 0.24),
+        0 0 48px rgba(246, 199, 68, 0.24);
+    }
   </style>
   {% include analytics.html %}
 </head>
@@ -58,8 +74,11 @@ nav_key: projects
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {% assign sorted_projects = site.data.projects | sort: "position" %}
         {% for project in sorted_projects %}
-        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-          <h3 class="text-xl font-semibold text-gray-900">{{ project.name }}</h3>
+        <article class="flex flex-col rounded-2xl border p-6 transition {% if project.featured %}featured-project sm:col-span-2 lg:col-span-3 lg:p-8{% else %}border-gray-200 bg-white shadow-sm hover:shadow-md{% endif %}">
+          {% if project.featured %}
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-amber-700">Featured project</p>
+          {% endif %}
+          <h3 class="{% if project.featured %}text-2xl lg:text-3xl{% else %}text-xl{% endif %} font-semibold text-gray-900">{{ project.name }}</h3>
           <ul class="mt-4 list-disc pl-5 text-gray-700">
             <li>{{ project.description }}</li>
           </ul>
@@ -67,7 +86,7 @@ nav_key: projects
             {% if project.published %}
             <a href="{{ '/projects/' | append: project.slug | append: '/' | relative_url }}" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="{{ project.name }}" data-analytics-link-type="live_site" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
             {% endif %}
-            <a href="{{ project.repo_url }}" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="{{ project.name }}" data-analytics-link-type="repository" class="font-semibold text-gray-700 hover:text-gray-950">Repository</a>
+            <a href="{{ project.repo_url }}" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="{{ project.name }}" data-analytics-link-type="repository" class="font-semibold {% if project.featured %}text-amber-800 hover:text-amber-950{% else %}text-gray-700 hover:text-gray-950{% endif %}">Repository</a>
             {% if project.published %}
             <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="{{ project.live_url }}" data-preview-title="{{ project.name }}" data-preview-cta="Open live site" data-analytics-event="project_preview_open" data-analytics-project-name="{{ project.name }}" data-preview-internal-url="{{ '/projects/' | append: project.slug | append: '/' | relative_url }}">Preview project</button>
             {% endif %}
