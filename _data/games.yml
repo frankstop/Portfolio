@@ -98,3 +98,12 @@
   position: 11
   published: true
 
+- slug: pixel-garden
+  name: Pixel Garden
+  description: Plants keep growing in real time, even with the tab closed.
+  source_url: https://github.com/frankstop/PixelGarden
+  game_url: https://frankstop.github.io/PixelGarden/
+  image: /assets/images/games/pixel-garden.png
+  position: 12
+  published: true
+
