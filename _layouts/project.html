@@ -7,6 +7,21 @@
   <meta name="description" content="{{ page.description | default: page.project_name }}">
   <meta name="robots" content="{% if page.project_published %}index, follow{% else %}noindex, follow{% endif %}">
   {% if page.canonical_path %}<link rel="canonical" href="https://frankiejvaldez.com{{ page.canonical_path }}">{% else %}<link rel="canonical" href="https://frankiejvaldez.com/projects/{{ page.project_slug }}/">{% endif %}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Frank Valdez Portfolio">
+  <meta property="og:title" content="{{ page.title | default: page.project_name }} | Frank Valdez Portfolio">
+  <meta property="og:description" content="{{ page.description | default: page.project_name }}">
+  <meta property="og:url" content="https://frankiejvaldez.com/projects/{{ page.project_slug }}/">
+  {% if page.og_image %}
+  <meta property="og:image" content="https://frankiejvaldez.com{{ page.og_image }}">
+  <meta property="og:image:alt" content="{{ page.og_image_alt | default: page.project_name }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://frankiejvaldez.com{{ page.og_image }}">
+  {% else %}
+  <meta name="twitter:card" content="summary">
+  {% endif %}
+  <meta name="twitter:title" content="{{ page.title | default: page.project_name }} | Frank Valdez Portfolio">
+  <meta name="twitter:description" content="{{ page.description | default: page.project_name }}">
   <style>
     :root {
       color-scheme: light dark;

@@ -1,6 +1,6 @@
 - slug: shreddedflatabs
   name: ShreddedFlatAbs
-  description: Six-day calisthenics and posture program presented like a music player, with day playlists, exercise videos, and track-style navigation.
+  description: "A 6-day calisthenics and posture program (Mon–Sat, Sun rest) with a music-player-style interface: day playlists, exercises as tracks, and a Now Playing panel that loads each exercise's reference video with Prev/Next navigation."
   live_url: https://frankstop.github.io/ShreddedFlatAbs/
   repo_url: https://github.com/frankstop/ShreddedFlatAbs
   published: true
