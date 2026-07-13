@@ -1,3 +1,5 @@
+---
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -13,14 +15,6 @@
     <loc>https://frankiejvaldez.com/projects.html</loc>
   </url>
   <url>
-    <loc>https://frankiejvaldez.com/games/</loc>
-  </url>
-  {% for game in site.data.games %}
-  <url>
-    <loc>https://frankiejvaldez.com/games/{{ game.slug }}/</loc>
-  </url>
-  {% endfor %}
-  <url>
     <loc>https://frankiejvaldez.com/experience.html</loc>
   </url>
   <url>
@@ -30,6 +24,18 @@
     <loc>https://frankiejvaldez.com/contact.html</loc>
   </url>
   <url>
+    <loc>https://frankiejvaldez.com/gala-fresh.html</loc>
+  </url>
+  <url>
+    <loc>https://frankiejvaldez.com/games/</loc>
+  </url>
+{% for game in site.data.games %}{% if game.published %}  <url>
+    <loc>https://frankiejvaldez.com/games/{{ game.slug }}/</loc>
+  </url>
+{% endif %}{% endfor %}{% for project in site.data.projects %}{% if project.published %}  <url>
+    <loc>https://frankiejvaldez.com/projects/{{ project.slug }}/</loc>
+  </url>
+{% endif %}{% endfor %}  <url>
     <loc>https://frankiejvaldez.com/projects/stopshopresearch/catalog-history/</loc>
   </url>
   <url>
