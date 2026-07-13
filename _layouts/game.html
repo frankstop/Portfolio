@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+{% assign game = site.data.games | where: "slug", page.game_slug | first %}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.game_name }} | Frank Valdez Games</title>
-  <meta name="description" content="Play {{ page.game_name }}, a browser game by Frank Valdez.">
+  <meta name="description" content="{% if game.description %}{{ game.description }}{% else %}Play {{ page.game_name }}, a browser game by Frank Valdez.{% endif %}">
   <meta name="robots" content="{% if page.game_published %}index, follow{% else %}noindex, follow{% endif %}">
   <link rel="canonical" href="https://frankiejvaldez.com/games/{{ page.game_slug }}/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Frank Valdez">
+  <meta property="og:title" content="{{ page.game_name }} | Frank Valdez Games">
+  <meta property="og:description" content="{% if game.description %}{{ game.description }}{% else %}Play {{ page.game_name }}, a browser game by Frank Valdez.{% endif %}">
+  <meta property="og:url" content="https://frankiejvaldez.com/games/{{ page.game_slug }}/">
+  {% if game.image %}<meta property="og:image" content="https://frankiejvaldez.com{{ game.image }}">{% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.game_name }} | Frank Valdez Games">
+  <meta name="twitter:description" content="{% if game.description %}{{ game.description }}{% else %}Play {{ page.game_name }}, a browser game by Frank Valdez.{% endif %}">
+  {% if game.image %}<meta name="twitter:image" content="https://frankiejvaldez.com{{ game.image }}">{% endif %}
   <style>
     :root {
       color-scheme: dark;
