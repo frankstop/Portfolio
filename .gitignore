@@ -3,3 +3,9 @@ node_modules/
 .DS_Store
 *.log
 /tmp/
+
+# Jekyll build output
+_site/
+
+# Compiled Tailwind CSS (generated at build time in CI)
+assets/css/styles.css
