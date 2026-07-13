@@ -1,293 +1,206 @@
 ---
+layout: default
 nav_key: home
+title: "Frank Valdez | IT Operations, Automation & Software Development"
+description: "Frank Valdez is an IT operations manager and software developer in the NYC area building automation tools, data workflows, POS systems, and practical web applications."
+canonical: "https://frankiejvaldez.com/"
+body_class: "bg-gray-50 text-gray-800"
+twitter_card: "summary_large_image"
+person_schema: true
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Frank Valdez | IT Operations, Automation & Software Development</title>
-  <meta name="description" content="Frank Valdez is an IT operations manager and software developer in the NYC area building automation tools, data workflows, POS systems, and practical web applications.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://frankiejvaldez.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Frank Valdez">
-  <meta property="og:title" content="Frank Valdez | IT Operations, Automation & Software Development">
-  <meta property="og:description" content="Portfolio of Frank Valdez: IT operations work, software projects, automation systems, data workflows, and tools built from real business problems.">
-  <meta property="og:url" content="https://frankiejvaldez.com/">
-  <meta property="og:image" content="https://frankiejvaldez.com/myheadshot.jpeg">
-  <meta property="og:image:alt" content="Headshot of Frank Valdez">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Frank Valdez | IT Operations, Automation & Software Development">
-  <meta name="twitter:description" content="IT operations manager and software developer building practical systems for support, automation, data, and business workflows.">
-  <meta name="twitter:image" content="https://frankiejvaldez.com/myheadshot.jpeg">
-  <meta name="twitter:image:alt" content="Headshot of Frank Valdez">
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Frank Valdez",
-      "alternateName": "frankiejvaldez",
-      "url": "https://frankiejvaldez.com/",
-      "email": "frankiejvaldez@gmail.com",
-      "jobTitle": "IT Operations Manager",
-      "sameAs": [
-        "https://github.com/frankstop",
-        "https://www.linkedin.com/in/frankiejvaldez"
-      ],
-      "knowsAbout": [
-        "IT Operations",
-        "Software Development",
-        "Automation",
-        "Data Workflows",
-        "Programming Languages",
-        "GitHub",
-        "Enterprise Support",
-        "Computer Administration",
-        "Website Hosting",
-        "AI Collaboration",
-        "Point-of-Sale Systems",
-        "SQL Server",
-        "Identity and Access Management",
-        "Device Provisioning",
-        "Technical Support",
-        "Web Development",
-        "Data Analysis",
-        "Technical Documentation",
-        "Systems Administration",
-        "Business Process Automation",
-        "IT Infrastructure",
-        "Help Desk Operations",
-        "End-User Support",
-        "Workflow Automation",
-        "Retail Technology",
-        "Inventory Systems",
-        "Python",
-        "JavaScript",
-        "React",
-        "FastAPI",
-        "SQLite",
-        "PostgreSQL",
-        "Google Workspace",
-        "Microsoft 365",
-        "Entra ID",
-        "Intune",
-        "GitHub Actions",
-        "Technical Training"
-      ]
-    }
-  </script>
+<style>
+  #hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+  }
 
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <style>
-    body { font-family: 'Inter', sans-serif; margin: 0; }
-    html { scroll-behavior: smooth; }
+  #hero canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
 
-    #hero {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-      color: white;
-    }
+  #hero .content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 0 2rem;
+    background: radial-gradient(circle, rgba(0, 0, 30, 0.6) 0%, rgba(0, 0, 30, 0.2) 60%, transparent 100%);
+  }
 
-    #hero canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-    }
+  .readable-text {
+    text-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.9),
+      0 2px 4px rgba(0, 0, 0, 0.9),
+      0 4px 8px rgba(0, 0, 0, 0.9),
+      0 8px 16px rgba(0, 0, 0, 0.9);
+  }
+</style>
 
-    #hero .content {
-      position: relative;
-      z-index: 10;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      text-align: center;
-      padding: 0 2rem;
-      background: radial-gradient(circle, rgba(0, 0, 30, 0.6) 0%, rgba(0, 0, 30, 0.2) 60%, transparent 100%);
-    }
-
-    .readable-text {
-      text-shadow: 
-        0 1px 2px rgba(0, 0, 0, 0.9), 
-        0 2px 4px rgba(0, 0, 0, 0.9), 
-        0 4px 8px rgba(0, 0, 0, 0.9), 
-        0 8px 16px rgba(0, 0, 0, 0.9);
-    }
-  </style>
-
-  {% include analytics.html %}
-</head>
-<body class="bg-gray-50 text-gray-800">
-
-  {% include header.html %}
-  <header id="hero">
-    <canvas id="vortexCanvas"></canvas>
-    <div class="content">
-      <h1 class="text-5xl sm:text-7xl font-extrabold mb-6 tracking-tight readable-text">Frank Valdez</h1>
-      <p class="text-xl sm:text-2xl font-semibold mb-10 tracking-wide text-blue-100 max-w-3xl mx-auto readable-text">
-        IT Operations, System Automation & Software Development
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-        <a href="mailto:frankiejvaldez@gmail.com"
-           data-analytics-event="contact_click"
-           data-analytics-method="email"
-           data-analytics-placement="homepage"
-           class="bg-white text-blue-700 px-8 py-3 rounded-full font-medium text-lg hover:bg-gray-200 transition">
-          Email Me
-        </a>
-        <a href="https://github.com/frankstop" target="_blank"
-           data-analytics-event="contact_click"
-           data-analytics-method="github"
-           data-analytics-placement="homepage"
-           class="border border-white px-8 py-3 rounded-full font-medium text-lg hover:bg-white hover:text-blue-700 transition">
-          GitHub
-        </a>
-        <a href="https://www.linkedin.com/in/frankiejvaldez" target="_blank" rel="noopener"
-           data-analytics-event="contact_click"
-           data-analytics-method="linkedin"
-           data-analytics-placement="homepage"
-           class="border border-white px-8 py-3 rounded-full font-medium text-lg hover:bg-white hover:text-blue-700 transition">
-          LinkedIn
-        </a>
-      </div>
-      <a href="#intro" aria-label="Scroll to introduction" class="mt-14 text-3xl text-blue-100 opacity-80 transition hover:opacity-100 readable-text">&darr;</a>
+<header id="hero">
+  <canvas id="vortexCanvas"></canvas>
+  <div class="content">
+    <h1 class="text-5xl sm:text-7xl font-extrabold mb-6 tracking-tight readable-text">Frank Valdez</h1>
+    <p class="text-xl sm:text-2xl font-semibold mb-10 tracking-wide text-blue-100 max-w-3xl mx-auto readable-text">
+      IT Operations, System Automation & Software Development
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+      <a href="mailto:frankiejvaldez@gmail.com"
+         data-analytics-event="contact_click"
+         data-analytics-method="email"
+         data-analytics-placement="homepage"
+         class="bg-white text-blue-700 px-8 py-3 rounded-full font-medium text-lg hover:bg-gray-200 transition">
+        Email Me
+      </a>
+      <a href="https://github.com/frankstop" target="_blank"
+         data-analytics-event="contact_click"
+         data-analytics-method="github"
+         data-analytics-placement="homepage"
+         class="border border-white px-8 py-3 rounded-full font-medium text-lg hover:bg-white hover:text-blue-700 transition">
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/frankiejvaldez" target="_blank" rel="noopener"
+         data-analytics-event="contact_click"
+         data-analytics-method="linkedin"
+         data-analytics-placement="homepage"
+         class="border border-white px-8 py-3 rounded-full font-medium text-lg hover:bg-white hover:text-blue-700 transition">
+        LinkedIn
+      </a>
     </div>
-  </header>
+    <a href="#intro" aria-label="Scroll to introduction" class="mt-14 text-3xl text-blue-100 opacity-80 transition hover:opacity-100 readable-text">&darr;</a>
+  </div>
+</header>
 
-  <main>
-    <section id="intro" class="bg-white py-16">
-      <div class="mx-auto max-w-3xl px-4">
-        <h2 class="text-3xl font-bold text-gray-900">IT operations and software development, grounded in real business problems</h2>
-        <p class="mt-6 text-lg leading-relaxed text-gray-700">
-          I'm Frank Valdez, a SUNY Old Westbury Alumni, IT operations manager, and software developer in the New York City area.
-          Day to day, I run the technology behind a two-location grocery operation: point-of-sale and
-          back-office systems, SQL Server data workflows, publishing, dashboards, and the user support
-          that keeps everything moving. Before that, I worked across enterprise IT &mdash; identity and
-          access management, device provisioning and large-scale deployments, and help desk operations.
-        </p>
-        <p class="mt-4 text-lg leading-relaxed text-gray-700">
-          The pattern in my work is the same everywhere: when a process is slow, repetitive, or
-          error-prone, I build software to fix it. That has produced automation scripts, longitudinal
-          data pipelines, internal tools, and web applications, written mostly in Python and JavaScript.
-          The full history is on my <a href="{{ '/experience.html' | relative_url }}" class="font-medium text-blue-600 hover:text-blue-800">experience page</a>,
-          and there's more background <a href="{{ '/about.html' | relative_url }}" class="font-medium text-blue-600 hover:text-blue-800">about me</a>
-          and the <a href="{{ '/skills.html' | relative_url }}" class="font-medium text-blue-600 hover:text-blue-800">skills I work with</a>.
-        </p>
+<main>
+  <section id="intro" class="bg-white py-16">
+    <div class="mx-auto max-w-3xl px-4">
+      <h2 class="text-3xl font-bold text-gray-900">IT operations and software development, grounded in real business problems</h2>
+      <p class="mt-6 text-lg leading-relaxed text-gray-700">
+        I'm Frank Valdez, a SUNY Old Westbury Alumni, IT operations manager, and software developer in the New York City area.
+        Day to day, I run the technology behind a two-location grocery operation: point-of-sale and
+        back-office systems, SQL Server data workflows, publishing, dashboards, and the user support
+        that keeps everything moving. Before that, I worked across enterprise IT &mdash; identity and
+        access management, device provisioning and large-scale deployments, and help desk operations.
+      </p>
+      <p class="mt-4 text-lg leading-relaxed text-gray-700">
+        The pattern in my work is the same everywhere: when a process is slow, repetitive, or
+        error-prone, I build software to fix it. That has produced automation scripts, longitudinal
+        data pipelines, internal tools, and web applications, written mostly in Python and JavaScript.
+        The full history is on my <a href="{{ '/experience.html' | relative_url }}" class="font-medium text-blue-600 hover:text-blue-800">experience page</a>,
+        and there's more background <a href="{{ '/about.html' | relative_url }}" class="font-medium text-blue-600 hover:text-blue-800">about me</a>
+        and the <a href="{{ '/skills.html' | relative_url }}" class="font-medium text-blue-600 hover:text-blue-800">skills I work with</a>.
+      </p>
+    </div>
+  </section>
+
+  <section id="featured-projects" class="bg-gray-50 py-16">
+    <div class="mx-auto max-w-6xl px-4">
+      <h2 class="text-3xl font-bold text-gray-900">Featured projects</h2>
+      <p class="mt-3 text-gray-600">A few things I've built recently &mdash; tools that came out of real workflows, not tutorials.</p>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {% assign home_projects = site.data.projects | where: "published", true | sort: "position" %}
+        {% for project in home_projects limit: 3 %}
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+          <h3 class="text-xl font-semibold text-gray-900">{{ project.name }}</h3>
+          <p class="mt-2 flex-1 text-gray-700">{{ project.description }}</p>
+          <div class="mt-4 flex gap-4 text-sm font-medium">
+            {% if project.live_url != "" %}
+            <a href="{{ project.live_url }}" class="text-blue-600 hover:text-blue-800">Live site</a>
+            {% endif %}
+            <a href="{{ project.repo_url }}" class="text-blue-600 hover:text-blue-800">Source code</a>
+          </div>
+        </article>
+        {% endfor %}
       </div>
-    </section>
+      <p class="mt-8">
+        <a href="{{ '/projects.html' | relative_url }}" class="font-semibold text-blue-600 hover:text-blue-800">View all projects &rarr;</a>
+      </p>
+    </div>
+  </section>
 
-    <section id="featured-projects" class="bg-gray-50 py-16">
-      <div class="mx-auto max-w-6xl px-4">
-        <h2 class="text-3xl font-bold text-gray-900">Featured projects</h2>
-        <p class="mt-3 text-gray-600">A few things I've built recently &mdash; tools that came out of real workflows, not tutorials.</p>
-        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {% assign home_projects = site.data.projects | where: "published", true | sort: "position" %}
-          {% for project in home_projects limit: 3 %}
-          <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:shadow-md">
-            <h3 class="text-xl font-semibold text-gray-900">{{ project.name }}</h3>
-            <p class="mt-2 flex-1 text-gray-700">{{ project.description }}</p>
-            <div class="mt-4 flex gap-4 text-sm font-medium">
-              {% if project.live_url != "" %}
-              <a href="{{ project.live_url }}" class="text-blue-600 hover:text-blue-800">Live site</a>
-              {% endif %}
-              <a href="{{ project.repo_url }}" class="text-blue-600 hover:text-blue-800">Source code</a>
-            </div>
-          </article>
-          {% endfor %}
-        </div>
-        <p class="mt-8">
-          <a href="{{ '/projects.html' | relative_url }}" class="font-semibold text-blue-600 hover:text-blue-800">View all projects &rarr;</a>
-        </p>
-      </div>
-    </section>
+  <section id="games" class="bg-white py-16">
+    <div class="mx-auto max-w-3xl px-4">
+      <h2 class="text-3xl font-bold text-gray-900">Browser games, built from scratch</h2>
+      <p class="mt-4 text-lg leading-relaxed text-gray-700">
+        The games hub collects a dozen playable browser games I've written &mdash; 2048, Minesweeper,
+        Sudoku, an Asteroids clone, and more. Each one is a small, self-contained exercise in game
+        loops, input handling, and rendering, playable directly in the browser with nothing to install.
+      </p>
+      <p class="mt-4">
+        <a href="{{ '/games/' | relative_url }}" class="font-semibold text-blue-600 hover:text-blue-800">Play the games &rarr;</a>
+      </p>
+    </div>
+  </section>
+</main>
 
-    <section id="games" class="bg-white py-16">
-      <div class="mx-auto max-w-3xl px-4">
-        <h2 class="text-3xl font-bold text-gray-900">Browser games, built from scratch</h2>
-        <p class="mt-4 text-lg leading-relaxed text-gray-700">
-          The games hub collects a dozen playable browser games I've written &mdash; 2048, Minesweeper,
-          Sudoku, an Asteroids clone, and more. Each one is a small, self-contained exercise in game
-          loops, input handling, and rendering, playable directly in the browser with nothing to install.
-        </p>
-        <p class="mt-4">
-          <a href="{{ '/games/' | relative_url }}" class="font-semibold text-blue-600 hover:text-blue-800">Play the games &rarr;</a>
-        </p>
-      </div>
-    </section>
-  </main>
+<script>
+  const canvas = document.getElementById("vortexCanvas");
+  const ctx = canvas.getContext("2d");
 
-  {% include footer.html %}
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener("resize", resizeCanvas);
+  resizeCanvas();
 
-  <script>
-    const canvas = document.getElementById("vortexCanvas");
-    const ctx = canvas.getContext("2d");
+  const numParticles = 12000;
+  const particles = [];
+  const vortices = [
+    { x: canvas.width * 0.3, y: canvas.height * 0.5, strength: 200 },
+    { x: canvas.width * 0.7, y: canvas.height * 0.5, strength: -200 },
+    { x: canvas.width * 0.5, y: canvas.height * 0.3, strength: 150 },
+    { x: canvas.width * 0.5, y: canvas.height * 0.7, strength: -150 }
+  ];
 
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-    window.addEventListener("resize", resizeCanvas);
-    resizeCanvas();
-
-    const numParticles = 12000;
-    const particles = [];
-    const vortices = [
-      { x: canvas.width * 0.3, y: canvas.height * 0.5, strength: 200 },
-      { x: canvas.width * 0.7, y: canvas.height * 0.5, strength: -200 },
-      { x: canvas.width * 0.5, y: canvas.height * 0.3, strength: 150 },
-      { x: canvas.width * 0.5, y: canvas.height * 0.7, strength: -150 }
-    ];
-
-    class Particle {
-      constructor(x, y) { this.x = x; this.y = y; }
-      update() {
-        const v = getField(this.x, this.y);
-        this.x += v.x; this.y += v.y;
-        if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
-          this.x = Math.random() * canvas.width;
-          this.y = Math.random() * canvas.height;
-        }
-      }
-      draw() {
-        ctx.fillStyle = "#ffffff";
-        ctx.fillRect(this.x, this.y, 1, 1);
+  class Particle {
+    constructor(x, y) { this.x = x; this.y = y; }
+    update() {
+      const v = getField(this.x, this.y);
+      this.x += v.x; this.y += v.y;
+      if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
       }
     }
-
-    function getField(x, y) {
-      let vx = 0, vy = 0;
-      vortices.forEach(vortex => {
-        const dx = x - vortex.x;
-        const dy = y - vortex.y;
-        const distSq = dx * dx + dy * dy + 100;
-        const factor = vortex.strength / distSq;
-        vx += factor * (-dy);
-        vy += factor * (dx);
-      });
-      return { x: vx, y: vy };
+    draw() {
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(this.x, this.y, 1, 1);
     }
+  }
 
-    for (let i = 0; i < numParticles; i++) {
-      particles.push(new Particle(Math.random() * canvas.width, Math.random() * canvas.height));
-    }
+  function getField(x, y) {
+    let vx = 0, vy = 0;
+    vortices.forEach(vortex => {
+      const dx = x - vortex.x;
+      const dy = y - vortex.y;
+      const distSq = dx * dx + dy * dy + 100;
+      const factor = vortex.strength / distSq;
+      vx += factor * (-dy);
+      vy += factor * (dx);
+    });
+    return { x: vx, y: vy };
+  }
 
-    function animate() {
-      requestAnimationFrame(animate);
-      ctx.fillStyle = "rgba(0, 0, 50, 0.1)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      particles.forEach(p => { p.update(); p.draw(); });
-    }
-    animate();
-  </script>
+  for (let i = 0; i < numParticles; i++) {
+    particles.push(new Particle(Math.random() * canvas.width, Math.random() * canvas.height));
+  }
 
-</body>
-</html>
+  function animate() {
+    requestAnimationFrame(animate);
+    ctx.fillStyle = "rgba(0, 0, 50, 0.1)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => { p.update(); p.draw(); });
+  }
+  animate();
+</script>

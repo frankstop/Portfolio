@@ -1,346 +1,315 @@
 ---
+layout: default
 nav_key: skills
+title: "IT Operations &amp; Software Development Skills | Frank Valdez"
+description: "Explore Frank Valdez's skills in IT operations, enterprise support, software and web development, automation, data analysis, AI workflows, and technical communication."
+canonical: "https://frankiejvaldez.com/skills.html"
+body_class: "skills-fireworks-page text-gray-800 min-h-screen flex flex-col"
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>IT Operations &amp; Software Development Skills | Frank Valdez</title>
-  <meta name="description" content="Explore Frank Valdez's skills in IT operations, enterprise support, software and web development, automation, data analysis, AI workflows, and technical communication.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://frankiejvaldez.com/skills.html">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Frank Valdez Portfolio">
-  <meta property="og:title" content="IT Operations &amp; Software Development Skills | Frank Valdez">
-  <meta property="og:description" content="Explore Frank Valdez's skills in IT operations, enterprise support, software and web development, automation, data analysis, AI workflows, and technical communication.">
-  <meta property="og:url" content="https://frankiejvaldez.com/skills.html">
-  <meta property="og:image" content="https://frankiejvaldez.com/myheadshot.jpeg">
-  <meta property="og:image:alt" content="Frank Valdez">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="IT Operations &amp; Software Development Skills | Frank Valdez">
-  <meta name="twitter:description" content="Explore Frank Valdez's skills in IT operations, enterprise support, software and web development, automation, data analysis, AI workflows, and technical communication.">
-  <meta name="twitter:image" content="https://frankiejvaldez.com/myheadshot.jpeg">
-  <meta name="twitter:image:alt" content="Frank Valdez">
+<style>
+  body.skills-fireworks-page {
+    position: relative;
+    background: #07162e;
+  }
 
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-    html { scroll-behavior: smooth; }
+  #fireworks {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
 
-    body.skills-fireworks-page {
-      position: relative;
-      background: #07162e;
-    }
+  .background-tint {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      linear-gradient(135deg, rgba(219, 234, 254, 0.13), rgba(255, 255, 255, 0.04) 44%, rgba(191, 219, 254, 0.13)),
+      linear-gradient(to bottom, rgba(3, 16, 38, 0.08), rgba(3, 12, 29, 0.42));
+  }
 
-    #fireworks {
-      position: fixed;
-      inset: 0;
-      z-index: -2;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
+  #skills > .text-center h2 {
+    color: #dbeafe;
+    text-shadow: 0 2px 18px rgba(2, 6, 23, 0.44);
+  }
 
-    .background-tint {
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      pointer-events: none;
-      background:
-        linear-gradient(135deg, rgba(219, 234, 254, 0.13), rgba(255, 255, 255, 0.04) 44%, rgba(191, 219, 254, 0.13)),
-        linear-gradient(to bottom, rgba(3, 16, 38, 0.08), rgba(3, 12, 29, 0.42));
-    }
+  .description-glass {
+    padding: 1.125rem 1.5rem;
+    color: #374151;
+    border: 1px solid rgba(255, 255, 255, 0.68);
+    border-radius: 1rem;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(239, 246, 255, 0.66));
+    box-shadow:
+      0 10px 28px rgba(2, 6, 23, 0.16),
+      inset 0 1px 0 rgba(255, 255, 255, 0.88);
+    -webkit-backdrop-filter: blur(22px) saturate(165%);
+    backdrop-filter: blur(22px) saturate(165%);
+  }
 
-    #skills > .text-center h2 {
-      color: #dbeafe;
-      text-shadow: 0 2px 18px rgba(2, 6, 23, 0.44);
-    }
+  .skills-glass {
+    border: 1px solid rgba(255, 255, 255, 0.68);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.79), rgba(239, 246, 255, 0.63));
+    box-shadow:
+      0 10px 24px rgba(2, 6, 23, 0.16),
+      inset 0 1px 0 rgba(255, 255, 255, 0.88);
+    -webkit-backdrop-filter: blur(20px) saturate(165%);
+    backdrop-filter: blur(20px) saturate(165%);
+  }
 
-    .description-glass {
-      padding: 1.125rem 1.5rem;
-      color: #374151;
-      border: 1px solid rgba(255, 255, 255, 0.68);
-      border-radius: 1rem;
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(239, 246, 255, 0.66));
-      box-shadow:
-        0 10px 28px rgba(2, 6, 23, 0.16),
-        inset 0 1px 0 rgba(255, 255, 255, 0.88);
-      -webkit-backdrop-filter: blur(22px) saturate(165%);
-      backdrop-filter: blur(22px) saturate(165%);
-    }
+  .skills-glass:hover {
+    box-shadow:
+      0 16px 32px rgba(2, 6, 23, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.94);
+  }
+</style>
 
-    .skills-glass {
-      border: 1px solid rgba(255, 255, 255, 0.68);
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.79), rgba(239, 246, 255, 0.63));
-      box-shadow:
-        0 10px 24px rgba(2, 6, 23, 0.16),
-        inset 0 1px 0 rgba(255, 255, 255, 0.88);
-      -webkit-backdrop-filter: blur(20px) saturate(165%);
-      backdrop-filter: blur(20px) saturate(165%);
-    }
+<canvas id="fireworks" aria-hidden="true"></canvas>
+<div class="background-tint" aria-hidden="true"></div>
 
-    .skills-glass:hover {
-      box-shadow:
-        0 16px 32px rgba(2, 6, 23, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.94);
-    }
-  </style>
+<!-- Main -->
+<main class="flex-grow pt-24 pb-16 px-6">
+  <section id="skills" class="max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-blue-700 mb-4">Technical & Professional Skills</h2>
+      <p class="description-glass max-w-3xl mx-auto text-gray-700 text-lg">
+        Practical technical experience across web development, enterprise IT support, data experimentation, AI-assisted workflow, and technical communication.
+      </p>
+    </div>
 
-  {% include analytics.html %}
-</head>
-<body class="skills-fireworks-page text-gray-800 min-h-screen flex flex-col">
-  <canvas id="fireworks" aria-hidden="true"></canvas>
-  <div class="background-tint" aria-hidden="true"></div>
-
-  {% include header.html %}
-
-  <!-- Main -->
-  <main class="flex-grow pt-24 pb-16 px-6">
-    <section id="skills" class="max-w-6xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-blue-700 mb-4">Technical & Professional Skills</h2>
-        <p class="description-glass max-w-3xl mx-auto text-gray-700 text-lg">
-          Practical technical experience across web development, enterprise IT support, data experimentation, AI-assisted workflow, and technical communication.
-        </p>
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Software & Web Development -->
+      <div class="skills-glass rounded-xl p-6 transition">
+        <h3 class="text-xl font-semibold text-blue-700 mb-4">Software & Web Development</h3>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+          <li>JavaScript, TypeScript, Python, Java, C++</li>
+          <li>HTML, CSS, React, Vite, Node.js</li>
+          <li>Browser-based applications and static sites</li>
+          <li>API integration, JSON workflows, and client-side state</li>
+          <li>Git, GitHub, GitHub Pages, and deployment troubleshooting</li>
+        </ul>
       </div>
 
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Software & Web Development -->
-        <div class="skills-glass rounded-xl p-6 transition">
-          <h3 class="text-xl font-semibold text-blue-700 mb-4">Software & Web Development</h3>
-          <ul class="list-disc pl-5 text-gray-700 space-y-1">
-            <li>JavaScript, TypeScript, Python, Java, C++</li>
-            <li>HTML, CSS, React, Vite, Node.js</li>
-            <li>Browser-based applications and static sites</li>
-            <li>API integration, JSON workflows, and client-side state</li>
-            <li>Git, GitHub, GitHub Pages, and deployment troubleshooting</li>
-          </ul>
-        </div>
-
-        <!-- AI-Assisted Workflow & Automation -->
-        <div class="skills-glass rounded-xl p-6 transition">
-          <h3 class="text-xl font-semibold text-blue-700 mb-4">AI-Assisted Workflow & Automation</h3>
-          <ul class="list-disc pl-5 text-gray-700 space-y-1">
-            <li>Codex and Claude-style workflow support</li>
-            <li>Prompting, acceptance criteria, and repo inspection</li>
-            <li>AI-assisted drafting, debugging, and implementation support</li>
-            <li>Verification against source files, live endpoints, and browser behavior</li>
-            <li>Workflow tools for job search, documentation, and project review</li>
-          </ul>
-        </div>
-
-        <!-- Data, Analytics & Experimentation -->
-        <div class="skills-glass rounded-xl p-6 transition">
-          <h3 class="text-xl font-semibold text-blue-700 mb-4">Data, Analytics & Experimentation</h3>
-          <ul class="list-disc pl-5 text-gray-700 space-y-1">
-            <li>Data mining, machine learning, and model evaluation</li>
-            <li>Decision trees, classification, and train/test analysis</li>
-            <li>Accuracy, precision, recall, F1-score, and overfitting tradeoffs</li>
-            <li>Hypothesis-driven experiments and metric selection</li>
-            <li>Data visualization and evidence-based decision making</li>
-          </ul>
-        </div>
-
-        <!-- IT Operations & Enterprise Support -->
-        <div class="skills-glass rounded-xl p-6 transition">
-          <h3 class="text-xl font-semibold text-blue-700 mb-4">IT Operations & Enterprise Support</h3>
-          <ul class="list-disc pl-5 text-gray-700 space-y-1">
-            <li>Windows, macOS, and Linux support</li>
-            <li>Active Directory, Azure AD, Microsoft 365, and user access support</li>
-            <li>Device imaging, endpoint deployment, and configuration support</li>
-            <li>TCP/IP, DNS, DHCP, and network troubleshooting</li>
-            <li>Help desk support, documentation, and user communication</li>
-          </ul>
-        </div>
-
-        <!-- Tools & Platforms -->
-        <div class="skills-glass rounded-xl p-6 transition">
-          <h3 class="text-xl font-semibold text-blue-700 mb-4">Tools & Platforms</h3>
-          <ul class="list-disc pl-5 text-gray-700 space-y-1">
-            <li>GitHub Actions, GitHub Pages, and static publishing</li>
-            <li>SQL, PostgreSQL, MySQL, and structured data workflows</li>
-            <li>Office 365, Google Workspace, and SaaS administration support</li>
-            <li>localStorage, public JSON datasets, and browser workflow persistence</li>
-            <li>Technical reports, project documentation, and demo materials</li>
-          </ul>
-        </div>
-
-        <!-- Professional Strengths -->
-        <div class="skills-glass rounded-xl p-6 transition">
-          <h3 class="text-xl font-semibold text-blue-700 mb-4">Professional Strengths</h3>
-          <ul class="list-disc pl-5 text-gray-700 space-y-1">
-            <li>Technical troubleshooting and root-cause analysis</li>
-            <li>Team coordination, scope control, and async collaboration</li>
-            <li>Process improvement and repeatable workflow design</li>
-            <li>User support, training, and clear technical communication</li>
-            <li>Bilingual: English and Spanish</li>
-          </ul>
-        </div>
+      <!-- AI-Assisted Workflow & Automation -->
+      <div class="skills-glass rounded-xl p-6 transition">
+        <h3 class="text-xl font-semibold text-blue-700 mb-4">AI-Assisted Workflow & Automation</h3>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+          <li>Codex and Claude-style workflow support</li>
+          <li>Prompting, acceptance criteria, and repo inspection</li>
+          <li>AI-assisted drafting, debugging, and implementation support</li>
+          <li>Verification against source files, live endpoints, and browser behavior</li>
+          <li>Workflow tools for job search, documentation, and project review</li>
+        </ul>
       </div>
-    </section>
-  </main>
 
-  {% include footer.html %}
+      <!-- Data, Analytics & Experimentation -->
+      <div class="skills-glass rounded-xl p-6 transition">
+        <h3 class="text-xl font-semibold text-blue-700 mb-4">Data, Analytics & Experimentation</h3>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+          <li>Data mining, machine learning, and model evaluation</li>
+          <li>Decision trees, classification, and train/test analysis</li>
+          <li>Accuracy, precision, recall, F1-score, and overfitting tradeoffs</li>
+          <li>Hypothesis-driven experiments and metric selection</li>
+          <li>Data visualization and evidence-based decision making</li>
+        </ul>
+      </div>
 
-  <script>
-    const canvas = document.getElementById("fireworks");
-    const ctx = canvas.getContext("2d");
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let width;
-    let height;
-    let ratio;
-    let fireworks = [];
-    let particles = [];
-    let stars = [];
-    let lastAutomaticLaunch = 0;
+      <!-- IT Operations & Enterprise Support -->
+      <div class="skills-glass rounded-xl p-6 transition">
+        <h3 class="text-xl font-semibold text-blue-700 mb-4">IT Operations & Enterprise Support</h3>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+          <li>Windows, macOS, and Linux support</li>
+          <li>Active Directory, Azure AD, Microsoft 365, and user access support</li>
+          <li>Device imaging, endpoint deployment, and configuration support</li>
+          <li>TCP/IP, DNS, DHCP, and network troubleshooting</li>
+          <li>Help desk support, documentation, and user communication</li>
+        </ul>
+      </div>
 
-    function resizeFireworks() {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      ratio = Math.min(window.devicePixelRatio || 1, 2);
-      canvas.width = Math.round(width * ratio);
-      canvas.height = Math.round(height * ratio);
-      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
-      stars = Array.from({ length: Math.round((width * height) / 15000) }, () => ({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        radius: Math.random() * 1.2,
-        alpha: Math.random() * 0.48 + 0.12
-      }));
+      <!-- Tools & Platforms -->
+      <div class="skills-glass rounded-xl p-6 transition">
+        <h3 class="text-xl font-semibold text-blue-700 mb-4">Tools & Platforms</h3>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+          <li>GitHub Actions, GitHub Pages, and static publishing</li>
+          <li>SQL, PostgreSQL, MySQL, and structured data workflows</li>
+          <li>Office 365, Google Workspace, and SaaS administration support</li>
+          <li>localStorage, public JSON datasets, and browser workflow persistence</li>
+          <li>Technical reports, project documentation, and demo materials</li>
+        </ul>
+      </div>
+
+      <!-- Professional Strengths -->
+      <div class="skills-glass rounded-xl p-6 transition">
+        <h3 class="text-xl font-semibold text-blue-700 mb-4">Professional Strengths</h3>
+        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+          <li>Technical troubleshooting and root-cause analysis</li>
+          <li>Team coordination, scope control, and async collaboration</li>
+          <li>Process improvement and repeatable workflow design</li>
+          <li>User support, training, and clear technical communication</li>
+          <li>Bilingual: English and Spanish</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  const canvas = document.getElementById("fireworks");
+  const ctx = canvas.getContext("2d");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let width;
+  let height;
+  let ratio;
+  let fireworks = [];
+  let particles = [];
+  let stars = [];
+  let lastAutomaticLaunch = 0;
+
+  function resizeFireworks() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    ratio = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(width * ratio);
+    canvas.height = Math.round(height * ratio);
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    stars = Array.from({ length: Math.round((width * height) / 15000) }, () => ({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      radius: Math.random() * 1.2,
+      alpha: Math.random() * 0.48 + 0.12
+    }));
+  }
+
+  class Firework {
+    constructor() {
+      this.x = width * (0.12 + Math.random() * 0.76);
+      this.y = height + 12;
+      this.targetX = width * (0.1 + Math.random() * 0.8);
+      this.targetY = height * (0.08 + Math.random() * 0.42);
+      this.speed = 8;
+      const angle = Math.atan2(this.targetY - this.y, this.targetX - this.x);
+      this.vx = Math.cos(angle) * this.speed;
+      this.vy = Math.sin(angle) * this.speed;
+      this.color = randomFireworkColor();
+      this.trail = [];
     }
 
-    class Firework {
-      constructor() {
-        this.x = width * (0.12 + Math.random() * 0.76);
-        this.y = height + 12;
-        this.targetX = width * (0.1 + Math.random() * 0.8);
-        this.targetY = height * (0.08 + Math.random() * 0.42);
-        this.speed = 8;
-        const angle = Math.atan2(this.targetY - this.y, this.targetX - this.x);
-        this.vx = Math.cos(angle) * this.speed;
-        this.vy = Math.sin(angle) * this.speed;
-        this.color = randomFireworkColor();
-        this.trail = [];
+    update() {
+      this.trail.push({ x: this.x, y: this.y });
+      if (this.trail.length > 10) this.trail.shift();
+      this.x += this.vx;
+      this.y += this.vy;
+
+      if (Math.hypot(this.targetX - this.x, this.targetY - this.y) < this.speed) {
+        explodeFirework(this.targetX, this.targetY, this.color);
+        return false;
       }
 
-      update() {
-        this.trail.push({ x: this.x, y: this.y });
-        if (this.trail.length > 10) this.trail.shift();
-        this.x += this.vx;
-        this.y += this.vy;
+      return true;
+    }
 
-        if (Math.hypot(this.targetX - this.x, this.targetY - this.y) < this.speed) {
-          explodeFirework(this.targetX, this.targetY, this.color);
-          return false;
+    draw() {
+      if (this.trail.length > 1) {
+        ctx.beginPath();
+        ctx.moveTo(this.trail[0].x, this.trail[0].y);
+        for (let index = 1; index < this.trail.length; index += 1) {
+          ctx.lineTo(this.trail[index].x, this.trail[index].y);
         }
-
-        return true;
+        ctx.globalAlpha = 0.65;
+        ctx.strokeStyle = this.color;
+        ctx.lineWidth = 1.8;
+        ctx.stroke();
       }
-
-      draw() {
-        if (this.trail.length > 1) {
-          ctx.beginPath();
-          ctx.moveTo(this.trail[0].x, this.trail[0].y);
-          for (let index = 1; index < this.trail.length; index += 1) {
-            ctx.lineTo(this.trail[index].x, this.trail[index].y);
-          }
-          ctx.globalAlpha = 0.65;
-          ctx.strokeStyle = this.color;
-          ctx.lineWidth = 1.8;
-          ctx.stroke();
-        }
-        ctx.globalAlpha = 1;
-      }
-    }
-
-    class FireworkParticle {
-      constructor(x, y, color) {
-        const angle = Math.random() * Math.PI * 2;
-        const speed = Math.random() * 5 + 1.4;
-        this.x = x;
-        this.y = y;
-        this.vx = Math.cos(angle) * speed;
-        this.vy = Math.sin(angle) * speed;
-        this.color = color;
-        this.life = reducedMotion ? 38 : 76;
-        this.maxLife = this.life;
-        this.size = Math.random() * 1.8 + 0.8;
-      }
-
-      update() {
-        this.vx *= 0.985;
-        this.vy = this.vy * 0.985 + 0.055;
-        this.x += this.vx;
-        this.y += this.vy;
-        this.life -= 1;
-        return this.life > 0;
-      }
-
-      draw() {
-        const alpha = this.life / this.maxLife;
-        ctx.globalAlpha = alpha;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = this.color;
-        ctx.fill();
-        ctx.globalAlpha = alpha * 0.2;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size * 3.8, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
-
-    function randomFireworkColor() {
-      const colors = ["#ff6384", "#ffd166", "#20d6a7", "#55c7f3", "#b879ff", "#f5f8ff", "#ff934f"];
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
-
-    function explodeFirework(x, y, color) {
-      const particleCount = reducedMotion ? 32 : 72;
-      for (let index = 0; index < particleCount; index += 1) {
-        particles.push(new FireworkParticle(x, y, color));
-      }
-    }
-
-    function drawStars() {
-      for (const star of stars) {
-        ctx.globalAlpha = star.alpha;
-        ctx.beginPath();
-        ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "#dbeafe";
-        ctx.fill();
-      }
-    }
-
-    function animateFireworks(timestamp) {
-      requestAnimationFrame(animateFireworks);
-      ctx.globalCompositeOperation = "source-over";
-      ctx.fillStyle = "rgba(4, 14, 33, 0.2)";
-      ctx.fillRect(0, 0, width, height);
-      drawStars();
-      ctx.globalCompositeOperation = "lighter";
-      fireworks = fireworks.filter((firework) => {
-        firework.draw();
-        return firework.update();
-      });
-      particles = particles.filter((particle) => {
-        particle.draw();
-        return particle.update();
-      });
       ctx.globalAlpha = 1;
+    }
+  }
 
-      const interval = reducedMotion ? 11000 : 3000;
-      if (timestamp - lastAutomaticLaunch > interval && fireworks.length < 2) {
-        fireworks.push(new Firework());
-        lastAutomaticLaunch = timestamp;
-      }
+  class FireworkParticle {
+    constructor(x, y, color) {
+      const angle = Math.random() * Math.PI * 2;
+      const speed = Math.random() * 5 + 1.4;
+      this.x = x;
+      this.y = y;
+      this.vx = Math.cos(angle) * speed;
+      this.vy = Math.sin(angle) * speed;
+      this.color = color;
+      this.life = reducedMotion ? 38 : 76;
+      this.maxLife = this.life;
+      this.size = Math.random() * 1.8 + 0.8;
     }
 
-    window.addEventListener("resize", resizeFireworks);
-    resizeFireworks();
+    update() {
+      this.vx *= 0.985;
+      this.vy = this.vy * 0.985 + 0.055;
+      this.x += this.vx;
+      this.y += this.vy;
+      this.life -= 1;
+      return this.life > 0;
+    }
+
+    draw() {
+      const alpha = this.life / this.maxLife;
+      ctx.globalAlpha = alpha;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.fill();
+      ctx.globalAlpha = alpha * 0.2;
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size * 3.8, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+
+  function randomFireworkColor() {
+    const colors = ["#ff6384", "#ffd166", "#20d6a7", "#55c7f3", "#b879ff", "#f5f8ff", "#ff934f"];
+    return colors[Math.floor(Math.random() * colors.length)];
+  }
+
+  function explodeFirework(x, y, color) {
+    const particleCount = reducedMotion ? 32 : 72;
+    for (let index = 0; index < particleCount; index += 1) {
+      particles.push(new FireworkParticle(x, y, color));
+    }
+  }
+
+  function drawStars() {
+    for (const star of stars) {
+      ctx.globalAlpha = star.alpha;
+      ctx.beginPath();
+      ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+      ctx.fillStyle = "#dbeafe";
+      ctx.fill();
+    }
+  }
+
+  function animateFireworks(timestamp) {
     requestAnimationFrame(animateFireworks);
-  </script>
-</body>
-</html>
+    ctx.globalCompositeOperation = "source-over";
+    ctx.fillStyle = "rgba(4, 14, 33, 0.2)";
+    ctx.fillRect(0, 0, width, height);
+    drawStars();
+    ctx.globalCompositeOperation = "lighter";
+    fireworks = fireworks.filter((firework) => {
+      firework.draw();
+      return firework.update();
+    });
+    particles = particles.filter((particle) => {
+      particle.draw();
+      return particle.update();
+    });
+    ctx.globalAlpha = 1;
+
+    const interval = reducedMotion ? 11000 : 3000;
+    if (timestamp - lastAutomaticLaunch > interval && fireworks.length < 2) {
+      fireworks.push(new Firework());
+      lastAutomaticLaunch = timestamp;
+    }
+  }
+
+  window.addEventListener("resize", resizeFireworks);
+  resizeFireworks();
+  requestAnimationFrame(animateFireworks);
+</script>

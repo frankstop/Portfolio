@@ -1,108 +1,73 @@
 ---
+layout: default
 nav_key: about
+title: "About Frank Valdez | IT Operations &amp; Software Development"
+description: "Learn about Frank Valdez and his practical approach to IT operations, enterprise support, software development, automation, data work, and AI collaboration."
+canonical: "https://frankiejvaldez.com/about.html"
+body_class: "bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-800 min-h-screen flex flex-col"
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>About Frank Valdez | IT Operations &amp; Software Development</title>
-  <meta name="description" content="Learn about Frank Valdez and his practical approach to IT operations, enterprise support, software development, automation, data work, and AI collaboration.">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://frankiejvaldez.com/about.html">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Frank Valdez Portfolio">
-  <meta property="og:title" content="About Frank Valdez | IT Operations &amp; Software Development">
-  <meta property="og:description" content="Learn about Frank Valdez and his practical approach to IT operations, enterprise support, software development, automation, data work, and AI collaboration.">
-  <meta property="og:url" content="https://frankiejvaldez.com/about.html">
-  <meta property="og:image" content="https://frankiejvaldez.com/myheadshot.jpeg">
-  <meta property="og:image:alt" content="Frank Valdez">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="About Frank Valdez | IT Operations &amp; Software Development">
-  <meta name="twitter:description" content="Learn about Frank Valdez and his practical approach to IT operations, enterprise support, software development, automation, data work, and AI collaboration.">
-  <meta name="twitter:image" content="https://frankiejvaldez.com/myheadshot.jpeg">
-  <meta name="twitter:image:alt" content="Frank Valdez">
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-    html { scroll-behavior: smooth; }
-  </style>
-
-  {% include analytics.html %}
-</head>
-<body class="bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-800 min-h-screen flex flex-col">
-
-  {% include header.html %}
-
-  <!-- Main Content -->
-  <main class="flex-grow pt-24 pb-16 px-6">
-    <section id="about" class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-      <img src="myheadshot.jpeg" alt="Frank Valdez" class="rounded-2xl shadow-lg w-full object-cover">
-      <div>
-        <h2 class="text-3xl font-bold text-blue-700 mb-4">About Me</h2>
-        <p class="text-lg mb-4">
-          I’m a technical operator and builder with experience across enterprise IT support, browser-based software projects, data experimentation, and AI-assisted workflow design.
-        </p>
-        <p class="text-lg mb-4">
-          My background started in hands-on support and operations: device deployment, identity migration support, infrastructure troubleshooting, user communication, office technology, and safety-critical team supervision. That experience shaped how I work now. I care about whether something works in the real environment, whether the process can be repeated, and whether the result can be checked.
-        </p>
-        <p class="text-lg mb-4">
-          My projects focus on practical tools and evidence-driven work. I’ve built job-search workflow systems, a browser-based UML diagramming tool, data mining experiments, interactive web apps, and AI-assisted project workflows. I use tools like Codex and Claude to move faster, but I stay honest about the limits: source files, live endpoints, generated output, browser behavior, and clear acceptance criteria all matter.
-        </p>
-        <p class="text-lg mb-6">
-          I bring a careful, direct, and human style to technical work. I like clarity, I care about people using the thing, and I’m comfortable being the person who asks what is actually true before the team keeps moving. Outside of work, I stay close to creative projects, surfing, skateboarding, and design.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-3">
-          <a href="projects.html" class="inline-block text-center bg-blue-600 text-white font-semibold px-5 py-3 rounded-lg hover:bg-blue-700 transition">View Projects</a>
-          <button type="button" id="resume-modal-open" data-analytics-event="resume_view" data-analytics-placement="about" class="inline-block text-center bg-white text-blue-700 border border-blue-200 font-semibold px-5 py-3 rounded-lg hover:bg-blue-50 transition">View Resume</button>
-        </div>
+<!-- Main Content -->
+<main class="flex-grow pt-24 pb-16 px-6">
+  <section id="about" class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <img src="myheadshot.jpeg" alt="Frank Valdez" class="rounded-2xl shadow-lg w-full object-cover">
+    <div>
+      <h2 class="text-3xl font-bold text-blue-700 mb-4">About Me</h2>
+      <p class="text-lg mb-4">
+        I’m a technical operator and builder with experience across enterprise IT support, browser-based software projects, data experimentation, and AI-assisted workflow design.
+      </p>
+      <p class="text-lg mb-4">
+        My background started in hands-on support and operations: device deployment, identity migration support, infrastructure troubleshooting, user communication, office technology, and safety-critical team supervision. That experience shaped how I work now. I care about whether something works in the real environment, whether the process can be repeated, and whether the result can be checked.
+      </p>
+      <p class="text-lg mb-4">
+        My projects focus on practical tools and evidence-driven work. I’ve built job-search workflow systems, a browser-based UML diagramming tool, data mining experiments, interactive web apps, and AI-assisted project workflows. I use tools like Codex and Claude to move faster, but I stay honest about the limits: source files, live endpoints, generated output, browser behavior, and clear acceptance criteria all matter.
+      </p>
+      <p class="text-lg mb-6">
+        I bring a careful, direct, and human style to technical work. I like clarity, I care about people using the thing, and I’m comfortable being the person who asks what is actually true before the team keeps moving. Outside of work, I stay close to creative projects, surfing, skateboarding, and design.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="projects.html" class="inline-block text-center bg-blue-600 text-white font-semibold px-5 py-3 rounded-lg hover:bg-blue-700 transition">View Projects</a>
+        <button type="button" id="resume-modal-open" data-analytics-event="resume_view" data-analytics-placement="about" class="inline-block text-center bg-white text-blue-700 border border-blue-200 font-semibold px-5 py-3 rounded-lg hover:bg-blue-50 transition">View Resume</button>
       </div>
-    </section>
-  </main>
-
-  <div id="resume-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-gray-900/70 px-4 py-6" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
-    <div class="flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl">
-      <div class="flex items-center justify-between border-b px-5 py-4">
-        <h3 id="resume-modal-title" class="text-lg font-semibold text-gray-900">Frank Valdez Resume</h3>
-        <button type="button" id="resume-modal-close" class="rounded-lg px-3 py-2 text-sm font-semibold text-gray-600 hover:bg-gray-100 hover:text-gray-900" aria-label="Close resume preview">Close</button>
-      </div>
-      <iframe src="https://frankstop.github.io/Resume/" title="Frank Valdez resume" class="h-[78vh] w-full bg-white"></iframe>
     </div>
+  </section>
+</main>
+
+<div id="resume-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-gray-900/70 px-4 py-6" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title">
+  <div class="flex max-h-[92vh] w-full max-w-5xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl">
+    <div class="flex items-center justify-between border-b px-5 py-4">
+      <h3 id="resume-modal-title" class="text-lg font-semibold text-gray-900">Frank Valdez Resume</h3>
+      <button type="button" id="resume-modal-close" class="rounded-lg px-3 py-2 text-sm font-semibold text-gray-600 hover:bg-gray-100 hover:text-gray-900" aria-label="Close resume preview">Close</button>
+    </div>
+    <iframe src="https://frankstop.github.io/Resume/" title="Frank Valdez resume" class="h-[78vh] w-full bg-white"></iframe>
   </div>
+</div>
 
-  {% include footer.html %}
+<script>
+  const resumeModal = document.getElementById('resume-modal');
+  const resumeOpen = document.getElementById('resume-modal-open');
+  const resumeClose = document.getElementById('resume-modal-close');
 
-  <script>
-    const resumeModal = document.getElementById('resume-modal');
-    const resumeOpen = document.getElementById('resume-modal-open');
-    const resumeClose = document.getElementById('resume-modal-close');
+  function closeResumeModal() {
+    resumeModal.classList.add('hidden');
+    resumeModal.classList.remove('flex');
+    resumeOpen.focus();
+  }
 
-    function closeResumeModal() {
-      resumeModal.classList.add('hidden');
-      resumeModal.classList.remove('flex');
-      resumeOpen.focus();
+  resumeOpen.addEventListener('click', () => {
+    resumeModal.classList.remove('hidden');
+    resumeModal.classList.add('flex');
+    resumeClose.focus();
+  });
+
+  resumeClose.addEventListener('click', closeResumeModal);
+  resumeModal.addEventListener('click', (event) => {
+    if (event.target === resumeModal) {
+      closeResumeModal();
     }
-
-    resumeOpen.addEventListener('click', () => {
-      resumeModal.classList.remove('hidden');
-      resumeModal.classList.add('flex');
-      resumeClose.focus();
-    });
-
-    resumeClose.addEventListener('click', closeResumeModal);
-    resumeModal.addEventListener('click', (event) => {
-      if (event.target === resumeModal) {
-        closeResumeModal();
-      }
-    });
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && !resumeModal.classList.contains('hidden')) {
-        closeResumeModal();
-      }
-    });
-  </script>
-
-</body>
-</html>
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !resumeModal.classList.contains('hidden')) {
+      closeResumeModal();
+    }
+  });
+</script>

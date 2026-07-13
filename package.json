@@ -1,5 +1,12 @@
 {
   "dependencies": {
     "liquidjs": "^10.27.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  },
+  "scripts": {
+    "build:css": "tailwindcss -c tailwind.config.js -i assets/css/tailwind.css -o assets/css/styles.css --minify",
+    "watch:css": "tailwindcss -c tailwind.config.js -i assets/css/tailwind.css -o assets/css/styles.css --watch"
   }
 }
