@@ -58,9 +58,9 @@ body_class: "bg-gray-50 text-gray-800"
         </ul>
         <div class="mt-6 flex flex-wrap items-center gap-4">
           {% if project.published %}
-          <a href="{{ '/projects/' | append: project.slug | append: '/' | relative_url }}" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="{{ project.name }}" data-analytics-link-type="live_site" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
+          <a href="{{ '/projects/' | append: project.slug | append: '/' | relative_url }}" target="_self" data-analytics-event="project_link_click" data-analytics-project-name="{{ project.name }}" data-analytics-link-type="live_site" class="font-semibold text-blue-700 hover:text-blue-900">Live site</a>
           {% endif %}
-          <a href="{{ project.repo_url }}" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-project-name="{{ project.name }}" data-analytics-link-type="repository" class="font-semibold {% if project.featured %}text-amber-800 hover:text-amber-950{% else %}text-gray-700 hover:text-gray-950{% endif %}">Repository</a>
+          <a href="{{ project.repo_redirect_url | default: project.repo_url }}" target="_self" data-analytics-event="project_link_click" data-analytics-project-name="{{ project.name }}" data-analytics-link-type="repository" class="font-semibold {% if project.featured %}text-amber-800 hover:text-amber-950{% else %}text-gray-700 hover:text-gray-950{% endif %}">Repository</a>
           {% if project.published %}
           <button type="button" class="preview-btn rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" data-preview-url="{{ project.live_url }}" data-preview-title="{{ project.name }}" data-preview-cta="Open live site" data-analytics-event="project_preview_open" data-analytics-project-name="{{ project.name }}" data-preview-internal-url="{{ '/projects/' | append: project.slug | append: '/' | relative_url }}">Preview project</button>
           {% endif %}
@@ -80,7 +80,7 @@ body_class: "bg-gray-50 text-gray-800"
         <h2 id="preview-title" class="mt-1 text-2xl font-bold text-gray-900">Project preview</h2>
       </div>
       <div class="flex flex-wrap gap-3">
-        <a id="preview-cta" href="#" target="_blank" rel="noreferrer" data-analytics-event="project_link_click" data-analytics-link-type="preview_cta" class="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Open live site</a>
+        <a id="preview-cta" href="#" target="_self" data-analytics-event="project_link_click" data-analytics-link-type="preview_cta" class="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Open live site</a>
         <button id="preview-close" type="button" class="rounded-md border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:text-gray-950">Close</button>
       </div>
     </div>
