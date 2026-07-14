@@ -3,19 +3,26 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
-const pageTemplates = [
-  "404.html",
+const layoutTemplates = [
+  "_layouts/default.html",
   "_layouts/game.html",
+  "_layouts/project.html"
+];
+const literalIncludePages = [
+  "404.html",
+  "games/index.html"
+];
+const layoutPages = [
   "about.html",
   "contact.html",
   "education.html",
   "experience.html",
   "gala-fresh.html",
-  "games/index.html",
   "index.html",
   "projects.html",
   "skills.html"
 ];
+const pageTemplates = [...layoutTemplates, ...literalIncludePages, ...layoutPages];
 const expectedEvents = [
   "certificate_click",
   "contact_click",
@@ -30,11 +37,31 @@ async function source(path) {
   return readFile(new URL(path, root), "utf8");
 }
 
-test("every public page template loads the shared analytics include once", async () => {
-  for (const path of pageTemplates) {
+function countIncludes(html) {
+  return (html.match(/{%\s*include analytics\.html\s*%}/g) || []).length;
+}
+
+test("every layout loads the shared analytics include once", async () => {
+  for (const path of layoutTemplates) {
+    assert.equal(countIncludes(await source(path)), 1, `${path} must include analytics.html once`);
+  }
+});
+
+test("standalone pages load the shared analytics include once", async () => {
+  for (const path of literalIncludePages) {
+    assert.equal(countIncludes(await source(path)), 1, `${path} must include analytics.html once`);
+  }
+});
+
+test("layout-based pages rely on an analytics-enabled layout", async () => {
+  for (const path of layoutPages) {
     const html = await source(path);
-    const includes = html.match(/{%\s*include analytics\.html\s*%}/g) || [];
-    assert.equal(includes.length, 1, `${path} must include analytics.html once`);
+    assert.match(
+      html,
+      /^---\r?\nlayout: (default|game|project)\r?\n/,
+      `${path} must declare an analytics-enabled layout`
+    );
+    assert.equal(countIncludes(html), 0, `${path} must not duplicate the analytics include`);
   }
 });
 
@@ -76,8 +103,10 @@ test("all game routes use the analytics-enabled game layout", async () => {
     "loveletter",
     "metrodash",
     "minesweeper",
+    "pixel-garden",
     "pressurematch",
     "signalrw",
+    "stack",
     "sudoku",
     "wingsprint"
   ];
