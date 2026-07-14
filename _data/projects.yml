@@ -62,3 +62,11 @@
   repo_url: https://github.com/frankstop/StopShopResearch
   published: true
   position: 8
+
+- slug: july-data-project
+  name: King Kullen Price Behavior
+  description: Nine-week analysis of 12,994 continuously tracked products showing how temporary promotions, rather than permanent resets, drive price movement.
+  live_url: https://frankstop.github.io/JulyDataProject/
+  repo_url: https://github.com/frankstop/JulyDataProject
+  published: true
+  position: 9
