@@ -115,9 +115,9 @@ person_schema: true
           <p class="mt-2 flex-1 text-gray-700">{{ project.description }}</p>
           <div class="mt-4 flex gap-4 text-sm font-medium">
             {% if project.live_url != "" %}
-            <a href="{{ '/projects/' | append: project.slug | append: '/' | relative_url }}" class="text-blue-600 hover:text-blue-800">Live site</a>
+            <a href="{{ '/projects/' | append: project.slug | append: '/' | relative_url }}" data-analytics-event="project_link_click" data-analytics-project-name="{{ project.name }}" data-analytics-link-type="live_site" class="text-blue-600 hover:text-blue-800">Live site</a>
             {% endif %}
-            <a href="{{ project.repo_redirect_url | default: project.repo_url }}" class="text-blue-600 hover:text-blue-800">Source code</a>
+            <a href="{{ project.repo_redirect_url | default: project.repo_url }}" data-analytics-event="project_link_click" data-analytics-project-name="{{ project.name }}" data-analytics-link-type="repository" class="text-blue-600 hover:text-blue-800">Source code</a>
           </div>
         </article>
         {% endfor %}
