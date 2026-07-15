@@ -1,11 +1,20 @@
+- slug: spoilage
+  name: Spoilage
+  description: Build a deck that is always dying—and learn to make its death useful. A roguelike deckbuilder where every card ripens, rots, and perishes.
+  source_url: https://github.com/frankstop/Spoilage
+  game_url: https://frankstop.github.io/Spoilage/
+  image: /assets/images/games/spoilage.png
+  featured: true
+  position: 1
+  published: true
+
 - slug: signalrw
   name: SignalRW
   description: High-fidelity HTML5 retro-vector survival arena game.
   source_url: https://github.com/frankstop/SignalRW
   game_url: https://frankstop.github.io/SignalRW/
   image: /assets/images/games/signalrw.png
-  featured: true
-  position: 1
+  position: 2
   published: true
 
 - slug: metrodash
@@ -14,7 +23,7 @@
   source_url: https://github.com/frankstop/MetroDash
   game_url: https://frankstop.github.io/MetroDash/
   image: /assets/images/games/metrodash.png
-  position: 2
+  position: 3
   published: true
 
 - slug: wingsprint
@@ -23,7 +32,7 @@
   source_url: https://github.com/frankstop/WingSprint
   game_url: https://frankstop.github.io/WingSprint/
   image: /assets/images/games/wingsprint.png
-  position: 3
+  position: 4
   published: true
 
 - slug: pressurematch
@@ -32,7 +41,7 @@
   source_url: https://github.com/frankstop/PressureMatch
   game_url: https://frankstop.github.io/PressureMatch/
   image: /assets/images/games/pressurematch.png
-  position: 4
+  position: 5
   published: true
 
 - slug: "2048"
@@ -41,7 +50,7 @@
   source_url: https://github.com/frankstop/2048
   game_url: https://frankstop.github.io/2048/
   image: /assets/images/games/2048.png
-  position: 5
+  position: 6
   published: true
 
 - slug: minesweeper
@@ -50,7 +59,7 @@
   source_url: https://github.com/frankstop/Minesweeper
   game_url: https://frankstop.github.io/Minesweeper/
   image: /assets/images/games/minesweeper.png
-  position: 6
+  position: 7
   published: true
 
 - slug: sudoku
@@ -59,7 +68,7 @@
   source_url: https://github.com/frankstop/Sudoku
   game_url: https://frankstop.github.io/Sudoku/
   image: /assets/images/games/sudoku.png
-  position: 7
+  position: 8
   published: true
 
 - slug: asteroidsgame
@@ -68,7 +77,7 @@
   source_url: https://github.com/frankstop/AsteroidsGame
   game_url: https://frankstop.github.io/AsteroidsGame/
   image: /assets/images/games/asteroidsgame.png
-  position: 8
+  position: 9
   published: true
 
 - slug: crossysprint
@@ -77,7 +86,7 @@
   source_url: https://github.com/frankstop/CrossySprint
   game_url: https://frankstop.github.io/CrossySprint/
   image: /assets/images/games/crossysprint.png
-  position: 9
+  position: 10
   published: true
 
 - slug: loveletter
@@ -86,7 +95,7 @@
   source_url: https://github.com/frankstop/LoveLetter
   game_url: https://frankstop.github.io/LoveLetter/
   image: /assets/images/games/loveletter.png
-  position: 10
+  position: 11
   published: true
 
 - slug: stack
@@ -95,7 +104,7 @@
   source_url: https://github.com/frankstop/Stack
   game_url: https://frankstop.github.io/Stack/
   image: /assets/images/games/stack.png
-  position: 11
+  position: 12
   published: true
 
 - slug: pixel-garden
@@ -104,6 +113,6 @@
   source_url: https://github.com/frankstop/PixelGarden
   game_url: https://frankstop.github.io/PixelGarden/
   image: /assets/images/games/pixel-garden.png
-  position: 12
+  position: 13
   published: true
 
