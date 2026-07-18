@@ -23,13 +23,21 @@
   published: false
   position: 3
 
+- slug: galafreshbaldwin
+  name: Gala Fresh Baldwin Catalog Research
+  description: Daily longitudinal research tracking Gala Fresh Baldwin's public online catalog, prices, availability, categories, and promotions.
+  live_url: https://frankstop.github.io/GalaFreshBaldwin/
+  repo_url: https://github.com/frankstop/GalaFreshBaldwin
+  published: true
+  position: 4
+
 - slug: kingkullenresearch
   name: KingKullenResearch
   description: Weekly grocery pricing pipeline using collected retail data for longitudinal analysis and modeling.
   live_url: https://frankstop.github.io/KingKullenResearch/
   repo_url: https://github.com/frankstop/KingKullenResearch
   published: true
-  position: 4
+  position: 5
 
 - slug: civil-service-watch
   name: CivilServiceWatch
@@ -37,7 +45,7 @@
   live_url: https://frankstop.github.io/civil-service-watch/
   repo_url: https://github.com/frankstop/civil-service-watch
   published: true
-  position: 5
+  position: 6
 
 - slug: circular
   name: Gala-LI/Circular
@@ -45,7 +53,7 @@
   live_url: https://gala-li.github.io/Circular/
   repo_url: https://github.com/gala-li/Circular
   published: true
-  position: 6
+  position: 7
 
 - slug: othelloai
   name: Othello AI / FastAPI Capstone
@@ -53,7 +61,7 @@
   live_url: https://frankstop.github.io/OthelloAI/
   repo_url: https://github.com/frankstop/OthelloAISource
   published: true
-  position: 7
+  position: 8
 
 - slug: stopshopresearch
   name: StopShopResearch
@@ -61,7 +69,7 @@
   live_url: https://frankstop.github.io/StopShopResearch/
   repo_url: https://github.com/frankstop/StopShopResearch
   published: true
-  position: 8
+  position: 9
 
 - slug: july-data-project
   name: King Kullen Price Behavior
@@ -70,4 +78,4 @@
   repo_url: https://github.com/frankstop/JulyDataProject
   repo_redirect_url: https://frankiejvaldez.com/projects/july-data-project/
   published: true
-  position: 9
+  position: 10
