@@ -99,6 +99,7 @@ test("all game routes use the analytics-enabled game layout", async () => {
   const games = [
     "2048",
     "asteroidsgame",
+    "connect4",
     "crossysprint",
     "loveletter",
     "metrodash",

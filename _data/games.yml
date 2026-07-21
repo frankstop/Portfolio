@@ -116,3 +116,11 @@
   position: 13
   published: true
 
+- slug: connect4
+  name: Connect 4
+  description: Take turns dropping discs and be first to connect four.
+  source_url: https://github.com/frankstop/Connect4
+  game_url: https://frankstop.github.io/Connect4/
+  image: /assets/images/games/connect4.png
+  position: 14
+  published: true
