@@ -4,7 +4,6 @@
   source_url: https://github.com/frankstop/Spoilage
   game_url: https://frankstop.github.io/Spoilage/
   image: /assets/images/games/spoilage.png
-  featured: true
   position: 1
   published: true
 
@@ -122,5 +121,6 @@
   source_url: https://github.com/frankstop/Connect4
   game_url: https://frankstop.github.io/Connect4/
   image: /assets/images/games/connect4.png
+  featured: true
   position: 14
   published: true
