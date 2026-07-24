@@ -87,3 +87,11 @@
   repo_redirect_url: https://frankiejvaldez.com/projects/july-data-project/
   published: true
   position: 11
+
+- slug: quantum-machine-learning
+  name: Quantum Machine Learning Explorer
+  description: Interactive visual suite for exploring quantum machine learning theory, Bloch state encoding, variational quantum circuits, and quantum kernels in the browser.
+  live_url: https://frankstop.github.io/QuantumMachineLearning/
+  repo_url: https://github.com/frankstop/QuantumMachineLearning
+  published: true
+  position: 12
