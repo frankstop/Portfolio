@@ -4,7 +4,7 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
-test("the hidden resume route redirects to the published resume", async () => {
+test("the hidden resume route embeds the published resume without navigating away", async () => {
   const [route, header, sitemap] = await Promise.all([
     readFile(new URL("resume/index.html", root), "utf8"),
     readFile(new URL("_includes/header.html", root), "utf8"),
@@ -12,11 +12,9 @@ test("the hidden resume route redirects to the published resume", async () => {
   ]);
 
   assert.match(route, /^---\npermalink: \/resume\/\n---/);
-  assert.match(
-    route,
-    /window\.location\.replace\(destination\.href\)/
-  );
-  assert.ok(route.includes("https://frankstop.github.io/Resume/"));
+  assert.match(route, /<iframe[\s\S]*src="https:\/\/frankstop\.github\.io\/Resume\/"/);
+  assert.match(route, /canonical" href="https:\/\/frankiejvaldez\.com\/resume\/"/);
+  assert.doesNotMatch(route, /http-equiv="refresh"|window\.location/);
   assert.ok(!header.includes("/resume"));
   assert.ok(!sitemap.includes("/resume"));
 });

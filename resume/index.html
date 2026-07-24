@@ -7,22 +7,38 @@ permalink: /resume/
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex">
-  <meta http-equiv="refresh" content="0; url=https://frankstop.github.io/Resume/">
-  <link rel="canonical" href="https://frankstop.github.io/Resume/">
+  <link rel="canonical" href="https://frankiejvaldez.com/resume/">
   <title>Frank Valdez Resume</title>
-  <script>
-    (function () {
-      const destination = new URL("https://frankstop.github.io/Resume/");
-      destination.search = window.location.search;
-      destination.hash = window.location.hash;
-      window.location.replace(destination.href);
-    }());
-  </script>
+  {% include analytics.html %}
+  <style>
+    html,
+    body,
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: #eef2f7;
+    }
+
+    iframe {
+      display: block;
+      border: 0;
+    }
+  </style>
 </head>
 <body>
-  <p>
-    Redirecting to
-    <a href="https://frankstop.github.io/Resume/">Frank Valdez’s resume</a>.
-  </p>
+  <iframe
+    src="https://frankstop.github.io/Resume/"
+    title="Frank Valdez resume"
+    loading="eager"
+  >
+    <p>
+      <a href="https://frankstop.github.io/Resume/">View Frank Valdez’s resume</a>
+    </p>
+  </iframe>
 </body>
 </html>
