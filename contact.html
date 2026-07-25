@@ -4,31 +4,1121 @@ nav_key: contact
 title: "Contact Frank Valdez | IT Operations &amp; Software Development"
 description: "Contact Frank Valdez about IT operations, enterprise support, software development, automation, data workflows, and technical project opportunities."
 canonical: "https://frankiejvaldez.com/contact.html"
-body_class: "bg-gradient-to-br from-blue-50 via-white to-blue-100 text-gray-800 min-h-screen flex flex-col"
+body_class: "sp-body"
 ---
-<main class="flex-grow flex items-center justify-center pt-24 pb-16">
-  <section id="contact" class="text-center px-4">
-    <h2 class="text-4xl font-bold mb-6 text-blue-700">Get In Touch</h2>
-    <p class="mb-8 text-lg text-gray-700 max-w-2xl mx-auto">Feel free to reach out through email, connect on LinkedIn, or explore my work on GitHub.</p>
-    <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
-      <a href="mailto:frankiejvaldez@gmail.com" data-analytics-event="contact_click" data-analytics-method="email" data-analytics-placement="contact_page" class="flex items-center gap-2 text-blue-700 hover:underline">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Z"/>
-        </svg>
-        frankiejvaldez@gmail.com
-      </a>
-      <a href="https://github.com/frankstop" target="_blank" data-analytics-event="contact_click" data-analytics-method="github" data-analytics-placement="contact_page" class="flex items-center gap-2 text-blue-700 hover:underline">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38V14c-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63 0 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07C3.6 11 1.74 10.31 1.74 7.25c0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A6.92 6.92 0 0 1 8 3.5a6.92 6.92 0 0 1 3.16.41c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.06-1.86 3.75-3.64 3.95.29.25.54.73.54 1.48v2.16c0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
-        </svg>
-        github.com/frankstop
-      </a>
-      <a href="https://www.linkedin.com/in/frankiejvaldez" target="_blank" rel="noopener" data-analytics-event="contact_click" data-analytics-method="linkedin" data-analytics-placement="contact_page" class="flex items-center gap-2 text-blue-700 hover:underline">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708C16 15.487 15.474 16 14.825 16H1.175C.526 16 0 15.487 0 14.854V1.146Zm4.943 12.248V6.169H2.542v7.225h2.401Zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.521-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016Zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4Z"/>
-        </svg>
-        linkedin.com/in/frankiejvaldez
-      </a>
+<style>
+  /* ==========================================================================
+     Spatial contact page — self-contained visual system.
+     Uses plain CSS only (no new Tailwind utilities), so it renders correctly
+     whether or not assets/css/styles.css has been rebuilt.
+     ========================================================================== */
+
+  :root {
+    --sp-void:        #04091a;
+    --sp-deep:        #0a1430;
+    --sp-accent:      #60a5fa;
+    --sp-accent-warm: #93c5fd;
+    --sp-accent-deep: #3b82f6;
+    --sp-ink:         #eaf2ff;
+    --sp-ink-soft:    rgba(234, 242, 255, 0.66);
+    --sp-ink-faint:   rgba(234, 242, 255, 0.42);
+    --sp-line:        rgba(147, 197, 253, 0.16);
+    --sp-danger:      #fca5a5;
+    --sp-ok:          #6ee7b7;
+
+    /* Pointer position, normalized to -1 .. 1. Driven by JS. */
+    --mx: 0;
+    --my: 0;
+    /* Pointer position over the glass panel, in %. Drives the specular sheen. */
+    --px: 50%;
+    --py: 0%;
+  }
+
+  body.sp-body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--sp-ink);
+    background: var(--sp-void);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* The shared footer is styled for light pages; soften it over the dark field. */
+  body.sp-body > footer {
+    position: relative;
+    z-index: 2;
+    background: rgba(4, 9, 26, 0.72) !important;
+    border-top: 1px solid var(--sp-line) !important;
+    color: var(--sp-ink-faint) !important;
+    backdrop-filter: blur(10px);
+  }
+
+  /* --------------------------------------------------------------- ENVIRONMENT
+     Layer 0: the depth field. A canvas of parallaxing dots at three z-strata,
+     plus soft gradient orbs, plus a receding perspective grid on the floor.
+     --------------------------------------------------------------------- */
+
+  .sp-main {
+    position: relative;
+    flex: 1 0 auto;
+    overflow: hidden;
+    isolation: isolate;
+    padding: 8.5rem 1.5rem 5rem;
+    background:
+      radial-gradient(120% 90% at 18% 8%,  rgba(59, 130, 246, 0.22) 0%, transparent 55%),
+      radial-gradient(110% 80% at 88% 92%, rgba(129, 140, 248, 0.18) 0%, transparent 58%),
+      linear-gradient(168deg, #04091a 0%, #0a1430 46%, #050c1f 100%);
+  }
+
+  .sp-depth {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .sp-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+    will-change: transform;
+  }
+
+  .sp-orb--a {
+    width: 30rem; height: 30rem;
+    top: -7rem; left: -6rem;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.55), transparent 68%);
+    transform: translate3d(calc(var(--mx) * 26px), calc(var(--my) * 26px), 0);
+  }
+
+  .sp-orb--b {
+    width: 26rem; height: 26rem;
+    bottom: -8rem; right: -5rem;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.45), transparent 68%);
+    transform: translate3d(calc(var(--mx) * -34px), calc(var(--my) * -34px), 0);
+  }
+
+  .sp-floor {
+    position: absolute;
+    left: -25%;
+    right: -25%;
+    bottom: -12vh;
+    height: 46vh;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.42;
+    background-image:
+      linear-gradient(to right,  var(--sp-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--sp-line) 1px, transparent 1px);
+    background-size: 62px 62px;
+    transform: perspective(320px) rotateX(64deg) translate3d(calc(var(--mx) * -18px), 0, 0);
+    transform-origin: bottom center;
+    mask-image: linear-gradient(to top, #000 0%, transparent 82%);
+    -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 82%);
+  }
+
+  /* ------------------------------------------------------------------- STAGE
+     Everything meaningful lives inside a shared perspective so the layers
+     genuinely occupy different depths rather than merely looking like it.
+     --------------------------------------------------------------------- */
+
+  .sp-stage {
+    position: relative;
+    z-index: 1;
+    max-width: 74rem;
+    margin: 0 auto;
+    perspective: 1400px;
+    perspective-origin: 50% 40%;
+  }
+
+  .sp-layer { transform-style: preserve-3d; will-change: transform; }
+
+  /* Depth 3 — furthest back, moves least. */
+  .sp-layer--far {
+    transform: translate3d(calc(var(--mx) * 8px), calc(var(--my) * 6px), -120px);
+  }
+
+  /* Depth 2 — the working plane. */
+  .sp-layer--mid {
+    transform: translate3d(calc(var(--mx) * 16px), calc(var(--my) * 12px), 0);
+  }
+
+  .sp-intro { text-align: center; margin-bottom: 3.25rem; }
+
+  .sp-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0 0 1.15rem;
+    padding: 0.4rem 0.95rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+    color: var(--sp-accent-warm);
+    background: rgba(96, 165, 250, 0.1);
+    border: 1px solid var(--sp-line);
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+  }
+
+  .sp-pulse {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--sp-ok);
+    box-shadow: 0 0 0 0 rgba(110, 231, 183, 0.65);
+    animation: sp-pulse 2.4s ease-out infinite;
+  }
+
+  @keyframes sp-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(110, 231, 183, 0.6); }
+    70%  { box-shadow: 0 0 0 9px rgba(110, 231, 183, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(110, 231, 183, 0); }
+  }
+
+  .sp-title {
+    margin: 0 0 1rem;
+    font-size: clamp(2.3rem, 6vw, 3.9rem);
+    font-weight: 800;
+    line-height: 1.06;
+    letter-spacing: -0.028em;
+    background: linear-gradient(180deg, #ffffff 12%, #a8c6f5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 18px 46px rgba(4, 9, 26, 0.75);
+  }
+
+  .sp-lede {
+    margin: 0 auto;
+    max-width: 40rem;
+    font-size: 1.06rem;
+    line-height: 1.72;
+    color: var(--sp-ink-soft);
+  }
+
+  /* -------------------------------------------------------------------- DECK */
+
+  .sp-deck {
+    display: grid;
+    grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+    gap: 1.75rem;
+    align-items: start;
+    transform-style: preserve-3d;
+  }
+
+  @media (max-width: 62rem) {
+    .sp-deck { grid-template-columns: minmax(0, 1fr); }
+  }
+
+  /* Satellite rail — sits nearer the viewer than the headline, further than
+     the form. Each chip lifts toward the camera on hover. */
+  .sp-rail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    transform-style: preserve-3d;
+  }
+
+  .sp-chip {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.95rem 1.1rem;
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--sp-ink);
+    background: linear-gradient(150deg, rgba(255,255,255,0.075), rgba(255,255,255,0.028));
+    border: 1px solid var(--sp-line);
+    backdrop-filter: blur(16px) saturate(140%);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.09) inset,
+      0 10px 26px rgba(2, 6, 20, 0.42);
+    transition: transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.34s ease,
+                border-color 0.34s ease,
+                background 0.34s ease;
+    transform-style: preserve-3d;
+  }
+
+  .sp-chip:hover,
+  .sp-chip:focus-visible {
+    transform: translate3d(0, -4px, 40px);
+    border-color: rgba(147, 197, 253, 0.42);
+    background: linear-gradient(150deg, rgba(96,165,250,0.15), rgba(255,255,255,0.04));
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.16) inset,
+      0 20px 44px rgba(2, 6, 20, 0.6),
+      0 0 0 1px rgba(96, 165, 250, 0.22);
+    outline: none;
+  }
+
+  .sp-chip:focus-visible { box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.55); }
+
+  .sp-chip__icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    width: 2.4rem; height: 2.4rem;
+    border-radius: 11px;
+    color: var(--sp-accent-warm);
+    background: rgba(96, 165, 250, 0.14);
+    border: 1px solid rgba(96, 165, 250, 0.22);
+  }
+
+  .sp-chip__label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sp-ink-faint);
+  }
+
+  .sp-chip__value {
+    display: block;
+    font-size: 0.92rem;
+    font-weight: 600;
+    word-break: break-all;
+  }
+
+  .sp-note {
+    margin: 0.35rem 0 0;
+    padding: 0.95rem 1.1rem;
+    font-size: 0.83rem;
+    line-height: 1.65;
+    color: var(--sp-ink-faint);
+    border-left: 2px solid rgba(96, 165, 250, 0.35);
+  }
+
+  /* ------------------------------------------------------------- GLASS PANEL
+     The form is the closest object in the scene. It tilts toward the pointer
+     and carries a specular highlight that tracks the cursor across its face.
+     --------------------------------------------------------------------- */
+
+  .sp-panel-wrap {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+  }
+
+  /* Note: deliberately NOT overflow:hidden. A non-visible overflow value
+     forces transform-style to flatten, which would kill the z-depth of the
+     fields and button inside. The sheen inherits the radius instead. */
+  .sp-panel {
+    position: relative;
+    padding: 2.1rem;
+    border-radius: 26px;
+    background: linear-gradient(155deg, rgba(255,255,255,0.11) 0%, rgba(255,255,255,0.035) 58%, rgba(96,165,250,0.05) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(26px) saturate(150%);
+    -webkit-backdrop-filter: blur(26px) saturate(150%);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.22) inset,
+      0 -1px 0 rgba(0,0,0,0.22) inset,
+      0 34px 80px rgba(2, 6, 20, 0.62),
+      0 8px 24px rgba(2, 6, 20, 0.4);
+    transform-style: preserve-3d;
+  }
+
+  @media (max-width: 30rem) { .sp-panel { padding: 1.5rem; } }
+
+  /* Specular sheen that follows the pointer. */
+  .sp-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(46rem 26rem at var(--px) var(--py),
+                rgba(255, 255, 255, 0.13), transparent 62%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .sp-panel-wrap:hover .sp-panel::before,
+  .sp-panel-wrap:focus-within .sp-panel::before { opacity: 1; }
+
+  /* Keep real content painting above the sheen pseudo-element. */
+  .sp-panel__head,
+  .sp-actions,
+  .sp-status,
+  .sp-success__mark,
+  .sp-success h2,
+  .sp-success p,
+  .sp-ghost { position: relative; z-index: 1; }
+
+  .sp-panel__head { margin-bottom: 1.6rem; }
+
+  .sp-panel__title {
+    margin: 0 0 0.4rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.012em;
+  }
+
+  .sp-panel__sub {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--sp-ink-soft);
+  }
+
+  .sp-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.05rem;
+    transform-style: preserve-3d;
+  }
+
+  @media (max-width: 40rem) { .sp-row { grid-template-columns: 1fr; } }
+
+  .sp-field {
+    position: relative;
+    margin-bottom: 1.05rem;
+    transform-style: preserve-3d;
+    transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* Focused fields physically advance toward the viewer. */
+  .sp-field:focus-within { transform: translateZ(26px); }
+
+  .sp-field label {
+    display: block;
+    margin-bottom: 0.42rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--sp-ink-faint);
+    transition: color 0.24s ease;
+  }
+
+  .sp-field:focus-within label { color: var(--sp-accent-warm); }
+
+  .sp-field input,
+  .sp-field select,
+  .sp-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.82rem 0.95rem;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--sp-ink);
+    background: rgba(3, 8, 22, 0.42);
+    border: 1px solid rgba(147, 197, 253, 0.2);
+    border-radius: 13px;
+    outline: none;
+    transition: border-color 0.26s ease, box-shadow 0.26s ease, background 0.26s ease;
+    box-shadow: 0 2px 10px rgba(2, 6, 20, 0.34) inset;
+  }
+
+  .sp-field textarea { min-height: 8.5rem; resize: vertical; line-height: 1.65; }
+
+  .sp-field select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2393c5fd'%3E%3Cpath d='M4.5 6.5 8 10l3.5-3.5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.85rem center;
+    background-size: 1.05rem;
+    padding-right: 2.4rem;
+  }
+
+  .sp-field select option { background: #0a1430; color: var(--sp-ink); }
+
+  .sp-field input::placeholder,
+  .sp-field textarea::placeholder { color: rgba(234, 242, 255, 0.3); }
+
+  .sp-field input:focus,
+  .sp-field select:focus,
+  .sp-field textarea:focus {
+    border-color: rgba(96, 165, 250, 0.72);
+    background: rgba(3, 8, 22, 0.58);
+    box-shadow:
+      0 0 0 3px rgba(59, 130, 246, 0.24),
+      0 2px 10px rgba(2, 6, 20, 0.34) inset;
+  }
+
+  .sp-field[data-invalid="true"] input,
+  .sp-field[data-invalid="true"] select,
+  .sp-field[data-invalid="true"] textarea {
+    border-color: rgba(252, 165, 165, 0.72);
+    box-shadow: 0 0 0 3px rgba(248, 113, 113, 0.16);
+  }
+
+  .sp-error {
+    display: none;
+    margin-top: 0.4rem;
+    font-size: 0.78rem;
+    color: var(--sp-danger);
+  }
+
+  .sp-field[data-invalid="true"] .sp-error { display: block; }
+
+  /* Honeypot — visually gone, still reachable by naive bots. */
+  .sp-hp {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px; height: 1px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .sp-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    transform-style: preserve-3d;
+  }
+
+  .sp-submit {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.9rem 1.9rem;
+    font: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #06122c;
+    cursor: pointer;
+    border: 0;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #bfdbfe 0%, #60a5fa 52%, #3b82f6 100%);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.55) inset,
+      0 12px 30px rgba(59, 130, 246, 0.38);
+    transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 0.28s ease, filter 0.28s ease;
+    transform: translateZ(18px);
+  }
+
+  .sp-submit:hover:not(:disabled) {
+    transform: translate3d(0, -2px, 42px);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.6) inset,
+      0 22px 46px rgba(59, 130, 246, 0.5);
+  }
+
+  .sp-submit:focus-visible { outline: 3px solid rgba(191, 219, 254, 0.85); outline-offset: 3px; }
+  .sp-submit:active:not(:disabled) { transform: translate3d(0, 0, 8px); }
+  .sp-submit:disabled { cursor: progress; filter: saturate(0.55) brightness(0.9); }
+
+  .sp-spinner {
+    display: none;
+    width: 15px; height: 15px;
+    border: 2px solid rgba(6, 18, 44, 0.28);
+    border-top-color: #06122c;
+    border-radius: 50%;
+    animation: sp-spin 0.72s linear infinite;
+  }
+
+  @keyframes sp-spin { to { transform: rotate(360deg); } }
+
+  .sp-form[data-state="sending"] .sp-spinner { display: block; }
+
+  .sp-privacy {
+    margin: 0;
+    max-width: 19rem;
+    font-size: 0.76rem;
+    line-height: 1.55;
+    color: var(--sp-ink-faint);
+  }
+
+  /* Live region for submission feedback. */
+  .sp-status {
+    display: none;
+    margin-top: 1.15rem;
+    padding: 0.8rem 1rem;
+    font-size: 0.86rem;
+    line-height: 1.6;
+    border-radius: 12px;
+    border: 1px solid transparent;
+  }
+
+  .sp-status[data-tone="error"] {
+    display: block;
+    color: var(--sp-danger);
+    background: rgba(248, 113, 113, 0.1);
+    border-color: rgba(248, 113, 113, 0.3);
+  }
+
+  .sp-status[data-tone="info"] {
+    display: block;
+    color: var(--sp-accent-warm);
+    background: rgba(96, 165, 250, 0.1);
+    border-color: rgba(96, 165, 250, 0.3);
+  }
+
+  /* --------------------------------------------------------------- SUCCESS */
+
+  .sp-success { text-align: center; padding: 3.1rem 2.1rem; }
+
+  .sp-success__mark {
+    display: grid;
+    place-items: center;
+    width: 4.1rem; height: 4.1rem;
+    margin: 0 auto 1.4rem;
+    border-radius: 50%;
+    color: var(--sp-ok);
+    background: rgba(110, 231, 183, 0.13);
+    border: 1px solid rgba(110, 231, 183, 0.34);
+    box-shadow: 0 0 40px rgba(110, 231, 183, 0.24);
+    animation: sp-rise 0.66s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @keyframes sp-rise {
+    from { opacity: 0; transform: translate3d(0, 16px, -60px) scale(0.86); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  .sp-success h2 { margin: 0 0 0.6rem; font-size: 1.45rem; font-weight: 700; }
+  .sp-success p  { margin: 0 auto 1.6rem; max-width: 28rem; color: var(--sp-ink-soft); line-height: 1.7; }
+
+  .sp-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.5rem;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--sp-ink);
+    cursor: pointer;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--sp-line);
+    border-radius: 999px;
+    transition: background 0.26s ease, transform 0.26s ease;
+  }
+
+  .sp-ghost:hover { background: rgba(255,255,255,0.12); transform: translateY(-1px); }
+  .sp-ghost:focus-visible { outline: 3px solid rgba(96,165,250,0.6); outline-offset: 2px; }
+
+  /* ------------------------------------------------------- MOTION / A11Y
+     Every spatial effect above is decorative. Strip all of it when the
+     visitor has asked the system for reduced motion.
+     --------------------------------------------------------------------- */
+
+  @media (prefers-reduced-motion: reduce) {
+    .sp-layer--far,
+    .sp-layer--mid,
+    .sp-orb,
+    .sp-floor,
+    .sp-panel-wrap { transform: none !important; }
+
+    .sp-chip:hover,
+    .sp-chip:focus-visible,
+    .sp-submit,
+    .sp-submit:hover:not(:disabled) { transform: none !important; }
+
+    .sp-field:focus-within { transform: none !important; }
+    .sp-pulse, .sp-spinner, .sp-success__mark { animation: none !important; }
+    .sp-chip, .sp-panel-wrap, .sp-field, .sp-submit { transition: none !important; }
+  }
+
+  /* Fallback for browsers without backdrop-filter (older Firefox). */
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .sp-panel { background: rgba(12, 23, 51, 0.92); }
+    .sp-chip  { background: rgba(12, 23, 51, 0.85); }
+  }
+</style>
+
+<main class="sp-main">
+  <canvas class="sp-depth" id="spDepth" aria-hidden="true"></canvas>
+  <div class="sp-orb sp-orb--a" aria-hidden="true"></div>
+  <div class="sp-orb sp-orb--b" aria-hidden="true"></div>
+  <div class="sp-floor" aria-hidden="true"></div>
+
+  <div class="sp-stage" id="spStage">
+
+    <!-- Depth 3 ------------------------------------------------------------ -->
+    <div class="sp-layer sp-layer--far">
+      <header class="sp-intro">
+        <p class="sp-eyebrow"><span class="sp-pulse" aria-hidden="true"></span>Open to new work</p>
+        <h1 class="sp-title">Get In Touch</h1>
+        <p class="sp-lede">
+          Whether it&rsquo;s an IT operations problem, an automation you keep meaning to build,
+          or a project that needs a second set of hands &mdash; tell me what you&rsquo;re working on.
+          Messages land straight in my inbox.
+        </p>
+      </header>
     </div>
-  </section>
+
+    <!-- Depth 2 ------------------------------------------------------------ -->
+    <div class="sp-layer sp-layer--mid">
+      <div class="sp-deck">
+
+        <aside class="sp-rail">
+          <a class="sp-chip"
+             href="mailto:frankiejvaldez@gmail.com"
+             data-analytics-event="contact_click"
+             data-analytics-method="email"
+             data-analytics-placement="contact_page">
+            <span class="sp-chip__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Z"/>
+              </svg>
+            </span>
+            <span>
+              <span class="sp-chip__label">Email</span>
+              <span class="sp-chip__value">frankiejvaldez@gmail.com</span>
+            </span>
+          </a>
+
+          <a class="sp-chip"
+             href="https://github.com/frankstop"
+             target="_blank" rel="noopener"
+             data-analytics-event="contact_click"
+             data-analytics-method="github"
+             data-analytics-placement="contact_page">
+            <span class="sp-chip__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38V14c-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63 0 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07C3.6 11 1.74 10.31 1.74 7.25c0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A6.92 6.92 0 0 1 8 3.5a6.92 6.92 0 0 1 3.16.41c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.06-1.86 3.75-3.64 3.95.29.25.54.73.54 1.48v2.16c0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+              </svg>
+            </span>
+            <span>
+              <span class="sp-chip__label">GitHub</span>
+              <span class="sp-chip__value">github.com/frankstop</span>
+            </span>
+          </a>
+
+          <a class="sp-chip"
+             href="https://www.linkedin.com/in/frankiejvaldez"
+             target="_blank" rel="noopener"
+             data-analytics-event="contact_click"
+             data-analytics-method="linkedin"
+             data-analytics-placement="contact_page">
+            <span class="sp-chip__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708C16 15.487 15.474 16 14.825 16H1.175C.526 16 0 15.487 0 14.854V1.146Zm4.943 12.248V6.169H2.542v7.225h2.401Zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.521-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016Zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4Z"/>
+              </svg>
+            </span>
+            <span>
+              <span class="sp-chip__label">LinkedIn</span>
+              <span class="sp-chip__value">linkedin.com/in/frankiejvaldez</span>
+            </span>
+          </a>
+
+          <p class="sp-note">
+            Based in the New York City area. I read everything that comes through
+            and usually reply within one to two business days.
+          </p>
+        </aside>
+
+        <!-- Depth 1 — nearest object -------------------------------------- -->
+        <div class="sp-panel-wrap" id="spTilt">
+          <form class="sp-panel sp-form" id="spForm" data-state="idle" novalidate>
+            <div class="sp-panel__head">
+              <h2 class="sp-panel__title">Send a message</h2>
+              <p class="sp-panel__sub">Four fields. No account, no newsletter, no follow-up spam.</p>
+            </div>
+
+            <div class="sp-row">
+              <div class="sp-field" data-field="name">
+                <label for="spName">Your name</label>
+                <input type="text" id="spName" name="name" autocomplete="name"
+                       placeholder="Jane Rivera" required aria-describedby="spNameError">
+                <p class="sp-error" id="spNameError">Please tell me what to call you.</p>
+              </div>
+
+              <div class="sp-field" data-field="email">
+                <label for="spEmail">Email address</label>
+                <input type="email" id="spEmail" name="email" autocomplete="email"
+                       placeholder="jane@company.com" required aria-describedby="spEmailError">
+                <p class="sp-error" id="spEmailError">That email address doesn&rsquo;t look right.</p>
+              </div>
+            </div>
+
+            <div class="sp-field" data-field="topic">
+              <label for="spTopic">What is this about?</label>
+              <select id="spTopic" name="topic">
+                <option value="Project inquiry">Project inquiry</option>
+                <option value="Job or contract opportunity">Job or contract opportunity</option>
+                <option value="Question about a project">Question about a project on this site</option>
+                <option value="Collaboration">Collaboration</option>
+                <option value="Something else">Something else</option>
+              </select>
+            </div>
+
+            <div class="sp-field" data-field="message">
+              <label for="spMessage">Message</label>
+              <textarea id="spMessage" name="message"
+                        placeholder="A sentence or two about what you need is plenty to start."
+                        required aria-describedby="spMessageError"></textarea>
+              <p class="sp-error" id="spMessageError">A little more detail helps &mdash; at least 10 characters.</p>
+            </div>
+
+            <!-- Honeypot: humans never see it, bots fill it in. -->
+            <div class="sp-hp" aria-hidden="true">
+              <label for="spBotcheck">Leave this field empty</label>
+              <input type="text" id="spBotcheck" name="botcheck" tabindex="-1" autocomplete="off">
+            </div>
+
+            <div class="sp-actions">
+              <button type="submit" class="sp-submit" id="spSubmit">
+                <span class="sp-spinner" aria-hidden="true"></span>
+                <span id="spSubmitLabel">Send message</span>
+              </button>
+              <p class="sp-privacy">
+                Your message and email address go to me directly. Nothing is stored on this site.
+              </p>
+            </div>
+
+            <p class="sp-status" id="spStatus" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="sp-panel sp-success" id="spSuccess" hidden>
+            <div class="sp-success__mark" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none"
+                   stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"
+                   viewBox="0 0 24 24">
+                <path d="M20 6 9 17l-5-5"/>
+              </svg>
+            </div>
+            <h2 tabindex="-1" id="spSuccessHeading">Message sent</h2>
+            <p>
+              Thanks for reaching out &mdash; it&rsquo;s in my inbox now. I&rsquo;ll get back to you
+              at the address you gave, usually within one to two business days.
+            </p>
+            <button type="button" class="sp-ghost" id="spReset">Send another message</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </main>
+
+<script>
+(function () {
+  "use strict";
+
+  /* =====================================================================
+     1. FORM DELIVERY CONFIG  —  the only part you need to edit.
+
+     Paste the access key you get from https://web3forms.com (free, no
+     account required; the key is emailed to you). Until you do, the form
+     stays inert and says so instead of failing silently.
+
+     Prefer Formspree instead? Set PROVIDER to "formspree" and put your
+     form URL (https://formspree.io/f/XXXXXXXX) in FORMSPREE_ENDPOINT.
+     ===================================================================== */
+  var PROVIDER            = "web3forms";                 // "web3forms" | "formspree"
+  var WEB3FORMS_KEY       = "d2a8a073-9202-42d4-8898-43567995c8ba";
+  var FORMSPREE_ENDPOINT  = "https://formspree.io/f/PASTE_FORM_ID_HERE";
+  /* ===================================================================== */
+
+  var form      = document.getElementById("spForm");
+  var success   = document.getElementById("spSuccess");
+  var statusEl  = document.getElementById("spStatus");
+  var submitBtn = document.getElementById("spSubmit");
+  var btnLabel  = document.getElementById("spSubmitLabel");
+  var resetBtn  = document.getElementById("spReset");
+  var stage     = document.getElementById("spStage");
+  var tilt      = document.getElementById("spTilt");
+  var canvas    = document.getElementById("spDepth");
+
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var finePointer  = window.matchMedia("(pointer: fine)").matches;
+
+  /* ------------------------------------------------------- SPATIAL: PARALLAX
+     One pointer listener drives every layer through CSS custom properties,
+     so the browser composites the whole scene on the GPU.
+  */
+  if (!reduceMotion && finePointer) {
+    var raf = null;
+    var target = { x: 0, y: 0 };
+
+    window.addEventListener("pointermove", function (event) {
+      target.x = (event.clientX / window.innerWidth) * 2 - 1;
+      target.y = (event.clientY / window.innerHeight) * 2 - 1;
+      if (raf === null) raf = window.requestAnimationFrame(applyParallax);
+    }, { passive: true });
+
+    function applyParallax() {
+      raf = null;
+      document.documentElement.style.setProperty("--mx", target.x.toFixed(4));
+      document.documentElement.style.setProperty("--my", target.y.toFixed(4));
+    }
+
+    /* --------------------------------------------------- SPATIAL: PANEL TILT
+       The glass panel rotates toward the cursor and its specular highlight
+       tracks the pointer across the surface.
+    */
+    if (tilt) {
+      var MAX_TILT = 5.5; // degrees — restraint keeps text legible
+
+      tilt.addEventListener("pointermove", function (event) {
+        var rect = tilt.getBoundingClientRect();
+        var px = (event.clientX - rect.left) / rect.width;
+        var py = (event.clientY - rect.top) / rect.height;
+
+        tilt.style.transform =
+          "rotateY(" + ((px - 0.5) * MAX_TILT * 2).toFixed(2) + "deg) " +
+          "rotateX(" + ((0.5 - py) * MAX_TILT * 2).toFixed(2) + "deg) " +
+          "translateZ(30px)";
+
+        tilt.style.setProperty("--px", (px * 100).toFixed(1) + "%");
+        tilt.style.setProperty("--py", (py * 100).toFixed(1) + "%");
+      }, { passive: true });
+
+      tilt.addEventListener("pointerleave", function () {
+        tilt.style.transform = "";
+      });
+    }
+  }
+
+  /* ----------------------------------------------------- SPATIAL: DEPTH FIELD
+     Three strata of dots. Far dots are small, dim and barely move; near dots
+     are larger, brighter and swing further. That difference in rate is the
+     whole illusion.
+  */
+  if (canvas && canvas.getContext) {
+    var ctx = canvas.getContext("2d");
+    var dots = [];
+    var dpr = Math.min(window.devicePixelRatio || 1, 2);
+    var w = 0, h = 0;
+    var STRATA = [
+      { count: 90, size: 0.9, alpha: 0.28, drift: 0.05, sway: 5  },
+      { count: 55, size: 1.5, alpha: 0.45, drift: 0.11, sway: 14 },
+      { count: 26, size: 2.4, alpha: 0.65, drift: 0.20, sway: 28 }
+    ];
+
+    function seed() {
+      var rect = canvas.getBoundingClientRect();
+      w = rect.width; h = rect.height;
+      canvas.width  = Math.round(w * dpr);
+      canvas.height = Math.round(h * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      dots = [];
+      STRATA.forEach(function (layer) {
+        for (var i = 0; i < layer.count; i++) {
+          dots.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            r: layer.size * (0.6 + Math.random() * 0.8),
+            a: layer.alpha * (0.5 + Math.random() * 0.5),
+            v: layer.drift * (0.5 + Math.random()),
+            sway: layer.sway
+          });
+        }
+      });
+    }
+
+    function paint() {
+      ctx.clearRect(0, 0, w, h);
+      var mx = parseFloat(getComputedStyle(document.documentElement)
+                 .getPropertyValue("--mx")) || 0;
+      var my = parseFloat(getComputedStyle(document.documentElement)
+                 .getPropertyValue("--my")) || 0;
+
+      for (var i = 0; i < dots.length; i++) {
+        var d = dots[i];
+        ctx.beginPath();
+        ctx.arc(d.x - mx * d.sway, d.y - my * d.sway, d.r, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(191, 219, 254, " + d.a + ")";
+        ctx.fill();
+      }
+    }
+
+    function tick() {
+      for (var i = 0; i < dots.length; i++) {
+        dots[i].y -= dots[i].v;
+        if (dots[i].y < -4) {
+          dots[i].y = h + 4;
+          dots[i].x = Math.random() * w;
+        }
+      }
+      paint();
+      window.requestAnimationFrame(tick);
+    }
+
+    seed();
+    if (reduceMotion) {
+      paint();                       // one static frame, no animation loop
+    } else {
+      window.requestAnimationFrame(tick);
+    }
+
+    var resizeTimer = null;
+    window.addEventListener("resize", function () {
+      window.clearTimeout(resizeTimer);
+      resizeTimer = window.setTimeout(function () { seed(); paint(); }, 180);
+    }, { passive: true });
+  }
+
+  /* --------------------------------------------------------------- VALIDATION */
+
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  function fieldOf(name) {
+    return form.querySelector('[data-field="' + name + '"]');
+  }
+
+  function mark(name, invalid) {
+    var wrap = fieldOf(name);
+    if (!wrap) return;
+    wrap.setAttribute("data-invalid", invalid ? "true" : "false");
+    var control = wrap.querySelector("input, textarea, select");
+    if (control) control.setAttribute("aria-invalid", invalid ? "true" : "false");
+  }
+
+  function validate() {
+    var values = {
+      name:    form.elements.name.value.trim(),
+      email:   form.elements.email.value.trim(),
+      message: form.elements.message.value.trim()
+    };
+    var problems = [];
+
+    if (values.name.length < 2)              { mark("name", true);    problems.push("name"); }
+    else                                     { mark("name", false); }
+
+    if (!EMAIL_RE.test(values.email))        { mark("email", true);   problems.push("email"); }
+    else                                     { mark("email", false); }
+
+    if (values.message.length < 10)          { mark("message", true); problems.push("message"); }
+    else                                     { mark("message", false); }
+
+    return problems;
+  }
+
+  /* Clear a field's error state as soon as the visitor starts fixing it. */
+  ["name", "email", "message"].forEach(function (name) {
+    var control = form.elements[name];
+    if (!control) return;
+    control.addEventListener("input", function () {
+      var wrap = fieldOf(name);
+      if (wrap && wrap.getAttribute("data-invalid") === "true") mark(name, false);
+    });
+  });
+
+  function say(message, tone) {
+    statusEl.textContent = message;
+    if (tone) statusEl.setAttribute("data-tone", tone);
+    else statusEl.removeAttribute("data-tone");
+  }
+
+  function setSending(sending) {
+    form.setAttribute("data-state", sending ? "sending" : "idle");
+    submitBtn.disabled = sending;
+    btnLabel.textContent = sending ? "Sending…" : "Send message";
+  }
+
+  /* ------------------------------------------------------------------ SUBMIT */
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (form.elements.botcheck.value) return;   // bot tripped the honeypot
+
+    var problems = validate();
+    if (problems.length) {
+      say("Please check the highlighted field" + (problems.length > 1 ? "s" : "") + " above.", "error");
+      var first = fieldOf(problems[0]).querySelector("input, textarea, select");
+      if (first) first.focus();
+      return;
+    }
+
+    var configured =
+      (PROVIDER === "web3forms" && WEB3FORMS_KEY.indexOf("PASTE_") === -1) ||
+      (PROVIDER === "formspree" && FORMSPREE_ENDPOINT.indexOf("PASTE_") === -1);
+
+    if (!configured) {
+      say("This form isn’t connected to an email service yet. " +
+          "In the meantime, email me directly at frankiejvaldez@gmail.com.", "info");
+      return;
+    }
+
+    var name    = form.elements.name.value.trim();
+    var email   = form.elements.email.value.trim();
+    var topic   = form.elements.topic.value;
+    var message = form.elements.message.value.trim();
+
+    var endpoint, payload;
+
+    if (PROVIDER === "web3forms") {
+      endpoint = "https://api.web3forms.com/submit";
+      payload = {
+        access_key: WEB3FORMS_KEY,
+        subject: "Portfolio contact: " + topic + " — " + name,
+        from_name: "frankiejvaldez.com",
+        replyto: email,
+        name: name,
+        email: email,
+        topic: topic,
+        message: message
+      };
+    } else {
+      endpoint = FORMSPREE_ENDPOINT;
+      payload = {
+        name: name,
+        email: email,
+        _replyto: email,
+        _subject: "Portfolio contact: " + topic + " — " + name,
+        topic: topic,
+        message: message
+      };
+    }
+
+    setSending(true);
+    say("", null);
+
+    fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(payload)
+    })
+      .then(function (response) {
+        return response.json().catch(function () { return {}; })
+          .then(function (data) { return { ok: response.ok, data: data }; });
+      })
+      .then(function (result) {
+        var delivered = result.ok && result.data.success !== false;
+        if (!delivered) throw new Error(result.data.message || "Delivery failed");
+
+        form.hidden = true;
+        success.hidden = false;
+        document.getElementById("spSuccessHeading").focus();
+
+        if (window.portfolioAnalytics) {
+          window.portfolioAnalytics.track("contact_click", {
+            method: "form",
+            placement: "contact_page"
+          });
+        }
+      })
+      .catch(function () {
+        setSending(false);
+        say("That didn’t go through. Please try again, or email me directly at " +
+            "frankiejvaldez@gmail.com.", "error");
+      });
+  });
+
+  /* -------------------------------------------------------------- RESET STATE */
+
+  if (resetBtn) {
+    resetBtn.addEventListener("click", function () {
+      form.reset();
+      ["name", "email", "message"].forEach(function (n) { mark(n, false); });
+      setSending(false);
+      say("", null);
+      success.hidden = true;
+      form.hidden = false;
+      form.elements.name.focus();
+    });
+  }
+}());
+</script>
