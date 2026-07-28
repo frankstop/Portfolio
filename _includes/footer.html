@@ -1,11 +1,49 @@
+<style>
+  .footer-local-time {
+    display: inline-block;
+    background: linear-gradient(
+      90deg,
+      #b91c1c,
+      #9a3412,
+      #854d0e,
+      #3f6212,
+      #047857,
+      #0369a1,
+      #4338ca,
+      #7e22ce,
+      #a21caf,
+      #b91c1c
+    );
+    background-size: 240% 100%;
+    background-clip: text;
+    color: transparent;
+    font-family: Manrope, ui-sans-serif, system-ui, sans-serif;
+    font-variant-numeric: tabular-nums;
+    font-weight: 500;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: footer-lolcat-shift 4s linear infinite;
+  }
+
+  @keyframes footer-lolcat-shift {
+    to {
+      background-position: 240% center;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .footer-local-time {
+      animation: none;
+      background-position: center;
+    }
+  }
+</style>
+
 <footer class="border-t bg-white/50 py-4 text-center text-sm text-gray-600">
   <p>&copy; 2026 Frank Valdez, @frankiejvaldez. All rights reserved.</p>
   <p class="mt-2">
     <span>Local date &amp; time:</span>
-    <time
-      data-local-datetime
-      style="font-family: Manrope, ui-sans-serif, system-ui, sans-serif; font-variant-numeric: tabular-nums;"
-    >Loading&hellip;</time>
+    <time class="footer-local-time" data-local-datetime>Loading&hellip;</time>
   </p>
 </footer>
 <script src="{{ '/assets/js/footer-time.js' | relative_url }}" defer></script>
